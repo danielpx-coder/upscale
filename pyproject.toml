@@ -1,0 +1,14 @@
+[project]
+name = "videoupscale"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "opencv-contrib-python>=4.8", "requests>=2.31"]
+[project.optional-dependencies]
+cloud = ["replicate>=1.0"]
+[project.scripts]
+videoupscale = "videoupscale.cli:main"
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[tool.setuptools]
+packages = ["videoupscale", "videoupscale.backends"]

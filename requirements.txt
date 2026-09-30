@@ -1,0 +1,5 @@
+numpy>=1.24
+opencv-contrib-python>=4.8
+requests>=2.31
+# opcional (API paga):
+replicate>=1.0
