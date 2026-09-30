@@ -1,14 +1,34 @@
 [project]
 name = "videoupscale"
-version = "0.1.0"
+version = "0.2.0"
+description = "Upscale profissional de vídeos até 4K/8K (backends locais gratuitos e APIs de IA)"
+readme = "README.md"
 requires-python = ">=3.9"
+license = { text = "MIT" }
 dependencies = ["numpy>=1.24", "opencv-contrib-python>=4.8", "requests>=2.31"]
+
 [project.optional-dependencies]
 cloud = ["replicate>=1.0"]
+torch = ["torch>=2.0", "spandrel>=0.3"]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
 [project.scripts]
 videoupscale = "videoupscale.cli:main"
+
 [build-system]
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
+
 [tool.setuptools]
 packages = ["videoupscale", "videoupscale.backends"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B905"]
