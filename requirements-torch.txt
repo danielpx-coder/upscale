@@ -1,0 +1,4 @@
+# Backend 'torch' (Real-ESRGAN local). Ajuste o índice conforme sua GPU:
+# CUDA 12.1 -> pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0
+spandrel>=0.3

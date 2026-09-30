@@ -1,0 +1,4 @@
+# Instalação básica (backends gratuitos leves)
+numpy>=1.24
+opencv-contrib-python>=4.8
+requests>=2.31
