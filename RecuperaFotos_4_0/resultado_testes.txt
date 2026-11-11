@@ -1,0 +1,564 @@
+========================================================================
+RECUPERA FOTOS 4.0 — RESULTADO REAL DA SUÍTE DE TESTES
+========================================================================
+comando          : python rodar_testes.py
+data/hora        : 11/11/2026 10:30:20
+sistema          : Linux 6.1.158+ (x86_64)
+python           : 3.11.2 (CPython)
+Pillow           : 13.0.0
+cpus / memória   : 2 núcleo(s)
+pasta dos testes : /home/user/upscale/RecuperaFotos_4_0/tests
+========================================================================
+
+test_attribute_list_residente_parseado (test_advanced_ntfs.TesteAttributeList.test_attribute_list_residente_parseado) ... ok
+test_dois_extents_em_registros_distintos (test_advanced_ntfs.TesteAttributeList.test_dois_extents_em_registros_distintos) ... ok
+test_registro_de_extensao_nao_gera_candidato_duplicado (test_advanced_ntfs.TesteAttributeList.test_registro_de_extensao_nao_gera_candidato_duplicado) ... ok
+test_backup_boot_invalido_tambem (test_advanced_ntfs.TesteBootDeReserva.test_backup_boot_invalido_tambem) ... ok
+test_boot_primario_corrompido_usa_ultimo_setor (test_advanced_ntfs.TesteBootDeReserva.test_boot_primario_corrompido_usa_ultimo_setor) ... ok
+test_motor_recupera_com_boot_de_reserva (test_advanced_ntfs.TesteBootDeReserva.test_motor_recupera_com_boot_de_reserva) ... ok
+test_clusters_realocados_marcam_nao_confiavel (test_advanced_ntfs.TesteConfiabilidade.test_clusters_realocados_marcam_nao_confiavel) ... ok
+test_data_incompleta_gera_motivo (test_advanced_ntfs.TesteConfiabilidade.test_data_incompleta_gera_motivo) ... ok
+test_criar_desde_boot_invalido (test_advanced_ntfs.TesteCriarDesdeBoot.test_criar_desde_boot_invalido) ... ok
+test_criar_desde_boot_valido (test_advanced_ntfs.TesteCriarDesdeBoot.test_criar_desde_boot_valido) ... ok
+test_atributo_de_comprimento_zero_nao_causa_laco_infinito (test_advanced_ntfs.TesteLimitesDeMemoria.test_atributo_de_comprimento_zero_nao_causa_laco_infinito) ... ok
+test_bitmap_grande_nao_carrega_volume_inteiro (test_advanced_ntfs.TesteLimitesDeMemoria.test_bitmap_grande_nao_carrega_volume_inteiro) ... ok
+test_leitura_da_mft_em_blocos_limitados (test_advanced_ntfs.TesteLimitesDeMemoria.test_leitura_da_mft_em_blocos_limitados) ... ok
+test_limite_de_atributos_do_parser (test_advanced_ntfs.TesteLimitesDeMemoria.test_limite_de_atributos_do_parser) ... ok
+test_assinatura_file_falsa_rejeitada (test_advanced_ntfs.TesteMFTOrfaAposFormatacao.test_assinatura_file_falsa_rejeitada) ... ok
+test_registro_orfao_fora_da_mft_recuperado (test_advanced_ntfs.TesteMFTOrfaAposFormatacao.test_registro_orfao_fora_da_mft_recuperado) ... ok
+test_varredura_orfa_nao_repete_mft_atual (test_advanced_ntfs.TesteMFTOrfaAposFormatacao.test_varredura_orfa_nao_repete_mft_atual) ... ok
+test_arquivo_vivo_incluido_sob_pedido (test_advanced_ntfs.TesteNomesECaminhos.test_arquivo_vivo_incluido_sob_pedido) ... ok
+test_caminho_com_subpasta (test_advanced_ntfs.TesteNomesECaminhos.test_caminho_com_subpasta) ... ok
+test_diretorio_nao_gera_candidato (test_advanced_ntfs.TesteNomesECaminhos.test_diretorio_nao_gera_candidato) ... ok
+test_filtro_por_caminho (test_advanced_ntfs.TesteNomesECaminhos.test_filtro_por_caminho) ... ok
+test_nome_unicode_preservado (test_advanced_ntfs.TesteNomesECaminhos.test_nome_unicode_preservado) ... ok
+test_preferencia_de_namespace_win32_sobre_dos (test_advanced_ntfs.TesteNomesECaminhos.test_preferencia_de_namespace_win32_sobre_dos) ... ok
+test_comprimento_de_atributo_inconsistente (test_advanced_ntfs.TesteRegistrosAdulterados.test_comprimento_de_atributo_inconsistente) ... ok
+test_data_residente_truncado_registrado (test_advanced_ntfs.TesteRegistrosAdulterados.test_data_residente_truncado_registrado) ... ok
+test_fixup_invalido_gera_diagnostico (test_advanced_ntfs.TesteRegistrosAdulterados.test_fixup_invalido_gera_diagnostico) ... ok
+test_registro_truncado_nao_trava (test_advanced_ntfs.TesteRegistrosAdulterados.test_registro_truncado_nao_trava) ... ok
+test_runlist_apontando_para_fora_do_volume (test_advanced_ntfs.TesteRegistrosAdulterados.test_runlist_apontando_para_fora_do_volume) ... ok
+test_volume_ntfs_com_setor_4096 (test_advanced_ntfs.TesteSetores4096.test_volume_ntfs_com_setor_4096) ... ok
+test_comprimido_lznt1_real (test_advanced_ntfs.TesteSparseEComprimido.test_comprimido_lznt1_real) ... ok
+test_corpo_lznt1_invalido_retorna_none (test_advanced_ntfs.TesteSparseEComprimido.test_corpo_lznt1_invalido_retorna_none) ... ok
+test_runlist_sparse_preservada (test_advanced_ntfs.TesteSparseEComprimido.test_runlist_sparse_preservada) ... ok
+test_unidade_integralmente_fisica_copiada_sem_descomprimir (test_advanced_ntfs.TesteSparseEComprimido.test_unidade_integralmente_fisica_copiada_sem_descomprimir) ... ok
+test_particao_ntfs_dentro_de_imagem_de_disco (test_advanced_ntfs.TesteVolumeDeslocado.test_particao_ntfs_dentro_de_imagem_de_disco) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.694s
+
+OK
+
+test_arquivo_de_imagem (test_aquisicao.TesteAbrirOrigem.test_arquivo_de_imagem) ... ok
+test_disco_inexistente_linux (test_aquisicao.TesteAbrirOrigem.test_disco_inexistente_linux) ... ok
+test_letra_unidade_windows (test_aquisicao.TesteAbrirOrigem.test_letra_unidade_windows) ... skipped 'letras de unidade: só Windows'
+test_origem_inexistente (test_aquisicao.TesteAbrirOrigem.test_origem_inexistente) ... ok
+test_origem_vazia (test_aquisicao.TesteAbrirOrigem.test_origem_vazia) ... ok
+test_pasta_retorna_origem_pasta (test_aquisicao.TesteAbrirOrigem.test_pasta_retorna_origem_pasta) ... ok
+test_blocos_zerados_registrados_como_zero (test_aquisicao.TesteAdquiridor.test_blocos_zerados_registrados_como_zero) ... ok
+test_cancelamento_seguro (test_aquisicao.TesteAdquiridor.test_cancelamento_seguro) ... ok
+test_imagem_existente_sem_retomar_levanta (test_aquisicao.TesteAdquiridor.test_imagem_existente_sem_retomar_levanta) ... ok
+test_imagem_identica_byte_a_byte (test_aquisicao.TesteAdquiridor.test_imagem_identica_byte_a_byte) ... ok
+test_mapa_incompativel_ignorado_na_retomada (test_aquisicao.TesteAdquiridor.test_mapa_incompativel_ignorado_na_retomada) ... ok
+test_mapa_versao_1_criado (test_aquisicao.TesteAdquiridor.test_mapa_versao_1_criado) ... ok
+test_retomada_recopia_bloco_corrompido (test_aquisicao.TesteAdquiridor.test_retomada_recopia_bloco_corrompido) ... ok
+test_retomada_revalida_blocos (test_aquisicao.TesteAdquiridor.test_retomada_revalida_blocos) ... ok
+test_setores_ilegivel_registrado_como_erro (test_aquisicao.TesteAdquiridor.test_setores_ilegivel_registrado_como_erro) ... ok
+test_sha256_arquivo (test_aquisicao.TesteAdquiridor.test_sha256_arquivo) ... ok
+test_sha256_dos_blocos_correto (test_aquisicao.TesteAdquiridor.test_sha256_dos_blocos_correto) ... ok
+test_adicionar_e_conter (test_aquisicao.TesteIntervalos.test_adicionar_e_conter) ... ok
+test_contido_por_partes_nao_contem (test_aquisicao.TesteIntervalos.test_contido_por_partes_nao_contem) ... ok
+test_intervalo_invalido_ignorado (test_aquisicao.TesteIntervalos.test_intervalo_invalido_ignorado) ... ok
+test_intervalos_desjuntos_ordenados (test_aquisicao.TesteIntervalos.test_intervalos_desjuntos_ordenados) ... ok
+test_mesclagem (test_aquisicao.TesteIntervalos.test_mesclagem) ... ok
+test_mesclagem_adjacentes (test_aquisicao.TesteIntervalos.test_mesclagem_adjacentes) ... ok
+test_sobrepoe (test_aquisicao.TesteIntervalos.test_sobrepoe) ... ok
+test_vazio (test_aquisicao.TesteIntervalos.test_vazio) ... ok
+test_aberto_somente_leitura (test_aquisicao.TesteLeitorArquivo.test_aberto_somente_leitura) ... ok
+test_context_manager (test_aquisicao.TesteLeitorArquivo.test_context_manager) ... ok
+test_leitura_alem_do_fim_retorna_zeros (test_aquisicao.TesteLeitorArquivo.test_leitura_alem_do_fim_retorna_zeros) ... ok
+test_leitura_simples (test_aquisicao.TesteLeitorArquivo.test_leitura_simples) ... ok
+test_offset_fora_retorna_vazio (test_aquisicao.TesteLeitorArquivo.test_offset_fora_retorna_vazio) ... ok
+test_offset_negativo_levanta (test_aquisicao.TesteLeitorArquivo.test_offset_negativo_levanta) ... ok
+test_tamanho (test_aquisicao.TesteLeitorArquivo.test_tamanho) ... ok
+test_recorte_deslocado (test_aquisicao.TesteLeitorRecorte.test_recorte_deslocado) ... ok
+test_recorte_limitado_pelo_tamanho_base (test_aquisicao.TesteLeitorRecorte.test_recorte_limitado_pelo_tamanho_base) ... ok
+test_recorte_nao_fecha_base (test_aquisicao.TesteLeitorRecorte.test_recorte_nao_fecha_base) ... ok
+test_listar_retorna_lista_de_dicts (test_aquisicao.TesteListagemDispositivos.test_listar_retorna_lista_de_dicts) ... ok
+test_destino_dentro_da_pasta_de_origem_bloqueado (test_aquisicao.TesteValidacaoDestino.test_destino_dentro_da_pasta_de_origem_bloqueado) ... ok
+test_mesmo_disco_confirmado_bloqueia (test_aquisicao.TesteValidacaoDestino.test_mesmo_disco_confirmado_bloqueia) ... ok
+test_origem_pasta_destino_valido (test_aquisicao.TesteValidacaoDestino.test_origem_pasta_destino_valido) ... ok
+test_origem_pasta_mesmo_disco_bloqueada_sem_flag (test_aquisicao.TesteValidacaoDestino.test_origem_pasta_mesmo_disco_bloqueada_sem_flag) ... ok
+test_permitir_mesmo_disco_apenas_para_imagem (test_aquisicao.TesteValidacaoDestino.test_permitir_mesmo_disco_apenas_para_imagem) ... ok
+test_validar_destino_arquivo_nao_pasta (test_aquisicao.TesteValidacaoDestino.test_validar_destino_arquivo_nao_pasta) ... ok
+test_validar_destino_cria_pasta (test_aquisicao.TesteValidacaoDestino.test_validar_destino_cria_pasta) ... ok
+test_validar_destino_inexistente_sem_criar_explica (test_aquisicao.TesteValidacaoDestino.test_validar_destino_inexistente_sem_criar_explica)
+Com criar_se_nao_existe=False (é assim que a interface valida antes ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 0.013s
+
+OK (skipped=1)
+
+test_arquivos_reais_truncados_em_todos_os_pontos (test_fuzz.TesteFuzzAnalisadores.test_arquivos_reais_truncados_em_todos_os_pontos)
+Truncamento em posições variadas nunca gera comprimento além do ... ok
+test_assinatura_valida_com_lixo_depois (test_fuzz.TesteFuzzAnalisadores.test_assinatura_valida_com_lixo_depois)
+Cabeçalho verdadeiro + lixo: o comprimento não pode explodir. ... ok
+test_bytes_aleatorios_nao_quebram_os_analisadores (test_fuzz.TesteFuzzAnalisadores.test_bytes_aleatorios_nao_quebram_os_analisadores) ... ok
+test_varrer_regiao_sobre_dados_aleatorios (test_fuzz.TesteFuzzAnalisadores.test_varrer_regiao_sobre_dados_aleatorios) ... ok
+test_cancelamento_aleatorio_nao_corrompe_o_destino (test_fuzz.TesteFuzzMotor.test_cancelamento_aleatorio_nao_corrompe_o_destino) ... ok
+test_disco_aleatorio_inteiro (test_fuzz.TesteFuzzMotor.test_disco_aleatorio_inteiro) ... ok
+test_exfat_flipado (test_fuzz.TesteFuzzMotor.test_exfat_flipado) ... ok
+test_fat32_flipado (test_fuzz.TesteFuzzMotor.test_fat32_flipado) ... ok
+test_fat32_truncado (test_fuzz.TesteFuzzMotor.test_fat32_truncado) ... ok
+test_imagem_toda_ff (test_fuzz.TesteFuzzMotor.test_imagem_toda_ff) ... ok
+test_imagem_toda_zerada (test_fuzz.TesteFuzzMotor.test_imagem_toda_zerada) ... ok
+test_jpeg_fragmentado_e_sobrescrito (test_fuzz.TesteFuzzMotor.test_jpeg_fragmentado_e_sobrescrito)
+Metade de uma foto sobrescrita por outra: o resultado não pode ser ... ok
+test_muitos_arquivos_apagados (test_fuzz.TesteFuzzMotor.test_muitos_arquivos_apagados) ... ok
+test_nome_gigante_e_caracteres_de_controle (test_fuzz.TesteFuzzMotor.test_nome_gigante_e_caracteres_de_controle) ... ok
+test_ntfs_flipado (test_fuzz.TesteFuzzMotor.test_ntfs_flipado) ... ok
+test_relatorios_csv_validos_com_entradas_hostis (test_fuzz.TesteFuzzMotor.test_relatorios_csv_validos_com_entradas_hostis) ... ok
+test_imagem_ntfs_com_bits_flipados (test_fuzz.TesteFuzzNTFS.test_imagem_ntfs_com_bits_flipados) ... ok
+test_lznt1_aleatorio (test_fuzz.TesteFuzzNTFS.test_lznt1_aleatorio) ... ok
+test_registro_mft_aleatorio (test_fuzz.TesteFuzzNTFS.test_registro_mft_aleatorio) ... ok
+test_runlist_aleatoria (test_fuzz.TesteFuzzNTFS.test_runlist_aleatoria) ... ok
+test_busca_de_particoes_perdidas_em_disco_aleatorio (test_fuzz.TesteFuzzParticoes.test_busca_de_particoes_perdidas_em_disco_aleatorio) ... ok
+test_ebr_ciclico_nao_trava (test_fuzz.TesteFuzzParticoes.test_ebr_ciclico_nao_trava)
+Cadeia de EBRs que aponta para si mesma: limite de 128 saltos. ... ok
+test_gpt_aleatorio (test_fuzz.TesteFuzzParticoes.test_gpt_aleatorio) ... ok
+test_gpt_com_particoes_sobrepostas (test_fuzz.TesteFuzzParticoes.test_gpt_com_particoes_sobrepostas) ... ok
+test_mbr_aleatorio (test_fuzz.TesteFuzzParticoes.test_mbr_aleatorio) ... ok
+test_boot_aleatorio_nao_vira_sistema_de_arquivos (test_fuzz.TesteFuzzSistemasDeArquivos.test_boot_aleatorio_nao_vira_sistema_de_arquivos) ... ok
+test_cadeia_de_fat_ciclica_nao_trava (test_fuzz.TesteFuzzSistemasDeArquivos.test_cadeia_de_fat_ciclica_nao_trava)
+FAT com ciclo (cluster aponta para si mesmo / para trás). ... ok
+test_entrada_de_diretorio_com_nome_hostil (test_fuzz.TesteFuzzSistemasDeArquivos.test_entrada_de_diretorio_com_nome_hostil)
+Nomes corrompidos/maliciosos com '../' não podem escapar do destino ... ok
+test_exfat_com_bits_flipados (test_fuzz.TesteFuzzSistemasDeArquivos.test_exfat_com_bits_flipados) ... ok
+test_fat16_com_bits_flipados (test_fuzz.TesteFuzzSistemasDeArquivos.test_fat16_com_bits_flipados) ... ok
+test_fat32_com_bits_flipados (test_fuzz.TesteFuzzSistemasDeArquivos.test_fat32_com_bits_flipados) ... ok
+test_arquivo_vazio_e_corrompido (test_fuzz.TesteFuzzVerificacao.test_arquivo_vazio_e_corrompido) ... ok
+test_data_exif_com_tiff_corrompido (test_fuzz.TesteFuzzVerificacao.test_data_exif_com_tiff_corrompido) ... ok
+test_extensao_desconhecida_nao_quebra (test_fuzz.TesteFuzzVerificacao.test_extensao_desconhecida_nao_quebra) ... ok
+test_lixo_nunca_e_ok (test_fuzz.TesteFuzzVerificacao.test_lixo_nunca_e_ok) ... ok
+test_verificadores_estruturais_com_bytes_mutados (test_fuzz.TesteFuzzVerificacao.test_verificadores_estruturais_com_bytes_mutados) ... ok
+test_zeros_nunca_sao_ok (test_fuzz.TesteFuzzVerificacao.test_zeros_nunca_sao_ok) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 10.208s
+
+OK
+
+test_abas_de_resultado_e_registro (test_interface.TesteConstrucaoDaJanela.test_abas_de_resultado_e_registro) ... ok
+test_as_quatro_secoes_de_configuracao (test_interface.TesteConstrucaoDaJanela.test_as_quatro_secoes_de_configuracao) ... ok
+test_botoes_de_acao_e_seus_estados_iniciais (test_interface.TesteConstrucaoDaJanela.test_botoes_de_acao_e_seus_estados_iniciais) ... ok
+test_executar_gui_abre_janela_e_entra_no_mainloop (test_interface.TesteConstrucaoDaJanela.test_executar_gui_abre_janela_e_entra_no_mainloop) ... ok
+test_labels_de_informacao_criados (test_interface.TesteConstrucaoDaJanela.test_labels_de_informacao_criados) ... ok
+test_painel_de_seguranca_do_disco_do_sistema_existe (test_interface.TesteConstrucaoDaJanela.test_painel_de_seguranca_do_disco_do_sistema_existe) ... ok
+test_periodos_oferecidos (test_interface.TesteConstrucaoDaJanela.test_periodos_oferecidos) ... ok
+test_titulo_geometria_e_tamanho_minimo (test_interface.TesteConstrucaoDaJanela.test_titulo_geometria_e_tamanho_minimo) ... ok
+test_todas_as_opcoes_da_secao_4_existem (test_interface.TesteConstrucaoDaJanela.test_todas_as_opcoes_da_secao_4_existem) ... ok
+test_abrir_destino_invalido_avisa (test_interface.TesteDispositivosEDialogos.test_abrir_destino_invalido_avisa) ... ok
+test_abrir_destino_valido_chama_o_sistema (test_interface.TesteDispositivosEDialogos.test_abrir_destino_valido_chama_o_sistema) ... ok
+test_abrir_diagnostico_quando_existe (test_interface.TesteDispositivosEDialogos.test_abrir_diagnostico_quando_existe) ... ok
+test_abrir_diagnostico_sem_ntfs_avisa (test_interface.TesteDispositivosEDialogos.test_abrir_diagnostico_sem_ntfs_avisa) ... ok
+test_dialogo_cancelado_nao_altera_a_origem (test_interface.TesteDispositivosEDialogos.test_dialogo_cancelado_nao_altera_a_origem) ... ok
+test_dialogo_de_destino_valida_em_seguida (test_interface.TesteDispositivosEDialogos.test_dialogo_de_destino_valida_em_seguida) ... ok
+test_dialogo_de_imagem_define_a_origem (test_interface.TesteDispositivosEDialogos.test_dialogo_de_imagem_define_a_origem) ... ok
+test_dialogo_de_pasta_de_origem (test_interface.TesteDispositivosEDialogos.test_dialogo_de_pasta_de_origem) ... ok
+test_falha_ao_abrir_com_o_sistema_avisa (test_interface.TesteDispositivosEDialogos.test_falha_ao_abrir_com_o_sistema_avisa) ... ok
+test_falha_ao_listar_nao_quebra_a_janela (test_interface.TesteDispositivosEDialogos.test_falha_ao_listar_nao_quebra_a_janela) ... ok
+test_lista_de_dispositivos_formatada (test_interface.TesteDispositivosEDialogos.test_lista_de_dispositivos_formatada) ... ok
+test_selecionar_disco_do_sistema_gera_alerta (test_interface.TesteDispositivosEDialogos.test_selecionar_disco_do_sistema_gera_alerta) ... ok
+test_selecionar_sem_indice_nao_faz_nada (test_interface.TesteDispositivosEDialogos.test_selecionar_sem_indice_nao_faz_nada) ... ok
+test_sem_dispositivos_orienta_o_usuario (test_interface.TesteDispositivosEDialogos.test_sem_dispositivos_orienta_o_usuario) ... ok
+test_callbacks_so_colocam_na_fila (test_interface.TesteFilaELog.test_callbacks_so_colocam_na_fila)
+Nenhum widget é tocado pela thread de trabalho: os callbacks apenas ... ok
+test_fila_e_processada_na_ordem (test_interface.TesteFilaELog.test_fila_e_processada_na_ordem) ... ok
+test_limpar_resultados_zera_tudo (test_interface.TesteFilaELog.test_limpar_resultados_zera_tudo) ... ok
+test_log_tem_hora (test_interface.TesteFilaELog.test_log_tem_hora) ... ok
+test_log_tem_limite_de_linhas (test_interface.TesteFilaELog.test_log_tem_limite_de_linhas) ... ok
+test_formatar_bytes (test_interface.TesteFuncoesPuras.test_formatar_bytes) ... ok
+test_formatar_bytes_pb (test_interface.TesteFuncoesPuras.test_formatar_bytes_pb) ... ok
+test_formatar_duracao (test_interface.TesteFuncoesPuras.test_formatar_duracao) ... ok
+test_formatar_duracao_negativa (test_interface.TesteFuncoesPuras.test_formatar_duracao_negativa) ... ok
+test_limite_de_miniaturas_e_modesto (test_interface.TesteFuncoesPuras.test_limite_de_miniaturas_e_modesto) ... ok
+test_abrir_ampliada_sem_arquivo_nao_faz_nada (test_interface.TesteGaleria.test_abrir_ampliada_sem_arquivo_nao_faz_nada) ... ok
+test_clique_na_miniatura_abre_janela_ampliada (test_interface.TesteGaleria.test_clique_na_miniatura_abre_janela_ampliada) ... ok
+test_galeria_respeita_o_limite_de_miniaturas (test_interface.TesteGaleria.test_galeria_respeita_o_limite_de_miniaturas) ... ok
+test_miniatura_apenas_para_formatos_de_imagem (test_interface.TesteGaleria.test_miniatura_apenas_para_formatos_de_imagem) ... ok
+test_nome_longo_e_cortado_na_celula (test_interface.TesteGaleria.test_nome_longo_e_cortado_na_celula) ... ok
+test_sem_resultado_galeria_fica_vazia (test_interface.TesteGaleria.test_sem_resultado_galeria_fica_vazia) ... ok
+test_destino_com_espacos_e_trim (test_interface.TesteOpcoesDaGui.test_destino_com_espacos_e_trim) ... ok
+test_nunca_autoriza_mesmo_disco_por_conta_propria (test_interface.TesteOpcoesDaGui.test_nunca_autoriza_mesmo_disco_por_conta_propria)
+A GUI não tem interruptor para ignorar a regra do disco físico. ... ok
+test_opcoes_marcadas (test_interface.TesteOpcoesDaGui.test_opcoes_marcadas) ... ok
+test_periodo_especifico_usa_o_campo_de_data (test_interface.TesteOpcoesDaGui.test_periodo_especifico_usa_o_campo_de_data) ... ok
+test_periodos_relativos (test_interface.TesteOpcoesDaGui.test_periodos_relativos) ... ok
+test_valores_padrao (test_interface.TesteOpcoesDaGui.test_valores_padrao) ... ok
+test_cancelar_encerra_com_seguranca (test_interface.TesteRecuperacaoPelaGui.test_cancelar_encerra_com_seguranca) ... ok
+test_dois_cliques_nao_iniciam_duas_recuperacoes (test_interface.TesteRecuperacaoPelaGui.test_dois_cliques_nao_iniciam_duas_recuperacoes) ... ok
+test_erro_do_motor_vira_mensagem_e_nao_quebra_a_janela (test_interface.TesteRecuperacaoPelaGui.test_erro_do_motor_vira_mensagem_e_nao_quebra_a_janela) ... ok
+test_filtro_da_galeria_por_estado (test_interface.TesteRecuperacaoPelaGui.test_filtro_da_galeria_por_estado) ... ok
+test_finalizar_na_pausa_encerra_sem_etapa2 (test_interface.TesteRecuperacaoPelaGui.test_finalizar_na_pausa_encerra_sem_etapa2) ... ok
+test_fluxo_completo (test_interface.TesteRecuperacaoPelaGui.test_fluxo_completo) ... ok
+test_galeria_mostra_as_fotos_com_estado (test_interface.TesteRecuperacaoPelaGui.test_galeria_mostra_as_fotos_com_estado) ... ok
+test_miniatura_e_gerada_para_fotos (test_interface.TesteRecuperacaoPelaGui.test_miniatura_e_gerada_para_fotos) ... ok
+test_pausa_apos_etapa1_habilita_continuar_e_finalizar (test_interface.TesteRecuperacaoPelaGui.test_pausa_apos_etapa1_habilita_continuar_e_finalizar) ... ok
+test_data_especifica_invalida_bloqueia (test_interface.TesteValidacoesDeInicio.test_data_especifica_invalida_bloqueia) ... ok
+test_destino_no_mesmo_disco_e_bloqueado (test_interface.TesteValidacoesDeInicio.test_destino_no_mesmo_disco_e_bloqueado) ... ok
+test_destino_valido_em_outro_disco_e_aceito (test_interface.TesteValidacoesDeInicio.test_destino_valido_em_outro_disco_e_aceito) ... ok
+test_destino_vazio_nao_gera_aviso (test_interface.TesteValidacoesDeInicio.test_destino_vazio_nao_gera_aviso) ... ok
+test_sem_destino_avisa_e_nao_inicia (test_interface.TesteValidacoesDeInicio.test_sem_destino_avisa_e_nao_inicia) ... ok
+test_sem_origem_avisa_e_nao_inicia (test_interface.TesteValidacoesDeInicio.test_sem_origem_avisa_e_nao_inicia) ... ok
+test_validar_destino_sem_origem_exige_origem (test_interface.TesteValidacoesDeInicio.test_validar_destino_sem_origem_exige_origem) ... ok
+
+----------------------------------------------------------------------
+Ran 61 tests in 3.614s
+
+OK
+
+test_boot_invalido (test_ntfs.TesteBootNTFS.test_boot_invalido) ... ok
+test_info_boot_valido (test_ntfs.TesteBootNTFS.test_info_boot_valido) ... ok
+test_rec_size_por_clusters_por_registro (test_ntfs.TesteBootNTFS.test_rec_size_por_clusters_por_registro) ... ok
+test_data_valida (test_ntfs.TesteConversaoDatas.test_data_valida) ... ok
+test_fora_do_intervalo (test_ntfs.TesteConversaoDatas.test_fora_do_intervalo) ... ok
+test_zero_invalido (test_ntfs.TesteConversaoDatas.test_zero_invalido) ... ok
+test_fixup_corrompido_rejeitado (test_ntfs.TesteFixup.test_fixup_corrompido_rejeitado) ... ok
+test_fixup_valido_aplicado (test_ntfs.TesteFixup.test_fixup_valido_aplicado) ... ok
+test_parsear_registro_assinatura_lixo (test_ntfs.TesteFixup.test_parsear_registro_assinatura_lixo) ... ok
+test_parsear_registro_sem_assinatura (test_ntfs.TesteFixup.test_parsear_registro_sem_assinatura) ... ok
+test_parsear_registro_usado_maior_que_alocado (test_ntfs.TesteFixup.test_parsear_registro_usado_maior_que_alocado) ... ok
+test_parsear_registro_valido (test_ntfs.TesteFixup.test_parsear_registro_valido) ... ok
+test_usa_fora_do_registro (test_ntfs.TesteFixup.test_usa_fora_do_registro) ... ok
+test_chunk_nao_comprimido (test_ntfs.TesteLZNT1.test_chunk_nao_comprimido) ... ok
+test_corrompido_offset_invalido (test_ntfs.TesteLZNT1.test_corrompido_offset_invalido) ... ok
+test_descomprime_literais (test_ntfs.TesteLZNT1.test_descomprime_literais) ... ok
+test_descomprime_unidade_comprimida (test_ntfs.TesteLZNT1.test_descomprime_unidade_comprimida) ... ok
+test_entrada_aleatoria_nao_trava (test_ntfs.TesteLZNT1.test_entrada_aleatoria_nao_trava) ... ok
+test_saida_acima_do_limite_rejeitada (test_ntfs.TesteLZNT1.test_saida_acima_do_limite_rejeitada) ... ok
+test_arquivo_apagado_recuperado_com_nome (test_ntfs.TesteRecuperacaoNTFS.test_arquivo_apagado_recuperado_com_nome) ... ok
+test_arquivo_vivo_nao_recuperado (test_ntfs.TesteRecuperacaoNTFS.test_arquivo_vivo_nao_recuperado) ... ok
+test_bitmap_cluster_alocado (test_ntfs.TesteRecuperacaoNTFS.test_bitmap_cluster_alocado) ... ok
+test_boot_reconhecido_pelo_identificador (test_ntfs.TesteRecuperacaoNTFS.test_boot_reconhecido_pelo_identificador) ... ok
+test_caminho_reconstruido_via_subpasta (test_ntfs.TesteRecuperacaoNTFS.test_caminho_reconstruido_via_subpasta) ... ok
+test_comprimido_lznt1 (test_ntfs.TesteRecuperacaoNTFS.test_comprimido_lznt1) ... ok
+test_conteudo_recuperado_byte_a_byte (test_ntfs.TesteRecuperacaoNTFS.test_conteudo_recuperado_byte_a_byte) ... ok
+test_fragmentado_dois_extents (test_ntfs.TesteRecuperacaoNTFS.test_fragmentado_dois_extents) ... ok
+test_leitura_alem_do_fim_do_volume (test_ntfs.TesteRecuperacaoNTFS.test_leitura_alem_do_fim_do_volume) ... ok
+test_numero_registros_via_mft (test_ntfs.TesteRecuperacaoNTFS.test_numero_registros_via_mft) ... ok
+test_recusa_registro_sem_data (test_ntfs.TesteRecuperacaoNTFS.test_recusa_registro_sem_data) ... ok
+test_residente_pequeno (test_ntfs.TesteRecuperacaoNTFS.test_residente_pequeno) ... ok
+test_dois_runs_delta_relativo (test_ntfs.TesteRunList.test_dois_runs_delta_relativo) ... ok
+test_fragmentos_ignora_sparse (test_ntfs.TesteRunList.test_fragmentos_ignora_sparse) ... ok
+test_fragmentos_limita_tamanho (test_ntfs.TesteRunList.test_fragmentos_limita_tamanho) ... ok
+test_fragmentos_mescla_contiguos (test_ntfs.TesteRunList.test_fragmentos_mescla_contiguos) ... ok
+test_max_runs_limitado (test_ntfs.TesteRunList.test_max_runs_limitado) ... ok
+test_run_negativo (test_ntfs.TesteRunList.test_run_negativo) ... ok
+test_run_sparse (test_ntfs.TesteRunList.test_run_sparse) ... ok
+test_run_truncado_interrompe (test_ntfs.TesteRunList.test_run_truncado_interrompe) ... ok
+test_run_unico (test_ntfs.TesteRunList.test_run_unico) ... ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.126s
+
+OK
+
+test_criar_imagem_e_recuperar_a_partir_dela (test_recupera_fotos.TesteAquisicaoIntegrada.test_criar_imagem_e_recuperar_a_partir_dela) ... ok
+test_recuperacao_a_partir_da_imagem_preserva_bytes (test_recupera_fotos.TesteAquisicaoIntegrada.test_recuperacao_a_partir_da_imagem_preserva_bytes) ... ok
+test_cli_aceita_datas_validas (test_recupera_fotos.TesteCLI.test_cli_aceita_datas_validas) ... ok
+test_cli_buscar_particoes (test_recupera_fotos.TesteCLI.test_cli_buscar_particoes) ... ok
+test_cli_cartao_inteiro_e_alias (test_recupera_fotos.TesteCLI.test_cli_cartao_inteiro_e_alias) ... ok
+test_cli_com_console_nao_cria_arquivo_de_log (test_recupera_fotos.TesteCLI.test_cli_com_console_nao_cria_arquivo_de_log)
+Com console normal (python recupera_fotos.py) nada é desviado. ... ok
+test_cli_criar_imagem (test_recupera_fotos.TesteCLI.test_cli_criar_imagem) ... ok
+test_cli_criar_imagem_bloqueia_mesmo_disco (test_recupera_fotos.TesteCLI.test_cli_criar_imagem_bloqueia_mesmo_disco) ... ok
+test_cli_data_invalida_explica (test_recupera_fotos.TesteCLI.test_cli_data_invalida_explica) ... ok
+test_cli_desde_invalido (test_recupera_fotos.TesteCLI.test_cli_desde_invalido) ... ok
+test_cli_desde_valido (test_recupera_fotos.TesteCLI.test_cli_desde_valido) ... ok
+test_cli_ignorar_sem_data (test_recupera_fotos.TesteCLI.test_cli_ignorar_sem_data) ... ok
+test_cli_min_kb_negativo (test_recupera_fotos.TesteCLI.test_cli_min_kb_negativo) ... ok
+test_cli_pasta_relativa (test_recupera_fotos.TesteCLI.test_cli_pasta_relativa) ... ok
+test_cli_retomar_imagem (test_recupera_fotos.TesteCLI.test_cli_retomar_imagem) ... ok
+test_cli_retomar_sem_criar_e_erro (test_recupera_fotos.TesteCLI.test_cli_retomar_sem_criar_e_erro) ... ok
+test_cli_sem_console_grava_log_em_vez_de_quebrar (test_recupera_fotos.TesteCLI.test_cli_sem_console_grava_log_em_vez_de_quebrar)
+Um .exe gerado no modo janela tem sys.stdout = None; sem proteção, ... ok
+test_cli_sem_destino_e_erro (test_recupera_fotos.TesteCLI.test_cli_sem_destino_e_erro) ... ok
+test_cli_sem_destino_explica_e_sai_com_2 (test_recupera_fotos.TesteCLI.test_cli_sem_destino_explica_e_sai_com_2) ... ok
+test_cli_sem_pastas_e_sem_verificar (test_recupera_fotos.TesteCLI.test_cli_sem_pastas_e_sem_verificar) ... ok
+test_cli_videos_e_profunda (test_recupera_fotos.TesteCLI.test_cli_videos_e_profunda) ... ok
+test_listar (test_recupera_fotos.TesteCLI.test_listar) ... ok
+test_recuperacao_por_cli (test_recupera_fotos.TesteCLI.test_recuperacao_por_cli) ... ok
+test_saida_da_cli_explica_o_resultado (test_recupera_fotos.TesteCLI.test_saida_da_cli_explica_o_resultado) ... ok
+test_avif_sem_decodificador (test_recupera_fotos.TesteCarvingFotos.test_avif_sem_decodificador) ... ok
+test_bmp_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_bmp_por_assinatura) ... ok
+test_cr2_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_cr2_por_assinatura) ... ok
+test_dng_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_dng_por_assinatura) ... ok
+test_gif_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_gif_por_assinatura) ... ok
+test_heic_sem_decodificador_nao_vira_ok (test_recupera_fotos.TesteCarvingFotos.test_heic_sem_decodificador_nao_vira_ok) ... ok
+test_incluir_pequenos (test_recupera_fotos.TesteCarvingFotos.test_incluir_pequenos) ... ok
+test_jpeg_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_jpeg_por_assinatura) ... ok
+test_minimo_8kb_por_padrao (test_recupera_fotos.TesteCarvingFotos.test_minimo_8kb_por_padrao) ... ok
+test_multiplos_formatos_na_mesma_varredura (test_recupera_fotos.TesteCarvingFotos.test_multiplos_formatos_na_mesma_varredura) ... ok
+test_orf_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_orf_por_assinatura) ... ok
+test_png_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_png_por_assinatura) ... ok
+test_psd_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_psd_por_assinatura) ... ok
+test_raf_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_raf_por_assinatura) ... ok
+test_rw2_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_rw2_por_assinatura) ... ok
+test_tiff_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_tiff_por_assinatura) ... ok
+test_webp_por_assinatura (test_recupera_fotos.TesteCarvingFotos.test_webp_por_assinatura) ... ok
+test_3gp (test_recupera_fotos.TesteCarvingVideos.test_3gp) ... ok
+test_avi (test_recupera_fotos.TesteCarvingVideos.test_avi) ... ok
+test_m2ts_192 (test_recupera_fotos.TesteCarvingVideos.test_m2ts_192) ... ok
+test_m4v (test_recupera_fotos.TesteCarvingVideos.test_m4v) ... ok
+test_mkv_com_tamanho_conhecido (test_recupera_fotos.TesteCarvingVideos.test_mkv_com_tamanho_conhecido) ... ok
+test_mkv_sem_tamanho_nao_promete_recuperacao (test_recupera_fotos.TesteCarvingVideos.test_mkv_sem_tamanho_nao_promete_recuperacao) ... ok
+test_mov (test_recupera_fotos.TesteCarvingVideos.test_mov) ... ok
+test_mp4 (test_recupera_fotos.TesteCarvingVideos.test_mp4) ... ok
+test_mts_188 (test_recupera_fotos.TesteCarvingVideos.test_mts_188) ... ok
+test_videos_desativados_por_padrao (test_recupera_fotos.TesteCarvingVideos.test_videos_desativados_por_padrao) ... ok
+test_arquivos_diferentes_nao_sao_deduplicados (test_recupera_fotos.TesteDeduplicacao.test_arquivos_diferentes_nao_sao_deduplicados) ... ok
+test_mesma_regiao_em_duas_particoes_contabilizada (test_recupera_fotos.TesteDeduplicacao.test_mesma_regiao_em_duas_particoes_contabilizada)
+Duas entradas de tabela apontando para o MESMO volume: a segunda ... ok
+test_mesmo_arquivo_por_metadados_e_assinatura (test_recupera_fotos.TesteDeduplicacao.test_mesmo_arquivo_por_metadados_e_assinatura)
+A região recuperada por metadados fica protegida: a etapa 2 não ... ok
+test_mesmo_conteudo_duas_vezes_gera_um_arquivo (test_recupera_fotos.TesteDeduplicacao.test_mesmo_conteudo_duas_vezes_gera_um_arquivo) ... ok
+test_regiao_ja_recuperada_nao_e_recarvada (test_recupera_fotos.TesteDeduplicacao.test_regiao_ja_recuperada_nao_e_recarvada) ... ok
+test_apagado_contiguo (test_recupera_fotos.TesteExFATMetadados.test_apagado_contiguo) ... ok
+test_fragmentado_com_cadeia (test_recupera_fotos.TesteExFATMetadados.test_fragmentado_com_cadeia) ... ok
+test_nome_longo_exfat (test_recupera_fotos.TesteExFATMetadados.test_nome_longo_exfat) ... ok
+test_apagado_recuperado (test_recupera_fotos.TesteFAT16Metadados.test_apagado_recuperado) ... ok
+test_deteccao_fat16_nao_confunde_com_fat32 (test_recupera_fotos.TesteFAT16Metadados.test_deteccao_fat16_nao_confunde_com_fat32) ... ok
+test_lfn_em_fat16 (test_recupera_fotos.TesteFAT16Metadados.test_lfn_em_fat16) ... ok
+test_apagado_contiguo_recuperado_por_pasta (test_recupera_fotos.TesteFAT32Metadados.test_apagado_contiguo_recuperado_por_pasta) ... ok
+test_arquivos_vivos_nao_sao_recuperados (test_recupera_fotos.TesteFAT32Metadados.test_arquivos_vivos_nao_sao_recuperados) ... ok
+test_conteudo_byte_a_byte_identico (test_recupera_fotos.TesteFAT32Metadados.test_conteudo_byte_a_byte_identico) ... ok
+test_data_da_entrada_preservada (test_recupera_fotos.TesteFAT32Metadados.test_data_da_entrada_preservada) ... ok
+test_extensao_nao_foto_ignorada_na_etapa1 (test_recupera_fotos.TesteFAT32Metadados.test_extensao_nao_foto_ignorada_na_etapa1) ... ok
+test_filtro_por_pasta_relativa (test_recupera_fotos.TesteFAT32Metadados.test_filtro_por_pasta_relativa) ... ok
+test_formatado_rapido_recupera_por_varredura (test_recupera_fotos.TesteFAT32Metadados.test_formatado_rapido_recupera_por_varredura) ... ok
+test_fragmentado_com_cadeia_sobrevivente (test_recupera_fotos.TesteFAT32Metadados.test_fragmentado_com_cadeia_sobrevivente) ... ok
+test_nome_longo_lfn_preservado (test_recupera_fotos.TesteFAT32Metadados.test_nome_longo_lfn_preservado) ... ok
+test_sem_pastas_grava_tudo_na_raiz_do_destino (test_recupera_fotos.TesteFAT32Metadados.test_sem_pastas_grava_tudo_na_raiz_do_destino) ... ok
+test_subpasta_recriada_no_destino (test_recupera_fotos.TesteFAT32Metadados.test_subpasta_recriada_no_destino) ... ok
+test_jpeg_adulterado_detectado_sem_pillow (test_recupera_fotos.TesteJpegEspecial.test_jpeg_adulterado_detectado_sem_pillow) ... ok
+test_jpeg_com_dri_e_rst_valido (test_recupera_fotos.TesteJpegEspecial.test_jpeg_com_dri_e_rst_valido) ... ok
+test_jpeg_com_lixo_depois_do_eoi (test_recupera_fotos.TesteJpegEspecial.test_jpeg_com_lixo_depois_do_eoi) ... ok
+test_jpeg_lixo_no_meio_e_corrompido (test_recupera_fotos.TesteJpegEspecial.test_jpeg_lixo_no_meio_e_corrompido) ... ok
+test_jpeg_rst_fora_de_ordem (test_recupera_fotos.TesteJpegEspecial.test_jpeg_rst_fora_de_ordem) ... ok
+test_jpeg_truncado_e_recuperado_como_parcial (test_recupera_fotos.TesteJpegEspecial.test_jpeg_truncado_e_recuperado_como_parcial)
+JPEG sem EOI (cartão truncado) NÃO é descartado nem marcado 'ok': ... ok
+test_jpeg_truncado_nao_vira_ok_mesmo_com_pillow (test_recupera_fotos.TesteJpegEspecial.test_jpeg_truncado_nao_vira_ok_mesmo_com_pillow)
+O Pillow decodifica JPEGs truncados; isso não pode virar 'ok'. ... ok
+test_motion_photo_offset_invalido_rejeitado (test_recupera_fotos.TesteJpegEspecial.test_motion_photo_offset_invalido_rejeitado) ... ok
+test_motion_photo_valida (test_recupera_fotos.TesteJpegEspecial.test_motion_photo_valida) ... ok
+test_mpf_invalido_nao_anexa_pagina (test_recupera_fotos.TesteJpegEspecial.test_mpf_invalido_nao_anexa_pagina)
+Índice MPF incoerente (offset fora do arquivo): a página annexa NÃO ... ok
+test_mpf_valido (test_recupera_fotos.TesteJpegEspecial.test_mpf_valido) ... ok
+test_verificador_independente_do_pillow (test_recupera_fotos.TesteJpegEspecial.test_verificador_independente_do_pillow) ... ok
+test_constantes_de_bloco_limitadas (test_recupera_fotos.TesteLimitesMemoria.test_constantes_de_bloco_limitadas) ... ok
+test_galeria_limita_miniaturas (test_recupera_fotos.TesteLimitesMemoria.test_galeria_limita_miniaturas)
+O limite existe e é modesto (a galeria não pode segurar milhares de ... ok
+test_leituras_bloqueadas_limitadas (test_recupera_fotos.TesteLimitesMemoria.test_leituras_bloqueadas_limitadas)
+Nenhuma leitura individual pode exceder 8 MiB (memória limitada). ... ok
+test_lista_de_candidatos_limitada (test_recupera_fotos.TesteLimitesMemoria.test_lista_de_candidatos_limitada) ... ok
+test_diagnostico_ntfs_gerado_quando_ha_recusas (test_recupera_fotos.TesteNTFSMotor.test_diagnostico_ntfs_gerado_quando_ha_recusas) ... ok
+test_formatado_rapido_usa_mft_orfa (test_recupera_fotos.TesteNTFSMotor.test_formatado_rapido_usa_mft_orfa) ... ok
+test_mft_e_orfa (test_recupera_fotos.TesteNTFSMotor.test_mft_e_orfa) ... ok
+test_cancelamento_durante_etapa2 (test_recupera_fotos.TesteOpcoesExecucao.test_cancelamento_durante_etapa2) ... ok
+test_cancelamento_seguro (test_recupera_fotos.TesteOpcoesExecucao.test_cancelamento_seguro) ... ok
+test_cartao_inteiro_varre_todo_o_volume (test_recupera_fotos.TesteOpcoesExecucao.test_cartao_inteiro_varre_todo_o_volume) ... ok
+test_etapa2_desativada (test_recupera_fotos.TesteOpcoesExecucao.test_etapa2_desativada) ... ok
+test_filtro_de_data_especifica (test_recupera_fotos.TesteOpcoesExecucao.test_filtro_de_data_especifica) ... ok
+test_filtro_de_data_hoje (test_recupera_fotos.TesteOpcoesExecucao.test_filtro_de_data_hoje) ... ok
+test_filtro_de_data_invalido_gera_aviso (test_recupera_fotos.TesteOpcoesExecucao.test_filtro_de_data_invalido_gera_aviso)
+Data impossível: o usuário é avisado e a recuperação continua ... ok
+test_filtro_de_data_relativo_nd (test_recupera_fotos.TesteOpcoesExecucao.test_filtro_de_data_relativo_nd) ... ok
+test_ignorar_sem_data (test_recupera_fotos.TesteOpcoesExecucao.test_ignorar_sem_data) ... ok
+test_limite_de_arquivos (test_recupera_fotos.TesteOpcoesExecucao.test_limite_de_arquivos) ... ok
+test_pausa_apos_etapa1_e_continuar (test_recupera_fotos.TesteOpcoesExecucao.test_pausa_apos_etapa1_e_continuar) ... ok
+test_pausa_e_finalizar_encerra_sem_etapa2 (test_recupera_fotos.TesteOpcoesExecucao.test_pausa_e_finalizar_encerra_sem_etapa2) ... ok
+test_profunda_acrescenta_candidatos (test_recupera_fotos.TesteOpcoesExecucao.test_profunda_acrescenta_candidatos) ... ok
+test_sem_data_no_nome (test_recupera_fotos.TesteOpcoesExecucao.test_sem_data_no_nome) ... ok
+test_pasta_sem_volume_fisico_avisae_nao_inventa (test_recupera_fotos.TesteOrigemPasta.test_pasta_sem_volume_fisico_avisae_nao_inventa) ... ok
+test_boot_de_reserva_exfat (test_recupera_fotos.TesteParticoes.test_boot_de_reserva_exfat) ... ok
+test_boot_de_reserva_fat32_setor6 (test_recupera_fotos.TesteParticoes.test_boot_de_reserva_fat32_setor6) ... ok
+test_boot_de_reserva_ntfs (test_recupera_fotos.TesteParticoes.test_boot_de_reserva_ntfs) ... ok
+test_busca_automatica_quando_nenhuma_particao_valida (test_recupera_fotos.TesteParticoes.test_busca_automatica_quando_nenhuma_particao_valida)
+MBR apagado: a busca por partições perdidas é acionada sozinha e o ... ok
+test_ebr_particoes_logicas (test_recupera_fotos.TesteParticoes.test_ebr_particoes_logicas) ... ok
+test_gpt_duas_particoes (test_recupera_fotos.TesteParticoes.test_gpt_duas_particoes) ... ok
+test_gpt_primario_destruido_usa_backup (test_recupera_fotos.TesteParticoes.test_gpt_primario_destruido_usa_backup) ... ok
+test_mbr (test_recupera_fotos.TesteParticoes.test_mbr) ... ok
+test_particao_perdida_encontrada (test_recupera_fotos.TesteParticoes.test_particao_perdida_encontrada) ... ok
+test_setores_de_4096 (test_recupera_fotos.TesteParticoes.test_setores_de_4096) ... ok
+test_tabela_de_particoes_nao_e_modificada (test_recupera_fotos.TesteParticoes.test_tabela_de_particoes_nao_e_modificada) ... ok
+test_arquivo_completo_tem_fracao_1 (test_recupera_fotos.TesteRelatorios.test_arquivo_completo_tem_fracao_1) ... ok
+test_corrompidos_vao_para_subpasta (test_recupera_fotos.TesteRelatorios.test_corrompidos_vao_para_subpasta) ... ok
+test_csv_colunas_exigidas (test_recupera_fotos.TesteRelatorios.test_csv_colunas_exigidas) ... ok
+test_csv_utf8_bom_e_ponto_e_virgula (test_recupera_fotos.TesteRelatorios.test_csv_utf8_bom_e_ponto_e_virgula) ... ok
+test_estado_nao_verificado_quando_sem_verificacao (test_recupera_fotos.TesteRelatorios.test_estado_nao_verificado_quando_sem_verificacao) ... ok
+test_fracao_recuperada_parcial (test_recupera_fotos.TesteRelatorios.test_fracao_recuperada_parcial)
+Mecanismo real de 'parcial': os metadados declaram mais bytes do que ... ok
+test_metodo_no_csv_pertence_ao_conjunto (test_recupera_fotos.TesteRelatorios.test_metodo_no_csv_pertence_ao_conjunto) ... ok
+test_nomes_seguros_sem_caracteres_invalidos (test_recupera_fotos.TesteRelatorios.test_nomes_seguros_sem_caracteres_invalidos) ... ok
+test_sem_sobrescrita_de_arquivos (test_recupera_fotos.TesteRelatorios.test_sem_sobrescrita_de_arquivos) ... ok
+test_destino_criado_automaticamente (test_recupera_fotos.TesteSeguranca.test_destino_criado_automaticamente) ... ok
+test_destino_dentro_da_pasta_de_origem_bloqueado (test_recupera_fotos.TesteSeguranca.test_destino_dentro_da_pasta_de_origem_bloqueado) ... ok
+test_destino_no_mesmo_disco_e_bloqueado (test_recupera_fotos.TesteSeguranca.test_destino_no_mesmo_disco_e_bloqueado) ... ok
+test_leitor_abre_origem_somente_leitura (test_recupera_fotos.TesteSeguranca.test_leitor_abre_origem_somente_leitura) ... ok
+test_origem_inexistente_levanta (test_recupera_fotos.TesteSeguranca.test_origem_inexistente_levanta) ... ok
+test_origem_nao_e_modificada (test_recupera_fotos.TesteSeguranca.test_origem_nao_e_modificada) ... ok
+test_permitir_mesmo_disco_so_para_imagem (test_recupera_fotos.TesteSeguranca.test_permitir_mesmo_disco_so_para_imagem) ... ok
+
+----------------------------------------------------------------------
+Ran 134 tests in 14.296s
+
+OK
+
+test_atributo_comprimido_tem_flag_e_unidade (test_regressions.TesteAttributeList.test_atributo_comprimido_tem_flag_e_unidade) ... ok
+test_atributo_data_nao_residente_cabecalario (test_regressions.TesteAttributeList.test_atributo_data_nao_residente_cabecalario) ... ok
+test_layout_da_entrada_de_28_bytes_mais_nome (test_regressions.TesteAttributeList.test_layout_da_entrada_de_28_bytes_mais_nome)
+REGRESSÃO: o layout estava inventado. O real: comprimento em 0x04, ... ok
+test_boot_primario_intacto_nao_usa_reserva (test_regressions.TesteBootDeReserva.test_boot_primario_intacto_nao_usa_reserva) ... ok
+test_exfat_com_checksum_invalido_nao_e_aceito (test_regressions.TesteBootDeReserva.test_exfat_com_checksum_invalido_nao_e_aceito) ... ok
+test_exfat_usa_regiao_de_backup_com_checksum (test_regressions.TesteBootDeReserva.test_exfat_usa_regiao_de_backup_com_checksum) ... ok
+test_fat32_usa_setor_6 (test_regressions.TesteBootDeReserva.test_fat32_usa_setor_6) ... ok
+test_ntfs_usa_ultimo_setor (test_regressions.TesteBootDeReserva.test_ntfs_usa_ultimo_setor) ... ok
+test_motor_avisa_quando_usa_copia_de_reserva (test_regressions.TesteBootDeReservaNoMotor.test_motor_avisa_quando_usa_copia_de_reserva) ... ok
+test_apagado_contiguo_com_clusters_realocados_nao_e_confiavel (test_regressions.TesteCadeiaFATSobrevivente.test_apagado_contiguo_com_clusters_realocados_nao_e_confiavel)
+Se os clusters seguintes já foram reutilizados por outro arquivo, a ... ok
+test_apagado_contiguo_sem_ambiguidade (test_regressions.TesteCadeiaFATSobrevivente.test_apagado_contiguo_sem_ambiguidade)
+Sem cadeia na FAT (o Windows a zera na exclusão de arquivo ... ok
+test_apagado_fragmentado_usa_a_cadeia_e_nao_a_contiguidade (test_regressions.TesteCadeiaFATSobrevivente.test_apagado_fragmentado_usa_a_cadeia_e_nao_a_contiguidade)
+REGRESSÃO: o arquivo apagado e fragmentado era lido como contíguo a ... ok
+test_exfat_apagado_com_cadeia_sobrevivente (test_regressions.TesteCadeiaFATSobrevivente.test_exfat_apagado_com_cadeia_sobrevivente) ... ok
+test_lfn_reconstruido_e_checksum_conferido (test_regressions.TesteCadeiaFATSobrevivente.test_lfn_reconstruido_e_checksum_conferido) ... ok
+test_gif_com_trailer_no_fim_da_regiao (test_regressions.TesteCarvingCorrigido.test_gif_com_trailer_no_fim_da_regiao)
+REGRESSÃO: o trailer 0x3B só era conferido com 2 bytes legíveis; ... ok
+test_heic_e_avif_sao_fotos_mesmo_sem_videos (test_regressions.TesteCarvingCorrigido.test_heic_e_avif_sao_fotos_mesmo_sem_videos)
+REGRESSÃO: ao desativar vídeos, o analisador 'mp4' era desligado ... ok
+test_indice_mpf_incoerente_nao_completa_o_arquivo (test_regressions.TesteCarvingCorrigido.test_indice_mpf_incoerente_nao_completa_o_arquivo)
+REGRESSÃO: um offset MPF absurdo passava na validação frouxa ... ok
+test_indice_mpf_valido_cobre_as_paginas (test_regressions.TesteCarvingCorrigido.test_indice_mpf_valido_cobre_as_paginas) ... ok
+test_jpeg_inteiro_com_rst_e_ok (test_regressions.TesteCarvingCorrigido.test_jpeg_inteiro_com_rst_e_ok) ... ok
+test_jpeg_truncado_e_parcial_nunca_ok (test_regressions.TesteCarvingCorrigido.test_jpeg_truncado_e_parcial_nunca_ok)
+REGRESSÃO: JPEG sem EOI era descartado (nada era recuperado). ... ok
+test_jpeg_truncado_nao_engole_o_cartao (test_regressions.TesteCarvingCorrigido.test_jpeg_truncado_nao_engole_o_cartao)
+REGRESSÃO: sem EOI, a varredura avançava até o fim da região e o ... ok
+test_m2ts_de_192_bytes_e_encontrado (test_regressions.TesteCarvingCorrigido.test_m2ts_de_192_bytes_e_encontrado)
+REGRESSÃO: o M2TS (timecode de 4 bytes + pacote de 188) só era ... ok
+test_mp4_inteiro_dentro_da_regiao (test_regressions.TesteCarvingCorrigido.test_mp4_inteiro_dentro_da_regiao) ... ok
+test_mp4_nao_ultrapassa_o_fim_da_regiao (test_regressions.TesteCarvingCorrigido.test_mp4_nao_ultrapassa_o_fim_da_regiao)
+REGRESSÃO: uma box que atravessava o fim da região gerava um ... ok
+test_mts_de_188_bytes_tambem (test_regressions.TesteCarvingCorrigido.test_mts_de_188_bytes_tambem) ... ok
+test_png_e_bmp_com_comprimento_exato (test_regressions.TesteCarvingCorrigido.test_png_e_bmp_com_comprimento_exato) ... ok
+test_rst_fora_de_ordem_e_corrompido (test_regressions.TesteCarvingCorrigido.test_rst_fora_de_ordem_e_corrompido) ... ok
+test_tiff_com_strips_ausentes_nao_vira_ok (test_regressions.TesteCarvingCorrigido.test_tiff_com_strips_ausentes_nao_vira_ok)
+A estrutura declara strips que não existem mais: o comprimento é o ... ok
+test_tiff_segue_strips_e_ifds (test_regressions.TesteCarvingCorrigido.test_tiff_segue_strips_e_ifds)
+REGRESSÃO: o TIFF era medido sem seguir StripOffsets/TileOffsets — ... ok
+test_webp_real_tem_comprimento_exato_e_decodifica (test_regressions.TesteCarvingCorrigido.test_webp_real_tem_comprimento_exato_e_decodifica) ... ok
+test_webp_sintetico_nao_afirma_ok (test_regressions.TesteCarvingCorrigido.test_webp_sintetico_nao_afirma_ok)
+WebP montado à mão é estruturalmente válido mas não decodifica: ... ok
+test_delta_negativo_usa_largura_minima_assinada (test_regressions.TesteConvencoesDeRunsNTFS.test_delta_negativo_usa_largura_minima_assinada) ... ok
+test_exemplo_documentado_21_16_00_31_20_05 (test_regressions.TesteConvencoesDeRunsNTFS.test_exemplo_documentado_21_16_00_31_20_05)
+Sequência clássica de documentação: 21 16 0031 / 31 20 000005. ... ok
+test_fragmentos_usam_base_e_cluster_do_volume (test_regressions.TesteConvencoesDeRunsNTFS.test_fragmentos_usam_base_e_cluster_do_volume) ... ok
+test_ida_e_volta_construtor_parser (test_regressions.TesteConvencoesDeRunsNTFS.test_ida_e_volta_construtor_parser)
+O construtor de imagens de teste e o parser precisam concordar — ... ok
+test_max_runs_limita_memoria (test_regressions.TesteConvencoesDeRunsNTFS.test_max_runs_limita_memoria) ... ok
+test_nibble_baixo_e_o_length_e_alto_e_o_offset (test_regressions.TesteConvencoesDeRunsNTFS.test_nibble_baixo_e_o_length_e_alto_e_o_offset)
+REGRESSÃO: a convenção estava invertida (nibble alto = length). ... ok
+test_run_degenerado_n_zero_e_ignorado (test_regressions.TesteConvencoesDeRunsNTFS.test_run_degenerado_n_zero_e_ignorado)
+Length zero é ignorado, mas o campo de offset continua sendo ... ok
+test_run_sparse_tem_offset_de_zero_bytes (test_regressions.TesteConvencoesDeRunsNTFS.test_run_sparse_tem_offset_de_zero_bytes)
+REGRESSÃO: sparse era codificado como 0x10 (nibble alto). O real é ... ok
+test_run_truncado_interrompe_sem_inventar (test_regressions.TesteConvencoesDeRunsNTFS.test_run_truncado_interrompe_sem_inventar) ... ok
+test_nome_com_zero_declarado_nao_quebra (test_regressions.TesteExFatComprimentoDoNome.test_nome_com_zero_declarado_nao_quebra)
+FileNameLength = 0 (campo zerado por dano) não pode derrubar a ... ok
+test_nome_completo_valida_o_hash (test_regressions.TesteExFatComprimentoDoNome.test_nome_completo_valida_o_hash) ... ok
+test_nome_incompleto_nao_e_validado_pelo_hash (test_regressions.TesteExFatComprimentoDoNome.test_nome_incompleto_nao_e_validado_pelo_hash) ... ok
+test_assinatura_FILE_obrigatoria (test_regressions.TesteFixupNTFS.test_assinatura_FILE_obrigatoria) ... ok
+test_fixup_aplicado_com_setor_512 (test_regressions.TesteFixupNTFS.test_fixup_aplicado_com_setor_512) ... ok
+test_fixup_usa_512_mesmo_em_volume_de_4096 (test_regressions.TesteFixupNTFS.test_fixup_usa_512_mesmo_em_volume_de_4096)
+REGRESSÃO: o fixup era aplicado com o tamanho do setor do volume. ... ok
+test_registro_com_fixup_invalido_e_recusado (test_regressions.TesteFixupNTFS.test_registro_com_fixup_invalido_e_recusado) ... ok
+test_assinatura_55aa_e_obrigatoria (test_regressions.TesteIdentificacaoDeBoot.test_assinatura_55aa_e_obrigatoria) ... ok
+test_exfat_e_ntfs_pelo_oem (test_regressions.TesteIdentificacaoDeBoot.test_exfat_e_ntfs_pelo_oem) ... ok
+test_fat16_nao_e_confundido_com_fat32 (test_regressions.TesteIdentificacaoDeBoot.test_fat16_nao_e_confundido_com_fat32)
+REGRESSÃO: o byte 36 do boot FAT16 é o número da unidade física, ... ok
+test_lixo_nao_e_sistema_de_arquivos (test_regressions.TesteIdentificacaoDeBoot.test_lixo_nao_e_sistema_de_arquivos) ... ok
+test_setores_de_4096_sao_lidos_do_boot (test_regressions.TesteIdentificacaoDeBoot.test_setores_de_4096_sao_lidos_do_boot) ... ok
+test_chunk_nao_comprimido (test_regressions.TesteLZNT1.test_chunk_nao_comprimido) ... ok
+test_fluxo_inteiro_zerado_e_invalido (test_regressions.TesteLZNT1.test_fluxo_inteiro_zerado_e_invalido) ... ok
+test_grupo_de_literais_curto_so_no_fim (test_regressions.TesteLZNT1.test_grupo_de_literais_curto_so_no_fim)
+Um grupo de literais curto no MEIO do chunk é malformado: o ... ok
+test_ida_e_volta_para_padroes_periodicos (test_regressions.TesteLZNT1.test_ida_e_volta_para_padroes_periodicos) ... ok
+test_limite_de_saida_respeitado (test_regressions.TesteLZNT1.test_limite_de_saida_respeitado) ... ok
+test_offset_maior_que_a_saida_e_recusado (test_regressions.TesteLZNT1.test_offset_maior_que_a_saida_e_recusado) ... ok
+test_tabela_de_bits_pos_16_usa_5_de_offset (test_regressions.TesteLZNT1.test_tabela_de_bits_pos_16_usa_5_de_offset)
+REGRESSÃO: em pos=16 a divisão correta é 5/11 (MS-XCA), não 4/12. ... ok
+test_tabela_de_bits_pos_2048_usa_12_de_offset (test_regressions.TesteLZNT1.test_tabela_de_bits_pos_2048_usa_12_de_offset) ... ok
+test_zeros_apos_o_ultimo_chunk_sao_preenchimento (test_regressions.TesteLZNT1.test_zeros_apos_o_ultimo_chunk_sao_preenchimento) ... ok
+test_busca_de_particoes_perdidas_avisada (test_regressions.TesteLeituraHonesta.test_busca_de_particoes_perdidas_avisada)
+REGRESSÃO: a busca automática de partições perdidas rodava sem ... ok
+test_cancelamento_na_etapa2_aparece_no_resultado (test_regressions.TesteLeituraHonesta.test_cancelamento_na_etapa2_aparece_no_resultado)
+REGRESSÃO: cancelar durante a etapa 2 terminava a recuperação com ... ok
+test_candidato_de_tamanho_zero_e_ignorado (test_regressions.TesteLeituraHonesta.test_candidato_de_tamanho_zero_e_ignorado)
+Entrada de diretório com tamanho 0 não pode virar arquivo vazio. ... ok
+test_leitura_alem_do_fim_nao_inventa_zeros (test_regressions.TesteLeituraHonesta.test_leitura_alem_do_fim_nao_inventa_zeros)
+REGRESSÃO: o leitor preenche com zeros além do fim físico; se o ... ok
+test_nenhuma_leitura_passa_de_8mib (test_regressions.TesteLeituraHonesta.test_nenhuma_leitura_passa_de_8mib)
+REGRESSÃO: o bloco de varredura era 8 MiB + 64 KiB de sobreposição. ... ok
+test_abertura_e_somente_leitura (test_regressions.TesteSegurancaRegressoes.test_abertura_e_somente_leitura) ... ok
+test_cli_aceita_imagem_no_mesmo_disco_quando_autorizado (test_regressions.TesteSegurancaRegressoes.test_cli_aceita_imagem_no_mesmo_disco_quando_autorizado) ... ok
+test_cli_bloqueia_imagem_no_mesmo_disco (test_regressions.TesteSegurancaRegressoes.test_cli_bloqueia_imagem_no_mesmo_disco)
+REGRESSÃO: --criar-imagem gravava a imagem sem checar o disco. ... ok
+test_destino_no_mesmo_disco_da_origem_e_recusado (test_regressions.TesteSegurancaRegressoes.test_destino_no_mesmo_disco_da_origem_e_recusado) ... ok
+test_leitor_de_arquivo_fecha_o_descritor (test_regressions.TesteSegurancaRegressoes.test_leitor_de_arquivo_fecha_o_descritor)
+REGRESSÃO: LeitorArquivo.fechar() só marcava uma flag — o descritor ... ok
+test_motivo_da_contiguidade_e_explicito (test_regressions.TesteSegurancaRegressoes.test_motivo_da_contiguidade_e_explicito)
+Quando a cadeia da FAT foi zerada, o relatório precisa dizer que a ... ok
+test_nome_invalido_e_saneado (test_regressions.TesteSegurancaRegressoes.test_nome_invalido_e_saneado) ... ok
+test_origem_nao_e_modificada (test_regressions.TesteSegurancaRegressoes.test_origem_nao_e_modificada) ... ok
+test_copia_de_reserva_e_identica_ao_boot (test_regressions.TesteTamanhoExatoDosVolumes.test_copia_de_reserva_e_identica_ao_boot) ... ok
+test_disco_montado_com_volume_fat32_nao_desloca_as_particoes (test_regressions.TesteTamanhoExatoDosVolumes.test_disco_montado_com_volume_fat32_nao_desloca_as_particoes)
+O volume cabe exatamente no espaço reservado pela tabela de ... ok
+test_identificador_de_boot_le_os_campos_certos (test_regressions.TesteTamanhoExatoDosVolumes.test_identificador_de_boot_le_os_campos_certos) ... ok
+test_setor_de_boot_fat32_tem_512_bytes_e_campos_alinhados (test_regressions.TesteTamanhoExatoDosVolumes.test_setor_de_boot_fat32_tem_512_bytes_e_campos_alinhados) ... ok
+test_volume_fat16_tem_tamanho_exato (test_regressions.TesteTamanhoExatoDosVolumes.test_volume_fat16_tem_tamanho_exato) ... ok
+test_volume_fat32_tem_tamanho_exato (test_regressions.TesteTamanhoExatoDosVolumes.test_volume_fat32_tem_tamanho_exato) ... ok
+test_volumes_exfat_e_ntfs_tem_tamanho_exato (test_regressions.TesteTamanhoExatoDosVolumes.test_volumes_exfat_e_ntfs_tem_tamanho_exato) ... ok
+
+----------------------------------------------------------------------
+Ran 81 tests in 1.846s
+
+OK
+
+
+
+------------------------------------------------------------------------
+RESUMO POR MÓDULO (contado a partir do resultado real)
+------------------------------------------------------------------------
+módulo                    exec.    ok  falhas  erros  pulos
+test_advanced_ntfs           34    34       0      0      0
+test_aquisicao               44    43       0      0      1
+test_fuzz                    37    37       0      0      0
+test_interface               61    61       0      0      0
+test_ntfs                    40    40       0      0      0
+test_recupera_fotos         134   134       0      0      0
+test_regressions             81    81       0      0      0
+------------------------------------------------------------------------
+TOTAL                       431   430       0      0      1
+
+
+========================================================================
+RESULTADO FINAL: 431 teste(s) executado(s) em 30.8s
+  aprovados : 430
+  reprovados: 0
+  pulados   : 1
+     - test_letra_unidade_windows: letras de unidade: só Windows
+  STATUS    : TODOS OS TESTES PASSARAM
+========================================================================

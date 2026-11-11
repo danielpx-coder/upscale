@@ -32,3 +32,11 @@ target-version = "py39"
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
 ignore = ["B905"]
+
+[tool.ruff.lint.per-file-ignores]
+# RecuperaFotos_4_0 é uma pasta autocontida e distribuível: o usuário baixa e
+# executa sem instalar nada. Por isso cada módulo ajusta o sys.path ANTES de
+# importar os módulos vizinhos — funciona igual por "python motor.py",
+# "python rodar_testes.py", pela CLI e pela interface gráfica. Essa é a causa
+# dos E402; o restante das regras (E, F, I, UP, B) vale normalmente.
+"RecuperaFotos_4_0/**" = ["E402"]

@@ -1,0 +1,2098 @@
+{
+ "gabarito": {
+  "imagem": "/tmp/rf4_bench/cartao_benchmark.img",
+  "tamanho_bytes": 2147483648,
+  "tamanho_setores": 4194304,
+  "volume": {
+   "lba_inicio": 2048,
+   "setores": 1048576,
+   "offset": 1048576,
+   "bytes": 536870912,
+   "spc": 64,
+   "cluster_bytes": 32768,
+   "clusters": 16381,
+   "clusters_livres": 15643,
+   "espaco_livre_bytes": 512589824
+  },
+  "area_nao_alocada": {
+   "inicio": 537919488,
+   "fim": 2147483648,
+   "bytes": 1609564160
+  },
+  "fotos_vivas": [
+   {
+    "nome": "IMG_1000.JPG",
+    "tamanho": 245579,
+    "sha256": "b2fdebdefadd45cc952f12dc4c9cba8fe240ebdd63d62a19cb6021bd4b83cd0f"
+   },
+   {
+    "nome": "IMG_1001.JPG",
+    "tamanho": 245505,
+    "sha256": "fa4838b392ea53dda7c9c4fbc8a80b18cf7f97afae4d3e9ed1a592f93795b6cc"
+   },
+   {
+    "nome": "IMG_1002.JPG",
+    "tamanho": 245570,
+    "sha256": "1788b60058b9672fe3ce2b6ab594bcfeb61fb504f8d7fb9013265f43128d00d3"
+   },
+   {
+    "nome": "IMG_1003.JPG",
+    "tamanho": 245585,
+    "sha256": "15641d05f244799ada89106d8c9711f57bb740d1a8ab46dfc6a9088c132aaf89"
+   },
+   {
+    "nome": "IMG_1004.JPG",
+    "tamanho": 245627,
+    "sha256": "fff8e912a66492dda7c5025d2bb9f2d9c00dc72aab7920d84cc5511ef63e379d"
+   },
+   {
+    "nome": "IMG_1005.JPG",
+    "tamanho": 245415,
+    "sha256": "b92cdbc790779476c5fe59bdada4ebe976238653dfc6c86fa90fa5b5e7c6c195"
+   },
+   {
+    "nome": "IMG_1006.JPG",
+    "tamanho": 245598,
+    "sha256": "4d719a46bada89f7b72cabd937f2778097689423cd18eb2e237b2cf58b5e653f"
+   },
+   {
+    "nome": "IMG_1007.JPG",
+    "tamanho": 245370,
+    "sha256": "c94e5d6612af9994afb8a4ac747f74c240ad7939f7baaba3205f93618aad7ad7"
+   },
+   {
+    "nome": "IMG_1008.JPG",
+    "tamanho": 245400,
+    "sha256": "1f5c0a78fffdef35d6bb966b0937405bbceb5d656b4080b31878ba9f0912331f"
+   },
+   {
+    "nome": "IMG_1009.JPG",
+    "tamanho": 245516,
+    "sha256": "2f193763af52801c2551ceefb777e04798529c1d5145473d44b874207176e03b"
+   },
+   {
+    "nome": "IMG_1010.JPG",
+    "tamanho": 245544,
+    "sha256": "dcbc0f5a7674191cca5666ba1add8323c56d65e667ef9174c24f84ba3f0f4278"
+   },
+   {
+    "nome": "IMG_1011.JPG",
+    "tamanho": 245653,
+    "sha256": "6e7a4267c22ed8865bc92b223ce90fa7fc9fda9e84fb424f11132543246c0843"
+   },
+   {
+    "nome": "IMG_1012.JPG",
+    "tamanho": 245636,
+    "sha256": "0e53a39c5fd915a5d34a59d0bd33ab521e7e58867892f67680e682a2cdb0e42d"
+   },
+   {
+    "nome": "IMG_1013.JPG",
+    "tamanho": 245548,
+    "sha256": "c6b0ef694da9071164df0334e7916b36f8e0eaf38eb2bc9910c21c5ba1c5948b"
+   },
+   {
+    "nome": "IMG_1014.JPG",
+    "tamanho": 245655,
+    "sha256": "6617da219840162e9d779a4530e851a9aed89a75e387e5b2110c7fbcbf4e0826"
+   },
+   {
+    "nome": "IMG_1015.JPG",
+    "tamanho": 245639,
+    "sha256": "384d732241b7016d54c1f2eca4fb47de74bdc376b2b2f0fd568debf7f9ab5c1f"
+   },
+   {
+    "nome": "IMG_1016.JPG",
+    "tamanho": 245448,
+    "sha256": "edfb9a17ce4dcb06ba8e11b47d133e3c15c7c3f2e063302c3823154dfec74fe4"
+   },
+   {
+    "nome": "IMG_1017.JPG",
+    "tamanho": 245655,
+    "sha256": "7ab1d92e1a15a02e82a8bfde943660ef8f8701e243aa9972d17b83b01c9adf5e"
+   },
+   {
+    "nome": "IMG_1018.JPG",
+    "tamanho": 245240,
+    "sha256": "4b0bac5746d0b94ecec50cfa1a05016bd2d7b5647f9667f1b3351c0669c9e286"
+   },
+   {
+    "nome": "IMG_1019.JPG",
+    "tamanho": 245550,
+    "sha256": "e28832b0e16610904c1896eb2e713ca7fb48c4b98c599ed8441d7f6ec1e2b237"
+   },
+   {
+    "nome": "IMG_1020.JPG",
+    "tamanho": 245552,
+    "sha256": "313802234072314e0717992c8ae1764c24659edb70da723be9a955ca978b7600"
+   },
+   {
+    "nome": "IMG_1021.JPG",
+    "tamanho": 245544,
+    "sha256": "d1b4da9d20d59c89a62efc8e3377f5a74dd9d86bc7852560255ecb11f25ff06b"
+   },
+   {
+    "nome": "IMG_1022.JPG",
+    "tamanho": 245450,
+    "sha256": "c11f76c03ed7ec4a2ab83f0fffa5c08fdbd67b0f2bde73ca4142bd76d26020e1"
+   },
+   {
+    "nome": "IMG_1023.JPG",
+    "tamanho": 245399,
+    "sha256": "07f91f5881f671acafae8ae02c7418435ce8e446e2bb6750bc288b7dd3f3c20e"
+   },
+   {
+    "nome": "IMG_1024.JPG",
+    "tamanho": 245698,
+    "sha256": "ae807d9bf31a10d7c8940e5f57416b09424c9445a2d14d3bc64f82c6a8c74c89"
+   },
+   {
+    "nome": "IMG_1025.JPG",
+    "tamanho": 245494,
+    "sha256": "1a31a31291923eb88839ee6e658210e0c3af89c62ff1032ab221b8f2a3107b4b"
+   },
+   {
+    "nome": "IMG_1026.JPG",
+    "tamanho": 245565,
+    "sha256": "6b0438d563955e925bd6283d4570e5e301ab55e6e22f955afcdca4131ed5cb73"
+   },
+   {
+    "nome": "IMG_1027.JPG",
+    "tamanho": 245577,
+    "sha256": "685549f6e7a6151063a36f10f2ccc62bad38d1ab4cc7c15720ff919ce675abb8"
+   },
+   {
+    "nome": "IMG_1028.JPG",
+    "tamanho": 245540,
+    "sha256": "901377762edb0d4cff3aa055bac6cc56d05b58141a579fdfd1da02acaf183a4d"
+   },
+   {
+    "nome": "IMG_1029.JPG",
+    "tamanho": 245530,
+    "sha256": "15ee2f8718ed22ca3a65a0db423799ae84bd218d5ee7be4514bec53b86428089"
+   },
+   {
+    "nome": "IMG_1030.JPG",
+    "tamanho": 245560,
+    "sha256": "959cdb6f5412fd179a1f5e61c72fad9d6e977d8c9c890b3538facf99b340a122"
+   },
+   {
+    "nome": "IMG_1031.JPG",
+    "tamanho": 245637,
+    "sha256": "be85907a78ce60d27fb7b9d54e8bf367ad1d6d39fe231f5e48c916abf113b769"
+   },
+   {
+    "nome": "IMG_1032.JPG",
+    "tamanho": 245396,
+    "sha256": "901e24dcf47af8d6399589cdd8e261fbc9317a361452e262c691f560782af7b8"
+   },
+   {
+    "nome": "IMG_1033.JPG",
+    "tamanho": 245297,
+    "sha256": "0b51d5322282bae9f5b2f978f32e4f7c4f4b458903a23c2510ffb90299d68196"
+   },
+   {
+    "nome": "IMG_1034.JPG",
+    "tamanho": 245640,
+    "sha256": "3ed94ad8bcc3deded1565e235af9636e898248e463a61723b8ffe89a0ea5ff39"
+   },
+   {
+    "nome": "IMG_1035.JPG",
+    "tamanho": 245684,
+    "sha256": "79a131cd5240f7116980d30b2451aee7d4a13335c8420af3f461df2719223d00"
+   },
+   {
+    "nome": "IMG_1036.JPG",
+    "tamanho": 245368,
+    "sha256": "1d41606f5e4b7a422794099e0ce36dccbba202315e0c355edbc5eeb4ce8529bc"
+   },
+   {
+    "nome": "IMG_1037.JPG",
+    "tamanho": 245544,
+    "sha256": "c081f89b4e674a3964cc5586b87b0960bc4f37a135472abb0bfd4870173c749b"
+   },
+   {
+    "nome": "IMG_1038.JPG",
+    "tamanho": 245675,
+    "sha256": "2a09f0741829ae02d787ee7aa7bfa4754b171bfd97a142050aa0b47ffc8192db"
+   },
+   {
+    "nome": "IMG_1039.JPG",
+    "tamanho": 245392,
+    "sha256": "96ba820afebef594b7f31296ea40ede693d76b2bdee200a9a77aa1b816b13b6a"
+   },
+   {
+    "nome": "IMG_1040.JPG",
+    "tamanho": 245482,
+    "sha256": "8776f8a3dd6cb780038740e81d43bbbe3b4b1608673acafc766b04a2b5203cd6"
+   },
+   {
+    "nome": "IMG_1041.JPG",
+    "tamanho": 245544,
+    "sha256": "4169565976a412b62eea7937a18fb5fd4fe5af1bf4352a8107128fd27d414ffb"
+   },
+   {
+    "nome": "IMG_1042.JPG",
+    "tamanho": 245488,
+    "sha256": "a83d5490b1641f5b5422bd462eb9010331ea5b9bdc7810e5fa1bcc577ce15f00"
+   },
+   {
+    "nome": "IMG_1043.JPG",
+    "tamanho": 245479,
+    "sha256": "c6bbda899c792c56db49c2e016a337a679993f9b7bd6e1dc5da92d75b866b87d"
+   },
+   {
+    "nome": "IMG_1044.JPG",
+    "tamanho": 245400,
+    "sha256": "412d463d73cef6a5f418559a2b56df4ccfe8f8b969f52d763375a2df99ae9298"
+   }
+  ],
+  "fotos_apagadas": [
+   {
+    "nome": "IMG_2000.JPG",
+    "tamanho": 222650,
+    "sha256": "f236343d6b4b33cdf8ea8e8bdf3a39e2b4167f55921b1e9fe3c6657f5267d6d2",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2001.JPG",
+    "tamanho": 222623,
+    "sha256": "18737fc02264580a02dc4962162f0db935cbf547d1bb6f1c53e4a6fa57e59173",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2002.JPG",
+    "tamanho": 222591,
+    "sha256": "99e20b565f40e0e63c49cacddd0b8c4336cb32be36f49075b9862b549de8c52e",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2003.JPG",
+    "tamanho": 222762,
+    "sha256": "3d608b66238bc5ad57d393fd6480b98d2a2c0658ce5def4f1440bf7ad90fc6b9",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2004.JPG",
+    "tamanho": 222675,
+    "sha256": "2216ebaf25b623560b84dc3b09a575821a45b7545146121b204faeed1b16d567",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2005.JPG",
+    "tamanho": 222657,
+    "sha256": "af7d367b88aac23274de6490fe76eaf4cd05aecd17ee271efbc3b24ebc37396a",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2006.JPG",
+    "tamanho": 222964,
+    "sha256": "e26cfdd331c12cbdbd04402a419f381d590ad6147abee93fe575a377d537d495",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2007.JPG",
+    "tamanho": 222787,
+    "sha256": "dd3027e990e6b9b02dc1155c1ebb6213c774388493c90a0cd34228d5de1d3f60",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2008.JPG",
+    "tamanho": 222837,
+    "sha256": "e1eb4ce61ca9eeee404328ce35061524b8f50a808b3f830b372f2a192d839ede",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2009.JPG",
+    "tamanho": 222852,
+    "sha256": "fe3fd6c71d0386289694b4be50d97510c9d496e3adb88ee01cf288c066fd1d5d",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2010.JPG",
+    "tamanho": 222384,
+    "sha256": "a460deade5d2f089912f4bc5a2d84d1af60ff438b266adf938f71931fd2d9757",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2011.JPG",
+    "tamanho": 222611,
+    "sha256": "abca8cae4a64635cc99996af99b37ab6df6988dbd9530da4f1dc2318d9a385f9",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2012.JPG",
+    "tamanho": 222656,
+    "sha256": "2e8e20b76feffe2696f39aa21cd7a9a1e06f86a2d2d2659ee9d5958157e24000",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2013.JPG",
+    "tamanho": 222546,
+    "sha256": "ddcff47e575925556d413b5fc3ce794be35422b7a80639bef358a3d3eec16e4f",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2014.JPG",
+    "tamanho": 222719,
+    "sha256": "fac4ebb143894b9fcd008904031456a92855e91df63308d5b61fc9cd2e897903",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2015.JPG",
+    "tamanho": 222609,
+    "sha256": "85239b571592707eb729eafd54cb0f967acd0e21fea056afee5766c3771d4e9c",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2016.JPG",
+    "tamanho": 222599,
+    "sha256": "99b0072dd79bf44abfe26dbbf2a5e0f331424be7551562c0c484d96109b3921e",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2017.JPG",
+    "tamanho": 222634,
+    "sha256": "0bac9d3c9c519bb5811b65a75f0fff759458f1e3fa710bb6ecd224256134abfa",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2018.JPG",
+    "tamanho": 222618,
+    "sha256": "1b46f012c2ea012434d0240ab6104c1fd78cf2448a7a5c17fd0d3dcb4eed80a1",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2019.JPG",
+    "tamanho": 222910,
+    "sha256": "87f190e169ff01c571bee9570751a99798b761ae159bbda29e2c2232b7eb994b",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2020.JPG",
+    "tamanho": 222691,
+    "sha256": "a448d11ecb3d9fca89f2136cfb615411bede15bf4dc26b6747ad689c581309a3",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2021.JPG",
+    "tamanho": 222733,
+    "sha256": "467adabd0dfe6e4a0d70f292fc2c5b866049739a12d66b2c67c9b8af1e99ae5c",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2022.JPG",
+    "tamanho": 222492,
+    "sha256": "46675f958ba1736f8737b1d0d9429b59fc6bd3ea3e44f9dfea5d6c03234a233b",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2023.JPG",
+    "tamanho": 222751,
+    "sha256": "2f529a94f28397003311495d0351df739dde4c68422bf00e6cf45023a52276c1",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2024.JPG",
+    "tamanho": 222652,
+    "sha256": "5f1d4c29389a2ce1b51bf75f93979bb6ada459842f2bc1554eec9392b3e79fa5",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2025.JPG",
+    "tamanho": 222667,
+    "sha256": "7cce900aaacc32f2c5ef7be34cbbdabb4b6ca95b52dbee084d956809f314c2a9",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2026.JPG",
+    "tamanho": 222917,
+    "sha256": "1fdb80ab6d5c7a106da2f0398fda222ad40a76e9d4ce2e33c7a539daf0f76299",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2027.JPG",
+    "tamanho": 222918,
+    "sha256": "171883d997259c85e577284cd41ba2b2de75557d4ca74cde138542327582eb89",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2028.JPG",
+    "tamanho": 222624,
+    "sha256": "4ebf49701e2639307e8ed1abe343afdb32c04c4b57bcaa2b26cbc4de7dff7420",
+    "fragmentado": false
+   },
+   {
+    "nome": "IMG_2029.JPG",
+    "tamanho": 222687,
+    "sha256": "44eb94bf4f210b9e8960a88f92a0f69dd1f3b08d718237b2df7ad1962d9bb641",
+    "fragmentado": true
+   }
+  ],
+  "fotos_orfas": [
+   {
+    "offset": 545614336,
+    "tamanho": 264629,
+    "sha256": "4ab8a5d546afd89ce522825ce9b94ab2e2253311898b6630b2fa2ca7038e5584"
+   },
+   {
+    "offset": 585065076,
+    "tamanho": 264702,
+    "sha256": "dcfd183aaa846f49a9dc3a1d7b78c9334ed0d3e262894ecfe776650404b3b0ae"
+   },
+   {
+    "offset": 617242856,
+    "tamanho": 264840,
+    "sha256": "680f0a7caa29742effe91540ea052ddd25f382fd572b4ce990af17de831070ac"
+   },
+   {
+    "offset": 646845276,
+    "tamanho": 264805,
+    "sha256": "5f786703060939b3202885fb4dbb29d4861db0ad62df49fbf7623d15fabde1b7"
+   },
+   {
+    "offset": 685973968,
+    "tamanho": 264518,
+    "sha256": "9a981856184e8f0e22c8410bfa653ce9a47c154f135dd3884cb9a9b385ec834f"
+   },
+   {
+    "offset": 707903044,
+    "tamanho": 264868,
+    "sha256": "42e3e77589077d1df5829978ac3ec6266f8547e6a73aa0ed10a6768d28442042"
+   },
+   {
+    "offset": 758931128,
+    "tamanho": 264783,
+    "sha256": "5adcef4b0503684beb3fe07f59b8db16bdb003b6ba8447a086176e5bd38abcda"
+   },
+   {
+    "offset": 774500140,
+    "tamanho": 264567,
+    "sha256": "9331407df90332b1854a5ef527d1d9ae84bdfdfe7c6ff42bcc0859bf4289dd7c"
+   },
+   {
+    "offset": 813448608,
+    "tamanho": 264917,
+    "sha256": "dc9a6ccebf1b83ab20eb55967b368131c5a36e9666c2ab7b67d79befa0bc1dd7"
+   },
+   {
+    "offset": 852836372,
+    "tamanho": 264805,
+    "sha256": "60be99f646d9f6bec8613dd0547ed0e533022c198adbfc4d9afa6de82c30f78f"
+   },
+   {
+    "offset": 861120136,
+    "tamanho": 264924,
+    "sha256": "8c633b3af66a152e6dd8941c762cce8ba6976302770f84a98246b59bf9c3df9f"
+   },
+   {
+    "offset": 922925308,
+    "tamanho": 264988,
+    "sha256": "e60fe36bd6e94ddd5b4c21fb2df4d956485f731e8460fcb17efcbd942ce22691"
+   },
+   {
+    "offset": 939105648,
+    "tamanho": 264695,
+    "sha256": "13e4e040c4628866fa2aee2f6728b374b9069c896dd74359c13f76a866c0d751"
+   },
+   {
+    "offset": 986947044,
+    "tamanho": 264755,
+    "sha256": "15c72efcfdac0bee08969fcc54c3307a8d0e5a4677b5211129935d2a8461c177"
+   },
+   {
+    "offset": 1010936408,
+    "tamanho": 264795,
+    "sha256": "7b4212e5d48d3209a351b91a323fc73132f9db37c154d8f3499083d801144168"
+   },
+   {
+    "offset": 1041587916,
+    "tamanho": 264916,
+    "sha256": "d0e050395138fafbd623294249057c1a4e5200ed5416fa7fc0f7e7a46c2abab7"
+   },
+   {
+    "offset": 1071258432,
+    "tamanho": 264793,
+    "sha256": "fba8748b1674b22f631700f7b77307e345ee6ff4f788ffac71b685b007a7aab2"
+   },
+   {
+    "offset": 1098153396,
+    "tamanho": 264801,
+    "sha256": "567b089e109b59c265aadd389d93b87f8649a12cf656f57bf247b9806fe200bc"
+   },
+   {
+    "offset": 1137449512,
+    "tamanho": 264708,
+    "sha256": "06018850b4e45b5418af928cd88d29d6565e2883ccc5817cefd48ff2f91bd0a6"
+   },
+   {
+    "offset": 1159148700,
+    "tamanho": 264673,
+    "sha256": "cf07cabaa082d2ee183c5e817f4c0bdb12906be0c1b3aa2a5be6e28b0f769c5a"
+   },
+   {
+    "offset": 1211055888,
+    "tamanho": 264794,
+    "sha256": "87f846c8c5a07e025a070c2afa10222cf4b90feb995d60922653d7acc0ad6fcc"
+   },
+   {
+    "offset": 1217879428,
+    "tamanho": 264730,
+    "sha256": "9bded943ed6fa6c27c5df6a04a98c843e69bf1a2720db7a5de2415871a07b21b"
+   },
+   {
+    "offset": 1277190136,
+    "tamanho": 264445,
+    "sha256": "7de73a5daeac57e1102a3e90e710c214b85332971ce542e02fa0a8aba5e7f694"
+   },
+   {
+    "offset": 1282030188,
+    "tamanho": 264602,
+    "sha256": "7df07806586a6bb48d3e217ad56c7152bc1f610a807a913f6dc1fd2cf8bf958b"
+   },
+   {
+    "offset": 1333600992,
+    "tamanho": 264938,
+    "sha256": "7796b75f83dcde1d00dc02ccd34a6f886f42cc3982ea702d15905ce99bcd233b"
+   },
+   {
+    "offset": 1345185108,
+    "tamanho": 264451,
+    "sha256": "1de2010d6092efb8777b5d86198cd192eab2b5791cb751a0a43e1f2abf234c20"
+   },
+   {
+    "offset": 1404556744,
+    "tamanho": 264812,
+    "sha256": "597170137ebf3180a31a503a2fcdac9ffcf6263d2b1cfedd6960dfd1e33cde15"
+   },
+   {
+    "offset": 1418119228,
+    "tamanho": 264944,
+    "sha256": "d5870b2f59c8d54d9fe7776b6b0f9d171c805776684019cc118ced7ba2223e98"
+   },
+   {
+    "offset": 1442602160,
+    "tamanho": 264804,
+    "sha256": "6f371b0b0bb6584bd993d21890d15318d975a4b4916b24c8456dfdb40e03f986"
+   },
+   {
+    "offset": 1500062500,
+    "tamanho": 264892,
+    "sha256": "1b9fb0a67f2abd2c7d128fccefab6b353fe6885722213a7b50809238e996be3c"
+   },
+   {
+    "offset": 1528329624,
+    "tamanho": 264674,
+    "sha256": "7191dcdbc969c3fb88ee601d77ff63920827841bb016d6ae2b9910de66823e2a"
+   },
+   {
+    "offset": 1567009804,
+    "tamanho": 264713,
+    "sha256": "87aa0a272a412e4f230612d35e5375fe0f287c54182b7d5ed1dc52322edc7977"
+   },
+   {
+    "offset": 1598487168,
+    "tamanho": 264782,
+    "sha256": "79f9a00e737add3bc777a558ae42d6233f691c92b9f61f254e6ce9dfa68fbe7f"
+   },
+   {
+    "offset": 1600097524,
+    "tamanho": 264874,
+    "sha256": "22629f21685df6c4b61885af68eff363a7cc6046da14c9b7108d4dae7b3f38ed"
+   },
+   {
+    "offset": 1660320104,
+    "tamanho": 264954,
+    "sha256": "7b61a8791586a3a8423752878bb75d4ec5c93f25b78ba54a231d7397e07b88a5"
+   },
+   {
+    "offset": 1686013404,
+    "tamanho": 264880,
+    "sha256": "2dbc660f817056e79a556bc56e1f3b85d4fc02a500e7e7bd9e3bbf247595fa49"
+   },
+   {
+    "offset": 1715968592,
+    "tamanho": 264962,
+    "sha256": "35df30b2057d34b821802fce7918930057bff02cec6cf8600dc0fa627f32911a"
+   },
+   {
+    "offset": 1740150468,
+    "tamanho": 265016,
+    "sha256": "87e88690591d0ebef4cc61c651e1b17fc38595b405889e5ee4a580a680cf8d4f"
+   },
+   {
+    "offset": 1770621752,
+    "tamanho": 264779,
+    "sha256": "d0fcedd32916565eb666f675bde83c090eb6d527e6172ffeb066a55e72b452b7"
+   },
+   {
+    "offset": 1812783532,
+    "tamanho": 264744,
+    "sha256": "c478c48424c7cc5736b46d0c17e91a4448448b9eb48b68c83d05d95ccfe52042"
+   },
+   {
+    "offset": 1834330144,
+    "tamanho": 264810,
+    "sha256": "2e8bbb2d7709425eae8093e0f27e5bc2186c9037f4fe0ec9fc7fb392200ce4a5"
+   },
+   {
+    "offset": 1861139604,
+    "tamanho": 264891,
+    "sha256": "249805bf16aad89c3b5e309865ac9687b6e95202311beb43ade9068c425ea60e"
+   },
+   {
+    "offset": 1910893832,
+    "tamanho": 264648,
+    "sha256": "02d0053acad31f42f57037f4add99f5555636125b1ecf06cbf8a81172e888d53"
+   },
+   {
+    "offset": 1944265596,
+    "tamanho": 264715,
+    "sha256": "5ef505017131bd5c7f5bd401a14186366184873acff2378cfdbf16d3240fcc75"
+   },
+   {
+    "offset": 1983323120,
+    "tamanho": 265001,
+    "sha256": "e819a2786c68e7fc86f329efcd02e790b63e87061ba42e9c3c49c8e276c92483"
+   },
+   {
+    "offset": 1993324132,
+    "tamanho": 264699,
+    "sha256": "48b4c0d230c8afa46a887048cb06efb27f303a384a4683ed8e5b7e720523ebe6"
+   },
+   {
+    "offset": 2028951256,
+    "tamanho": 264632,
+    "sha256": "8c80c5766463b368d06f35a3aea219d9ace1425beff05896643064f2b2f38430"
+   },
+   {
+    "offset": 2067475788,
+    "tamanho": 264722,
+    "sha256": "3da0648f779c0280ac8edf7b464b156794e783870192cfe3ce11a89f7ad70d59"
+   },
+   {
+    "offset": 2087060416,
+    "tamanho": 264935,
+    "sha256": "72b84ad7e9fe66821e824e377a807ca332a5aae4936ecd88322b8439d974b664"
+   },
+   {
+    "offset": 2142359092,
+    "tamanho": 264857,
+    "sha256": "9e3ce4ecbf33aa9bf14c92d94674348adf9ba8efcff2e5f2d8215b137e4ba5f8"
+   }
+  ],
+  "segundos_para_construir": 22.150495052337646,
+  "gerado_em": "11/11/2026 09:18:28",
+  "python": "3.11.2",
+  "plataforma": "Linux 6.1.158+ (x86_64)"
+ },
+ "leitura_bruta": {
+  "bytes_lidos": 2147483648,
+  "segundos": 0.3940286636352539,
+  "mbps": 5197.591416587401,
+  "bloco": 4194304,
+  "erros_leitura": 0
+ },
+ "cenarios": [
+  {
+   "nome": "A — padrão da interface (só espaço livre)",
+   "opcoes": {
+    "apenas_espaco_livre": true,
+    "verificar": true
+   },
+   "cpu_usuario_s": 3.793,
+   "cpu_sistema_s": 0.138,
+   "rss_durante_mb": 24.8,
+   "rss_pico_processo_mb": 42.3,
+   "segundos": 3.9319019317626953,
+   "segundos_etapa1": 0.19898223876953125,
+   "segundos_etapa2": 3.732919692993164,
+   "bytes_varridos": 512589824,
+   "varrido_txt": "só os clusters livres do volume",
+   "mbps_efetivo": 124.32755406512604,
+   "recuperados": 30,
+   "candidatos": 30,
+   "rejeitados": 0,
+   "recusados_ntfs": 0,
+   "volumes": [
+    "fat32@1048576"
+   ],
+   "bytes_recuperados": 6680816,
+   "por_estado": {
+    "ok": 30,
+    "nao_verificado": 0,
+    "corrompido": 0,
+    "parcial": 0
+   },
+   "por_metodo": {
+    "pasta": 30
+   },
+   "duplicados_hash": 0,
+   "duplicados_regiao": 0,
+   "erros_leitura": 0,
+   "sistemas": [
+    "fat32"
+   ],
+   "avisos": [
+    "origem é um arquivo de imagem; gravação no mesmo disco autorizada"
+   ],
+   "cancelado": false,
+   "pausado": false,
+   "tempo_interno": 3.9305801391601562,
+   "fases_observadas": [
+    [
+     0.001,
+     "particoes",
+     0.05
+    ],
+    [
+     0.262,
+     "carving",
+     0.95
+    ]
+   ],
+   "gravados_no_disco": 30,
+   "relatorios_csv_no_destino": 1,
+   "bytes_gravados": 6680816,
+   "identicos_ao_gabarito": 30,
+   "distintos_do_gabarito": 30,
+   "vivos_reencontrados": 0,
+   "vivos_distintos": 0,
+   "fora_do_gabarito": 0,
+   "amostra_fora_do_gabarito": [],
+   "recall_apagadas": "30/30",
+   "recall_orfas": "0/50",
+   "relatorio_csv": "/tmp/rf4_bench/saida_0/relatorio_recuperacao.csv",
+   "marcos": [
+    [
+     0.001,
+     "Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)"
+    ],
+    [
+     0.001,
+     "Sistema de arquivos identificado: fat32"
+    ],
+    [
+     0.024,
+     "RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.031,
+     "RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.037,
+     "RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.043,
+     "RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.049,
+     "RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.056,
+     "RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.062,
+     "RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.068,
+     "RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.074,
+     "RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.08,
+     "RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.086,
+     "RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.092,
+     "RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.098,
+     "RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.104,
+     "RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.11,
+     "RECUPERADO IMG_2014.JPG (222719 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.116,
+     "RECUPERADO IMG_2015.JPG (222609 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.122,
+     "RECUPERADO IMG_2016.JPG (222599 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.127,
+     "RECUPERADO IMG_2017.JPG (222634 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.133,
+     "RECUPERADO IMG_2018.JPG (222618 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.139,
+     "RECUPERADO IMG_2019.JPG (222910 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.145,
+     "RECUPERADO IMG_2020.JPG (222691 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.151,
+     "RECUPERADO IMG_2021.JPG (222733 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.157,
+     "RECUPERADO IMG_2022.JPG (222492 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.163,
+     "RECUPERADO IMG_2023.JPG (222751 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.169,
+     "RECUPERADO IMG_2024.JPG (222652 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.175,
+     "RECUPERADO IMG_2025.JPG (222667 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.181,
+     "RECUPERADO IMG_2026.JPG (222917 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.187,
+     "RECUPERADO IMG_2027.JPG (222918 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.193,
+     "RECUPERADO IMG_2028.JPG (222624 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.199,
+     "RECUPERADO IMG_2029.JPG (222687 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.199,
+     "Etapa 1 concluída: 30 candidato(s) processado(s)."
+    ],
+    [
+     0.199,
+     "Etapa 2: varredura por assinatura (file carving)"
+    ],
+    [
+     3.931,
+     "Etapa 2 concluída: 0 candidato(s) analisado(s)."
+    ]
+   ]
+  },
+  {
+   "nome": "B — cartão inteiro com verificação",
+   "opcoes": {
+    "cartao_inteiro": true,
+    "apenas_espaco_livre": false,
+    "verificar": true
+   },
+   "cpu_usuario_s": 22.439,
+   "cpu_sistema_s": 0.784,
+   "rss_durante_mb": 25.6,
+   "rss_pico_processo_mb": 52.8,
+   "segundos": 23.235925912857056,
+   "segundos_etapa1": 0.15476727485656738,
+   "segundos_etapa2": 23.08115863800049,
+   "bytes_varridos": 2147483648,
+   "varrido_txt": "o cartão inteiro",
+   "mbps_efetivo": 88.13937553772226,
+   "recuperados": 125,
+   "candidatos": 125,
+   "rejeitados": 0,
+   "recusados_ntfs": 0,
+   "volumes": [
+    "fat32@1048576"
+   ],
+   "bytes_recuperados": 30968666,
+   "por_estado": {
+    "ok": 125,
+    "nao_verificado": 0,
+    "corrompido": 0,
+    "parcial": 0
+   },
+   "por_metodo": {
+    "pasta": 30,
+    "varredura": 95
+   },
+   "duplicados_hash": 0,
+   "duplicados_regiao": 0,
+   "erros_leitura": 0,
+   "sistemas": [
+    "fat32"
+   ],
+   "avisos": [
+    "origem é um arquivo de imagem; gravação no mesmo disco autorizada"
+   ],
+   "cancelado": false,
+   "pausado": false,
+   "tempo_interno": 23.234517574310303,
+   "fases_observadas": [
+    [
+     0.001,
+     "particoes",
+     0.05
+    ],
+    [
+     0.45,
+     "carving",
+     0.6013565063476562
+    ]
+   ],
+   "gravados_no_disco": 125,
+   "relatorios_csv_no_destino": 1,
+   "bytes_gravados": 30968666,
+   "identicos_ao_gabarito": 80,
+   "distintos_do_gabarito": 80,
+   "vivos_reencontrados": 45,
+   "vivos_distintos": 45,
+   "fora_do_gabarito": 0,
+   "amostra_fora_do_gabarito": [],
+   "recall_apagadas": "30/30",
+   "recall_orfas": "50/50",
+   "relatorio_csv": "/tmp/rf4_bench/saida_1/relatorio_recuperacao.csv",
+   "marcos": [
+    [
+     0.0,
+     "Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)"
+    ],
+    [
+     0.001,
+     "Sistema de arquivos identificado: fat32"
+    ],
+    [
+     0.007,
+     "RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.012,
+     "RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.017,
+     "RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.022,
+     "RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.027,
+     "RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.032,
+     "RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.037,
+     "RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.042,
+     "RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.047,
+     "RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.052,
+     "RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.058,
+     "RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.063,
+     "RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.067,
+     "RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.072,
+     "RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.077,
+     "RECUPERADO IMG_2014.JPG (222719 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.082,
+     "RECUPERADO IMG_2015.JPG (222609 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.087,
+     "RECUPERADO IMG_2016.JPG (222599 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.092,
+     "RECUPERADO IMG_2017.JPG (222634 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.097,
+     "RECUPERADO IMG_2018.JPG (222618 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.102,
+     "RECUPERADO IMG_2019.JPG (222910 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.108,
+     "RECUPERADO IMG_2020.JPG (222691 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.113,
+     "RECUPERADO IMG_2021.JPG (222733 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.118,
+     "RECUPERADO IMG_2022.JPG (222492 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.124,
+     "RECUPERADO IMG_2023.JPG (222751 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.129,
+     "RECUPERADO IMG_2024.JPG (222652 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.134,
+     "RECUPERADO IMG_2025.JPG (222667 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.139,
+     "RECUPERADO IMG_2026.JPG (222917 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.145,
+     "RECUPERADO IMG_2027.JPG (222918 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.15,
+     "RECUPERADO IMG_2028.JPG (222624 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.155,
+     "RECUPERADO IMG_2029.JPG (222687 bytes, pasta, estado=ok)"
+    ],
+    [
+     0.155,
+     "Etapa 1 concluída: 30 candidato(s) processado(s)."
+    ],
+    [
+     0.155,
+     "Etapa 2: varredura por assinatura (file carving)"
+    ],
+    [
+     0.178,
+     "RECUPERADO carv_000001163264.jpg (245579 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.194,
+     "RECUPERADO carv_000001425408.jpg (245505 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.208,
+     "RECUPERADO carv_000001687552.jpg (245570 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.223,
+     "RECUPERADO carv_000001949696.jpg (245585 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.237,
+     "RECUPERADO carv_000002211840.jpg (245627 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.249,
+     "RECUPERADO carv_000002473984.jpg (245415 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.256,
+     "RECUPERADO carv_000002736128.jpg (245598 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.264,
+     "RECUPERADO carv_000002998272.jpg (245370 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.271,
+     "RECUPERADO carv_000003260416.jpg (245400 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.278,
+     "RECUPERADO carv_000003522560.jpg (245516 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.286,
+     "RECUPERADO carv_000003784704.jpg (245544 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.293,
+     "RECUPERADO carv_000004046848.jpg (245653 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.3,
+     "RECUPERADO carv_000004308992.jpg (245636 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.307,
+     "RECUPERADO carv_000004571136.jpg (245548 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.314,
+     "RECUPERADO carv_000004833280.jpg (245655 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.321,
+     "RECUPERADO carv_000005095424.jpg (245639 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.328,
+     "RECUPERADO carv_000005357568.jpg (245448 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.335,
+     "RECUPERADO carv_000005619712.jpg (245655 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.342,
+     "RECUPERADO carv_000005881856.jpg (245240 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.348,
+     "RECUPERADO carv_000006144000.jpg (245550 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.355,
+     "RECUPERADO carv_000006406144.jpg (245552 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.362,
+     "RECUPERADO carv_000006668288.jpg (245544 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.369,
+     "RECUPERADO carv_000006930432.jpg (245450 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.375,
+     "RECUPERADO carv_000007192576.jpg (245399 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.381,
+     "RECUPERADO carv_000007454720.jpg (245698 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.388,
+     "RECUPERADO carv_000007716864.jpg (245494 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.394,
+     "RECUPERADO carv_000007979008.jpg (245565 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.401,
+     "RECUPERADO carv_000008241152.jpg (245577 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.462,
+     "RECUPERADO carv_000008503296.jpg (245540 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.471,
+     "RECUPERADO carv_000008765440.jpg (245530 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.48,
+     "RECUPERADO carv_000009027584.jpg (245560 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.488,
+     "RECUPERADO carv_000009289728.jpg (245637 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.496,
+     "RECUPERADO carv_000009551872.jpg (245396 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.504,
+     "RECUPERADO carv_000009814016.jpg (245297 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.512,
+     "RECUPERADO carv_000010076160.jpg (245640 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.52,
+     "RECUPERADO carv_000010338304.jpg (245684 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.527,
+     "RECUPERADO carv_000010600448.jpg (245368 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.535,
+     "RECUPERADO carv_000010862592.jpg (245544 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.543,
+     "RECUPERADO carv_000011124736.jpg (245675 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.551,
+     "RECUPERADO carv_000011386880.jpg (245392 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.558,
+     "RECUPERADO carv_000011649024.jpg (245482 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.566,
+     "RECUPERADO carv_000011911168.jpg (245544 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.573,
+     "RECUPERADO carv_000012173312.jpg (245488 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.581,
+     "RECUPERADO carv_000012435456.jpg (245479 bytes, varredura, estado=ok)"
+    ],
+    [
+     0.589,
+     "RECUPERADO carv_000012697600.jpg (245400 bytes, varredura, estado=ok)"
+    ],
+    [
+     3.772,
+     "RECUPERADO carv_000545614336.jpg (264629 bytes, varredura, estado=ok)"
+    ],
+    [
+     4.246,
+     "RECUPERADO carv_000585065076.jpg (264702 bytes, varredura, estado=ok)"
+    ],
+    [
+     4.665,
+     "RECUPERADO carv_000617242856.jpg (264840 bytes, varredura, estado=ok)"
+    ],
+    [
+     5.109,
+     "RECUPERADO carv_000646845276.jpg (264805 bytes, varredura, estado=ok)"
+    ],
+    [
+     5.597,
+     "RECUPERADO carv_000685973968.jpg (264518 bytes, varredura, estado=ok)"
+    ],
+    [
+     5.865,
+     "RECUPERADO carv_000707903044.jpg (264868 bytes, varredura, estado=ok)"
+    ],
+    [
+     6.412,
+     "RECUPERADO carv_000758931128.jpg (264783 bytes, varredura, estado=ok)"
+    ],
+    [
+     6.585,
+     "RECUPERADO carv_000774500140.jpg (264567 bytes, varredura, estado=ok)"
+    ],
+    [
+     6.936,
+     "RECUPERADO carv_000813448608.jpg (264917 bytes, varredura, estado=ok)"
+    ],
+    [
+     7.403,
+     "RECUPERADO carv_000852836372.jpg (264805 bytes, varredura, estado=ok)"
+    ],
+    [
+     7.515,
+     "RECUPERADO carv_000861120136.jpg (264924 bytes, varredura, estado=ok)"
+    ],
+    [
+     8.166,
+     "RECUPERADO carv_000922925308.jpg (264988 bytes, varredura, estado=ok)"
+    ],
+    [
+     8.347,
+     "RECUPERADO carv_000939105648.jpg (264695 bytes, varredura, estado=ok)"
+    ],
+    [
+     8.92,
+     "RECUPERADO carv_000986947044.jpg (264755 bytes, varredura, estado=ok)"
+    ],
+    [
+     9.223,
+     "RECUPERADO carv_001010936408.jpg (264795 bytes, varredura, estado=ok)"
+    ],
+    [
+     9.631,
+     "RECUPERADO carv_001041587916.jpg (264916 bytes, varredura, estado=ok)"
+    ],
+    [
+     9.935,
+     "RECUPERADO carv_001071258432.jpg (264793 bytes, varredura, estado=ok)"
+    ],
+    [
+     10.232,
+     "RECUPERADO carv_001098153396.jpg (264801 bytes, varredura, estado=ok)"
+    ],
+    [
+     10.719,
+     "RECUPERADO carv_001137449512.jpg (264708 bytes, varredura, estado=ok)"
+    ],
+    [
+     10.993,
+     "RECUPERADO carv_001159148700.jpg (264673 bytes, varredura, estado=ok)"
+    ],
+    [
+     11.527,
+     "RECUPERADO carv_001211055888.jpg (264794 bytes, varredura, estado=ok)"
+    ],
+    [
+     11.633,
+     "RECUPERADO carv_001217879428.jpg (264730 bytes, varredura, estado=ok)"
+    ],
+    [
+     12.276,
+     "RECUPERADO carv_001277190136.jpg (264445 bytes, varredura, estado=ok)"
+    ],
+    [
+     12.368,
+     "RECUPERADO carv_001282030188.jpg (264602 bytes, varredura, estado=ok)"
+    ],
+    [
+     12.897,
+     "RECUPERADO carv_001333600992.jpg (264938 bytes, varredura, estado=ok)"
+    ],
+    [
+     13.006,
+     "RECUPERADO carv_001345185108.jpg (264451 bytes, varredura, estado=ok)"
+    ],
+    [
+     13.715,
+     "RECUPERADO carv_001404556744.jpg (264812 bytes, varredura, estado=ok)"
+    ],
+    [
+     13.922,
+     "RECUPERADO carv_001418119228.jpg (264944 bytes, varredura, estado=ok)"
+    ],
+    [
+     14.245,
+     "RECUPERADO carv_001442602160.jpg (264804 bytes, varredura, estado=ok)"
+    ],
+    [
+     14.936,
+     "RECUPERADO carv_001500062500.jpg (264892 bytes, varredura, estado=ok)"
+    ],
+    [
+     15.204,
+     "RECUPERADO carv_001528329624.jpg (264674 bytes, varredura, estado=ok)"
+    ],
+    [
+     15.679,
+     "RECUPERADO carv_001567009804.jpg (264713 bytes, varredura, estado=ok)"
+    ],
+    [
+     16.103,
+     "RECUPERADO carv_001598487168.jpg (264782 bytes, varredura, estado=ok)"
+    ],
+    [
+     16.119,
+     "RECUPERADO carv_001600097524.jpg (264874 bytes, varredura, estado=ok)"
+    ],
+    [
+     16.849,
+     "RECUPERADO carv_001660320104.jpg (264954 bytes, varredura, estado=ok)"
+    ],
+    [
+     17.135,
+     "RECUPERADO carv_001686013404.jpg (264880 bytes, varredura, estado=ok)"
+    ],
+    [
+     17.567,
+     "RECUPERADO carv_001715968592.jpg (264962 bytes, varredura, estado=ok)"
+    ],
+    [
+     17.921,
+     "RECUPERADO carv_001740150468.jpg (265016 bytes, varredura, estado=ok)"
+    ],
+    [
+     18.281,
+     "RECUPERADO carv_001770621752.jpg (264779 bytes, varredura, estado=ok)"
+    ],
+    [
+     18.845,
+     "RECUPERADO carv_001812783532.jpg (264744 bytes, varredura, estado=ok)"
+    ],
+    [
+     19.205,
+     "RECUPERADO carv_001834330144.jpg (264810 bytes, varredura, estado=ok)"
+    ],
+    [
+     19.554,
+     "RECUPERADO carv_001861139604.jpg (264891 bytes, varredura, estado=ok)"
+    ],
+    [
+     20.185,
+     "RECUPERADO carv_001910893832.jpg (264648 bytes, varredura, estado=ok)"
+    ],
+    [
+     20.628,
+     "RECUPERADO carv_001944265596.jpg (264715 bytes, varredura, estado=ok)"
+    ],
+    [
+     21.144,
+     "RECUPERADO carv_001983323120.jpg (265001 bytes, varredura, estado=ok)"
+    ],
+    [
+     21.243,
+     "RECUPERADO carv_001993324132.jpg (264699 bytes, varredura, estado=ok)"
+    ],
+    [
+     21.637,
+     "RECUPERADO carv_002028951256.jpg (264632 bytes, varredura, estado=ok)"
+    ],
+    [
+     22.186,
+     "RECUPERADO carv_002067475788.jpg (264722 bytes, varredura, estado=ok)"
+    ],
+    [
+     22.399,
+     "RECUPERADO carv_002087060416.jpg (264935 bytes, varredura, estado=ok)"
+    ],
+    [
+     23.131,
+     "RECUPERADO carv_002142359092.jpg (264857 bytes, varredura, estado=ok)"
+    ],
+    [
+     23.235,
+     "Etapa 2 concluída: 95 candidato(s) analisado(s)."
+    ]
+   ]
+  },
+  {
+   "nome": "C — cartão inteiro sem verificação",
+   "opcoes": {
+    "cartao_inteiro": true,
+    "apenas_espaco_livre": false,
+    "verificar": false,
+    "sem_verificar": true
+   },
+   "cpu_usuario_s": 21.493,
+   "cpu_sistema_s": 0.696,
+   "rss_durante_mb": 25.6,
+   "rss_pico_processo_mb": 53.0,
+   "segundos": 22.206836938858032,
+   "segundos_etapa1": 0.01689887046813965,
+   "segundos_etapa2": 22.189938068389893,
+   "bytes_varridos": 2147483648,
+   "varrido_txt": "o cartão inteiro",
+   "mbps_efetivo": 92.22385005297006,
+   "recuperados": 125,
+   "candidatos": 125,
+   "rejeitados": 0,
+   "recusados_ntfs": 0,
+   "volumes": [
+    "fat32@1048576"
+   ],
+   "bytes_recuperados": 30968666,
+   "por_estado": {
+    "ok": 0,
+    "nao_verificado": 125,
+    "corrompido": 0,
+    "parcial": 0
+   },
+   "por_metodo": {
+    "pasta": 30,
+    "varredura": 95
+   },
+   "duplicados_hash": 0,
+   "duplicados_regiao": 0,
+   "erros_leitura": 0,
+   "sistemas": [
+    "fat32"
+   ],
+   "avisos": [
+    "origem é um arquivo de imagem; gravação no mesmo disco autorizada"
+   ],
+   "cancelado": false,
+   "pausado": false,
+   "tempo_interno": 22.206021785736084,
+   "fases_observadas": [
+    [
+     0.0,
+     "particoes",
+     0.05
+    ],
+    [
+     0.187,
+     "carving",
+     0.6013565063476562
+    ]
+   ],
+   "gravados_no_disco": 125,
+   "relatorios_csv_no_destino": 1,
+   "bytes_gravados": 30968666,
+   "identicos_ao_gabarito": 80,
+   "distintos_do_gabarito": 80,
+   "vivos_reencontrados": 45,
+   "vivos_distintos": 45,
+   "fora_do_gabarito": 0,
+   "amostra_fora_do_gabarito": [],
+   "recall_apagadas": "30/30",
+   "recall_orfas": "50/50",
+   "relatorio_csv": "/tmp/rf4_bench/saida_2/relatorio_recuperacao.csv",
+   "marcos": [
+    [
+     0.0,
+     "Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)"
+    ],
+    [
+     0.001,
+     "Sistema de arquivos identificado: fat32"
+    ],
+    [
+     0.002,
+     "RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.002,
+     "RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.003,
+     "RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.003,
+     "RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.004,
+     "RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.004,
+     "RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.005,
+     "RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.005,
+     "RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.006,
+     "RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.006,
+     "RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.007,
+     "RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.007,
+     "RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.008,
+     "RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.008,
+     "RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.009,
+     "RECUPERADO IMG_2014.JPG (222719 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.009,
+     "RECUPERADO IMG_2015.JPG (222609 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.01,
+     "RECUPERADO IMG_2016.JPG (222599 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.011,
+     "RECUPERADO IMG_2017.JPG (222634 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.011,
+     "RECUPERADO IMG_2018.JPG (222618 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.012,
+     "RECUPERADO IMG_2019.JPG (222910 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.012,
+     "RECUPERADO IMG_2020.JPG (222691 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.013,
+     "RECUPERADO IMG_2021.JPG (222733 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.013,
+     "RECUPERADO IMG_2022.JPG (222492 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.014,
+     "RECUPERADO IMG_2023.JPG (222751 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.014,
+     "RECUPERADO IMG_2024.JPG (222652 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.015,
+     "RECUPERADO IMG_2025.JPG (222667 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.015,
+     "RECUPERADO IMG_2026.JPG (222917 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.016,
+     "RECUPERADO IMG_2027.JPG (222918 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.016,
+     "RECUPERADO IMG_2028.JPG (222624 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.017,
+     "RECUPERADO IMG_2029.JPG (222687 bytes, pasta, estado=nao_verificado)"
+    ],
+    [
+     0.017,
+     "Etapa 1 concluída: 30 candidato(s) processado(s)."
+    ],
+    [
+     0.017,
+     "Etapa 2: varredura por assinatura (file carving)"
+    ],
+    [
+     0.035,
+     "RECUPERADO carv_000001163264.jpg (245579 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.047,
+     "RECUPERADO carv_000001425408.jpg (245505 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.058,
+     "RECUPERADO carv_000001687552.jpg (245570 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.068,
+     "RECUPERADO carv_000001949696.jpg (245585 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.077,
+     "RECUPERADO carv_000002211840.jpg (245627 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.087,
+     "RECUPERADO carv_000002473984.jpg (245415 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.089,
+     "RECUPERADO carv_000002736128.jpg (245598 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.092,
+     "RECUPERADO carv_000002998272.jpg (245370 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.094,
+     "RECUPERADO carv_000003260416.jpg (245400 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.097,
+     "RECUPERADO carv_000003522560.jpg (245516 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.099,
+     "RECUPERADO carv_000003784704.jpg (245544 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.101,
+     "RECUPERADO carv_000004046848.jpg (245653 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.104,
+     "RECUPERADO carv_000004308992.jpg (245636 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.106,
+     "RECUPERADO carv_000004571136.jpg (245548 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.108,
+     "RECUPERADO carv_000004833280.jpg (245655 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.11,
+     "RECUPERADO carv_000005095424.jpg (245639 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.112,
+     "RECUPERADO carv_000005357568.jpg (245448 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.114,
+     "RECUPERADO carv_000005619712.jpg (245655 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.116,
+     "RECUPERADO carv_000005881856.jpg (245240 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.118,
+     "RECUPERADO carv_000006144000.jpg (245550 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.12,
+     "RECUPERADO carv_000006406144.jpg (245552 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.122,
+     "RECUPERADO carv_000006668288.jpg (245544 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.123,
+     "RECUPERADO carv_000006930432.jpg (245450 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.125,
+     "RECUPERADO carv_000007192576.jpg (245399 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.127,
+     "RECUPERADO carv_000007454720.jpg (245698 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.128,
+     "RECUPERADO carv_000007716864.jpg (245494 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.13,
+     "RECUPERADO carv_000007979008.jpg (245565 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.132,
+     "RECUPERADO carv_000008241152.jpg (245577 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.195,
+     "RECUPERADO carv_000008503296.jpg (245540 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.199,
+     "RECUPERADO carv_000008765440.jpg (245530 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.202,
+     "RECUPERADO carv_000009027584.jpg (245560 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.205,
+     "RECUPERADO carv_000009289728.jpg (245637 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.208,
+     "RECUPERADO carv_000009551872.jpg (245396 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.21,
+     "RECUPERADO carv_000009814016.jpg (245297 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.213,
+     "RECUPERADO carv_000010076160.jpg (245640 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.216,
+     "RECUPERADO carv_000010338304.jpg (245684 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.218,
+     "RECUPERADO carv_000010600448.jpg (245368 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.221,
+     "RECUPERADO carv_000010862592.jpg (245544 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.224,
+     "RECUPERADO carv_000011124736.jpg (245675 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.226,
+     "RECUPERADO carv_000011386880.jpg (245392 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.229,
+     "RECUPERADO carv_000011649024.jpg (245482 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.231,
+     "RECUPERADO carv_000011911168.jpg (245544 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.233,
+     "RECUPERADO carv_000012173312.jpg (245488 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.236,
+     "RECUPERADO carv_000012435456.jpg (245479 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     0.238,
+     "RECUPERADO carv_000012697600.jpg (245400 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     3.581,
+     "RECUPERADO carv_000545614336.jpg (264629 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     4.109,
+     "RECUPERADO carv_000585065076.jpg (264702 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     4.533,
+     "RECUPERADO carv_000617242856.jpg (264840 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     4.839,
+     "RECUPERADO carv_000646845276.jpg (264805 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     5.344,
+     "RECUPERADO carv_000685973968.jpg (264518 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     5.636,
+     "RECUPERADO carv_000707903044.jpg (264868 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     6.169,
+     "RECUPERADO carv_000758931128.jpg (264783 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     6.352,
+     "RECUPERADO carv_000774500140.jpg (264567 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     6.713,
+     "RECUPERADO carv_000813448608.jpg (264917 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     7.162,
+     "RECUPERADO carv_000852836372.jpg (264805 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     7.268,
+     "RECUPERADO carv_000861120136.jpg (264924 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     7.992,
+     "RECUPERADO carv_000922925308.jpg (264988 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     8.194,
+     "RECUPERADO carv_000939105648.jpg (264695 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     8.751,
+     "RECUPERADO carv_000986947044.jpg (264755 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     9.019,
+     "RECUPERADO carv_001010936408.jpg (264795 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     9.418,
+     "RECUPERADO carv_001041587916.jpg (264916 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     9.701,
+     "RECUPERADO carv_001071258432.jpg (264793 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     10.026,
+     "RECUPERADO carv_001098153396.jpg (264801 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     10.608,
+     "RECUPERADO carv_001137449512.jpg (264708 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     10.951,
+     "RECUPERADO carv_001159148700.jpg (264673 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     11.616,
+     "RECUPERADO carv_001211055888.jpg (264794 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     11.735,
+     "RECUPERADO carv_001217879428.jpg (264730 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     12.441,
+     "RECUPERADO carv_001277190136.jpg (264445 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     12.537,
+     "RECUPERADO carv_001282030188.jpg (264602 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     13.076,
+     "RECUPERADO carv_001333600992.jpg (264938 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     13.17,
+     "RECUPERADO carv_001345185108.jpg (264451 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     13.793,
+     "RECUPERADO carv_001404556744.jpg (264812 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     13.977,
+     "RECUPERADO carv_001418119228.jpg (264944 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     14.253,
+     "RECUPERADO carv_001442602160.jpg (264804 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     14.855,
+     "RECUPERADO carv_001500062500.jpg (264892 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     15.119,
+     "RECUPERADO carv_001528329624.jpg (264674 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     15.588,
+     "RECUPERADO carv_001567009804.jpg (264713 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     15.986,
+     "RECUPERADO carv_001598487168.jpg (264782 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     15.996,
+     "RECUPERADO carv_001600097524.jpg (264874 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     16.678,
+     "RECUPERADO carv_001660320104.jpg (264954 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     16.981,
+     "RECUPERADO carv_001686013404.jpg (264880 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     17.372,
+     "RECUPERADO carv_001715968592.jpg (264962 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     17.657,
+     "RECUPERADO carv_001740150468.jpg (265016 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     17.926,
+     "RECUPERADO carv_001770621752.jpg (264779 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     18.397,
+     "RECUPERADO carv_001812783532.jpg (264744 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     18.696,
+     "RECUPERADO carv_001834330144.jpg (264810 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     18.968,
+     "RECUPERADO carv_001861139604.jpg (264891 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     19.499,
+     "RECUPERADO carv_001910893832.jpg (264648 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     19.922,
+     "RECUPERADO carv_001944265596.jpg (264715 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     20.437,
+     "RECUPERADO carv_001983323120.jpg (265001 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     20.524,
+     "RECUPERADO carv_001993324132.jpg (264699 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     20.889,
+     "RECUPERADO carv_002028951256.jpg (264632 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     21.356,
+     "RECUPERADO carv_002067475788.jpg (264722 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     21.522,
+     "RECUPERADO carv_002087060416.jpg (264935 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     22.121,
+     "RECUPERADO carv_002142359092.jpg (264857 bytes, varredura, estado=nao_verificado)"
+    ],
+    [
+     22.206,
+     "Etapa 2 concluída: 95 candidato(s) analisado(s)."
+    ]
+   ]
+  }
+ ]
+}
