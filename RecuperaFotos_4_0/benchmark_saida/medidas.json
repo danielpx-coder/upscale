@@ -680,15 +680,15 @@
     "sha256": "9e3ce4ecbf33aa9bf14c92d94674348adf9ba8efcff2e5f2d8215b137e4ba5f8"
    }
   ],
-  "segundos_para_construir": 14.929865598678589,
-  "gerado_em": "11/11/2026 04:57:12",
+  "segundos_para_construir": 22.150495052337646,
+  "gerado_em": "11/11/2026 09:18:28",
   "python": "3.11.2",
   "plataforma": "Linux 6.1.158+ (x86_64)"
  },
  "leitura_bruta": {
   "bytes_lidos": 2147483648,
-  "segundos": 0.3039681911468506,
-  "mbps": 6737.547084361164,
+  "segundos": 0.3940286636352539,
+  "mbps": 5197.591416587401,
   "bloco": 4194304,
   "erros_leitura": 0
  },
@@ -699,15 +699,16 @@
     "apenas_espaco_livre": true,
     "verificar": true
    },
-   "cpu_usuario_s": 2.816,
-   "cpu_sistema_s": 0.108,
-   "rss_pico_mb": 42.4,
-   "segundos": 2.9235711097717285,
-   "segundos_etapa1": 0.15337133407592773,
-   "segundos_etapa2": 2.770199775695801,
+   "cpu_usuario_s": 3.793,
+   "cpu_sistema_s": 0.138,
+   "rss_durante_mb": 24.8,
+   "rss_pico_processo_mb": 42.3,
+   "segundos": 3.9319019317626953,
+   "segundos_etapa1": 0.19898223876953125,
+   "segundos_etapa2": 3.732919692993164,
    "bytes_varridos": 512589824,
    "varrido_txt": "só os clusters livres do volume",
-   "mbps_efetivo": 167.20775094749405,
+   "mbps_efetivo": 124.32755406512604,
    "recuperados": 30,
    "candidatos": 30,
    "rejeitados": 0,
@@ -736,7 +737,7 @@
    ],
    "cancelado": false,
    "pausado": false,
-   "tempo_interno": 2.9226858615875244,
+   "tempo_interno": 3.9305801391601562,
    "fases_observadas": [
     [
      0.001,
@@ -744,7 +745,7 @@
      0.05
     ],
     [
-     0.199,
+     0.262,
      "carving",
      0.95
     ]
@@ -771,135 +772,135 @@
      "Sistema de arquivos identificado: fat32"
     ],
     [
-     0.021,
+     0.024,
      "RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)"
     ],
     [
-     0.026,
+     0.031,
      "RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)"
     ],
     [
-     0.031,
+     0.037,
      "RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)"
     ],
     [
-     0.036,
+     0.043,
      "RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)"
     ],
     [
-     0.041,
+     0.049,
      "RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)"
     ],
     [
-     0.046,
+     0.056,
      "RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)"
     ],
     [
-     0.051,
+     0.062,
      "RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)"
     ],
     [
-     0.056,
+     0.068,
      "RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)"
     ],
     [
-     0.06,
+     0.074,
      "RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)"
     ],
     [
-     0.065,
+     0.08,
      "RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)"
     ],
     [
-     0.07,
+     0.086,
      "RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)"
     ],
     [
-     0.075,
+     0.092,
      "RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)"
     ],
     [
-     0.08,
+     0.098,
      "RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)"
     ],
     [
-     0.084,
+     0.104,
      "RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)"
     ],
     [
-     0.089,
+     0.11,
      "RECUPERADO IMG_2014.JPG (222719 bytes, pasta, estado=ok)"
     ],
     [
-     0.094,
+     0.116,
      "RECUPERADO IMG_2015.JPG (222609 bytes, pasta, estado=ok)"
     ],
     [
-     0.098,
+     0.122,
      "RECUPERADO IMG_2016.JPG (222599 bytes, pasta, estado=ok)"
     ],
     [
-     0.103,
+     0.127,
      "RECUPERADO IMG_2017.JPG (222634 bytes, pasta, estado=ok)"
     ],
     [
-     0.108,
+     0.133,
      "RECUPERADO IMG_2018.JPG (222618 bytes, pasta, estado=ok)"
     ],
     [
-     0.113,
+     0.139,
      "RECUPERADO IMG_2019.JPG (222910 bytes, pasta, estado=ok)"
     ],
     [
-     0.117,
+     0.145,
      "RECUPERADO IMG_2020.JPG (222691 bytes, pasta, estado=ok)"
     ],
     [
-     0.121,
+     0.151,
      "RECUPERADO IMG_2021.JPG (222733 bytes, pasta, estado=ok)"
     ],
     [
-     0.125,
+     0.157,
      "RECUPERADO IMG_2022.JPG (222492 bytes, pasta, estado=ok)"
     ],
     [
-     0.129,
+     0.163,
      "RECUPERADO IMG_2023.JPG (222751 bytes, pasta, estado=ok)"
     ],
     [
-     0.133,
+     0.169,
      "RECUPERADO IMG_2024.JPG (222652 bytes, pasta, estado=ok)"
     ],
     [
-     0.137,
+     0.175,
      "RECUPERADO IMG_2025.JPG (222667 bytes, pasta, estado=ok)"
     ],
     [
-     0.141,
+     0.181,
      "RECUPERADO IMG_2026.JPG (222917 bytes, pasta, estado=ok)"
     ],
     [
-     0.145,
+     0.187,
      "RECUPERADO IMG_2027.JPG (222918 bytes, pasta, estado=ok)"
     ],
     [
-     0.15,
+     0.193,
      "RECUPERADO IMG_2028.JPG (222624 bytes, pasta, estado=ok)"
     ],
     [
-     0.153,
+     0.199,
      "RECUPERADO IMG_2029.JPG (222687 bytes, pasta, estado=ok)"
     ],
     [
-     0.153,
+     0.199,
      "Etapa 1 concluída: 30 candidato(s) processado(s)."
     ],
     [
-     0.153,
+     0.199,
      "Etapa 2: varredura por assinatura (file carving)"
     ],
     [
-     2.923,
+     3.931,
      "Etapa 2 concluída: 0 candidato(s) analisado(s)."
     ]
    ]
@@ -911,15 +912,16 @@
     "apenas_espaco_livre": false,
     "verificar": true
    },
-   "cpu_usuario_s": 20.465,
-   "cpu_sistema_s": 0.648,
-   "rss_pico_mb": 53.1,
-   "segundos": 21.11530065536499,
-   "segundos_etapa1": 0.1277787685394287,
-   "segundos_etapa2": 20.98752188682556,
+   "cpu_usuario_s": 22.439,
+   "cpu_sistema_s": 0.784,
+   "rss_durante_mb": 25.6,
+   "rss_pico_processo_mb": 52.8,
+   "segundos": 23.235925912857056,
+   "segundos_etapa1": 0.15476727485656738,
+   "segundos_etapa2": 23.08115863800049,
    "bytes_varridos": 2147483648,
    "varrido_txt": "o cartão inteiro",
-   "mbps_efetivo": 96.99127819331537,
+   "mbps_efetivo": 88.13937553772226,
    "recuperados": 125,
    "candidatos": 125,
    "rejeitados": 0,
@@ -949,15 +951,15 @@
    ],
    "cancelado": false,
    "pausado": false,
-   "tempo_interno": 21.11447048187256,
+   "tempo_interno": 23.234517574310303,
    "fases_observadas": [
     [
-     0.0,
+     0.001,
      "particoes",
      0.05
     ],
     [
-     0.368,
+     0.45,
      "carving",
      0.6013565063476562
     ]
@@ -980,519 +982,519 @@
      "Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)"
     ],
     [
-     0.0,
+     0.001,
      "Sistema de arquivos identificado: fat32"
     ],
     [
-     0.006,
+     0.007,
      "RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)"
     ],
     [
-     0.01,
+     0.012,
      "RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)"
     ],
     [
-     0.014,
+     0.017,
      "RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)"
     ],
     [
-     0.019,
+     0.022,
      "RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)"
     ],
     [
-     0.024,
+     0.027,
      "RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)"
     ],
     [
-     0.028,
+     0.032,
      "RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)"
     ],
     [
-     0.032,
+     0.037,
      "RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)"
     ],
     [
-     0.037,
+     0.042,
      "RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)"
     ],
     [
-     0.041,
+     0.047,
      "RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)"
     ],
     [
-     0.045,
+     0.052,
      "RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)"
     ],
     [
-     0.049,
+     0.058,
      "RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)"
     ],
     [
-     0.053,
+     0.063,
      "RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)"
     ],
     [
-     0.058,
+     0.067,
      "RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)"
     ],
     [
-     0.062,
+     0.072,
      "RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)"
     ],
     [
-     0.066,
+     0.077,
      "RECUPERADO IMG_2014.JPG (222719 bytes, pasta, estado=ok)"
     ],
     [
-     0.07,
+     0.082,
      "RECUPERADO IMG_2015.JPG (222609 bytes, pasta, estado=ok)"
     ],
     [
-     0.075,
+     0.087,
      "RECUPERADO IMG_2016.JPG (222599 bytes, pasta, estado=ok)"
     ],
     [
-     0.079,
+     0.092,
      "RECUPERADO IMG_2017.JPG (222634 bytes, pasta, estado=ok)"
     ],
     [
-     0.083,
+     0.097,
      "RECUPERADO IMG_2018.JPG (222618 bytes, pasta, estado=ok)"
     ],
     [
-     0.087,
+     0.102,
      "RECUPERADO IMG_2019.JPG (222910 bytes, pasta, estado=ok)"
     ],
     [
-     0.091,
+     0.108,
      "RECUPERADO IMG_2020.JPG (222691 bytes, pasta, estado=ok)"
     ],
     [
-     0.095,
+     0.113,
      "RECUPERADO IMG_2021.JPG (222733 bytes, pasta, estado=ok)"
     ],
     [
-     0.099,
+     0.118,
      "RECUPERADO IMG_2022.JPG (222492 bytes, pasta, estado=ok)"
     ],
     [
-     0.103,
+     0.124,
      "RECUPERADO IMG_2023.JPG (222751 bytes, pasta, estado=ok)"
     ],
     [
-     0.107,
+     0.129,
      "RECUPERADO IMG_2024.JPG (222652 bytes, pasta, estado=ok)"
     ],
     [
-     0.111,
+     0.134,
      "RECUPERADO IMG_2025.JPG (222667 bytes, pasta, estado=ok)"
     ],
     [
-     0.116,
+     0.139,
      "RECUPERADO IMG_2026.JPG (222917 bytes, pasta, estado=ok)"
     ],
     [
-     0.12,
+     0.145,
      "RECUPERADO IMG_2027.JPG (222918 bytes, pasta, estado=ok)"
     ],
     [
-     0.124,
+     0.15,
      "RECUPERADO IMG_2028.JPG (222624 bytes, pasta, estado=ok)"
     ],
     [
-     0.128,
+     0.155,
      "RECUPERADO IMG_2029.JPG (222687 bytes, pasta, estado=ok)"
     ],
     [
-     0.128,
+     0.155,
      "Etapa 1 concluída: 30 candidato(s) processado(s)."
     ],
     [
-     0.128,
+     0.155,
      "Etapa 2: varredura por assinatura (file carving)"
     ],
     [
-     0.147,
+     0.178,
      "RECUPERADO carv_000001163264.jpg (245579 bytes, varredura, estado=ok)"
     ],
     [
-     0.16,
+     0.194,
      "RECUPERADO carv_000001425408.jpg (245505 bytes, varredura, estado=ok)"
     ],
     [
-     0.172,
+     0.208,
      "RECUPERADO carv_000001687552.jpg (245570 bytes, varredura, estado=ok)"
     ],
     [
-     0.184,
+     0.223,
      "RECUPERADO carv_000001949696.jpg (245585 bytes, varredura, estado=ok)"
     ],
     [
-     0.194,
+     0.237,
      "RECUPERADO carv_000002211840.jpg (245627 bytes, varredura, estado=ok)"
     ],
     [
-     0.2,
+     0.249,
      "RECUPERADO carv_000002473984.jpg (245415 bytes, varredura, estado=ok)"
     ],
     [
-     0.21,
+     0.256,
      "RECUPERADO carv_000002736128.jpg (245598 bytes, varredura, estado=ok)"
     ],
     [
-     0.216,
+     0.264,
      "RECUPERADO carv_000002998272.jpg (245370 bytes, varredura, estado=ok)"
     ],
     [
-     0.222,
+     0.271,
      "RECUPERADO carv_000003260416.jpg (245400 bytes, varredura, estado=ok)"
     ],
     [
-     0.228,
+     0.278,
      "RECUPERADO carv_000003522560.jpg (245516 bytes, varredura, estado=ok)"
     ],
     [
-     0.233,
+     0.286,
      "RECUPERADO carv_000003784704.jpg (245544 bytes, varredura, estado=ok)"
     ],
     [
-     0.239,
+     0.293,
      "RECUPERADO carv_000004046848.jpg (245653 bytes, varredura, estado=ok)"
     ],
     [
-     0.245,
+     0.3,
      "RECUPERADO carv_000004308992.jpg (245636 bytes, varredura, estado=ok)"
     ],
     [
-     0.25,
+     0.307,
      "RECUPERADO carv_000004571136.jpg (245548 bytes, varredura, estado=ok)"
     ],
     [
-     0.256,
+     0.314,
      "RECUPERADO carv_000004833280.jpg (245655 bytes, varredura, estado=ok)"
     ],
     [
-     0.261,
+     0.321,
      "RECUPERADO carv_000005095424.jpg (245639 bytes, varredura, estado=ok)"
     ],
     [
-     0.267,
+     0.328,
      "RECUPERADO carv_000005357568.jpg (245448 bytes, varredura, estado=ok)"
     ],
     [
-     0.272,
+     0.335,
      "RECUPERADO carv_000005619712.jpg (245655 bytes, varredura, estado=ok)"
     ],
     [
-     0.278,
+     0.342,
      "RECUPERADO carv_000005881856.jpg (245240 bytes, varredura, estado=ok)"
     ],
     [
-     0.283,
+     0.348,
      "RECUPERADO carv_000006144000.jpg (245550 bytes, varredura, estado=ok)"
     ],
     [
-     0.288,
+     0.355,
      "RECUPERADO carv_000006406144.jpg (245552 bytes, varredura, estado=ok)"
     ],
     [
-     0.294,
+     0.362,
      "RECUPERADO carv_000006668288.jpg (245544 bytes, varredura, estado=ok)"
     ],
     [
-     0.299,
+     0.369,
      "RECUPERADO carv_000006930432.jpg (245450 bytes, varredura, estado=ok)"
     ],
     [
-     0.304,
+     0.375,
      "RECUPERADO carv_000007192576.jpg (245399 bytes, varredura, estado=ok)"
     ],
     [
-     0.309,
+     0.381,
      "RECUPERADO carv_000007454720.jpg (245698 bytes, varredura, estado=ok)"
     ],
     [
-     0.314,
+     0.388,
      "RECUPERADO carv_000007716864.jpg (245494 bytes, varredura, estado=ok)"
     ],
     [
-     0.319,
+     0.394,
      "RECUPERADO carv_000007979008.jpg (245565 bytes, varredura, estado=ok)"
     ],
     [
-     0.324,
+     0.401,
      "RECUPERADO carv_000008241152.jpg (245577 bytes, varredura, estado=ok)"
     ],
     [
-     0.378,
+     0.462,
      "RECUPERADO carv_000008503296.jpg (245540 bytes, varredura, estado=ok)"
     ],
     [
-     0.384,
+     0.471,
      "RECUPERADO carv_000008765440.jpg (245530 bytes, varredura, estado=ok)"
     ],
     [
-     0.39,
+     0.48,
      "RECUPERADO carv_000009027584.jpg (245560 bytes, varredura, estado=ok)"
     ],
     [
-     0.396,
+     0.488,
      "RECUPERADO carv_000009289728.jpg (245637 bytes, varredura, estado=ok)"
     ],
     [
-     0.402,
+     0.496,
      "RECUPERADO carv_000009551872.jpg (245396 bytes, varredura, estado=ok)"
     ],
     [
-     0.408,
+     0.504,
      "RECUPERADO carv_000009814016.jpg (245297 bytes, varredura, estado=ok)"
     ],
     [
-     0.414,
+     0.512,
      "RECUPERADO carv_000010076160.jpg (245640 bytes, varredura, estado=ok)"
     ],
     [
-     0.421,
+     0.52,
      "RECUPERADO carv_000010338304.jpg (245684 bytes, varredura, estado=ok)"
     ],
     [
-     0.426,
+     0.527,
      "RECUPERADO carv_000010600448.jpg (245368 bytes, varredura, estado=ok)"
     ],
     [
-     0.433,
+     0.535,
      "RECUPERADO carv_000010862592.jpg (245544 bytes, varredura, estado=ok)"
     ],
     [
-     0.438,
+     0.543,
      "RECUPERADO carv_000011124736.jpg (245675 bytes, varredura, estado=ok)"
     ],
     [
-     0.444,
+     0.551,
      "RECUPERADO carv_000011386880.jpg (245392 bytes, varredura, estado=ok)"
     ],
     [
-     0.45,
+     0.558,
      "RECUPERADO carv_000011649024.jpg (245482 bytes, varredura, estado=ok)"
     ],
     [
-     0.456,
+     0.566,
      "RECUPERADO carv_000011911168.jpg (245544 bytes, varredura, estado=ok)"
     ],
     [
-     0.461,
+     0.573,
      "RECUPERADO carv_000012173312.jpg (245488 bytes, varredura, estado=ok)"
     ],
     [
-     0.467,
+     0.581,
      "RECUPERADO carv_000012435456.jpg (245479 bytes, varredura, estado=ok)"
     ],
     [
-     0.472,
+     0.589,
      "RECUPERADO carv_000012697600.jpg (245400 bytes, varredura, estado=ok)"
     ],
     [
-     3.453,
+     3.772,
      "RECUPERADO carv_000545614336.jpg (264629 bytes, varredura, estado=ok)"
     ],
     [
-     3.928,
+     4.246,
      "RECUPERADO carv_000585065076.jpg (264702 bytes, varredura, estado=ok)"
     ],
     [
-     4.294,
+     4.665,
      "RECUPERADO carv_000617242856.jpg (264840 bytes, varredura, estado=ok)"
     ],
     [
-     4.587,
+     5.109,
      "RECUPERADO carv_000646845276.jpg (264805 bytes, varredura, estado=ok)"
     ],
     [
-     5.05,
+     5.597,
      "RECUPERADO carv_000685973968.jpg (264518 bytes, varredura, estado=ok)"
     ],
     [
-     5.347,
+     5.865,
      "RECUPERADO carv_000707903044.jpg (264868 bytes, varredura, estado=ok)"
     ],
     [
-     5.887,
+     6.412,
      "RECUPERADO carv_000758931128.jpg (264783 bytes, varredura, estado=ok)"
     ],
     [
-     6.053,
+     6.585,
      "RECUPERADO carv_000774500140.jpg (264567 bytes, varredura, estado=ok)"
     ],
     [
-     6.403,
+     6.936,
      "RECUPERADO carv_000813448608.jpg (264917 bytes, varredura, estado=ok)"
     ],
     [
-     6.866,
+     7.403,
      "RECUPERADO carv_000852836372.jpg (264805 bytes, varredura, estado=ok)"
     ],
     [
-     6.974,
+     7.515,
      "RECUPERADO carv_000861120136.jpg (264924 bytes, varredura, estado=ok)"
     ],
     [
-     7.583,
+     8.166,
      "RECUPERADO carv_000922925308.jpg (264988 bytes, varredura, estado=ok)"
     ],
     [
-     7.759,
+     8.347,
      "RECUPERADO carv_000939105648.jpg (264695 bytes, varredura, estado=ok)"
     ],
     [
-     8.275,
+     8.92,
      "RECUPERADO carv_000986947044.jpg (264755 bytes, varredura, estado=ok)"
     ],
     [
-     8.554,
+     9.223,
      "RECUPERADO carv_001010936408.jpg (264795 bytes, varredura, estado=ok)"
     ],
     [
-     8.928,
+     9.631,
      "RECUPERADO carv_001041587916.jpg (264916 bytes, varredura, estado=ok)"
     ],
     [
-     9.208,
+     9.935,
      "RECUPERADO carv_001071258432.jpg (264793 bytes, varredura, estado=ok)"
     ],
     [
-     9.477,
+     10.232,
      "RECUPERADO carv_001098153396.jpg (264801 bytes, varredura, estado=ok)"
     ],
     [
-     9.916,
+     10.719,
      "RECUPERADO carv_001137449512.jpg (264708 bytes, varredura, estado=ok)"
     ],
     [
-     10.198,
+     10.993,
      "RECUPERADO carv_001159148700.jpg (264673 bytes, varredura, estado=ok)"
     ],
     [
-     10.734,
+     11.527,
      "RECUPERADO carv_001211055888.jpg (264794 bytes, varredura, estado=ok)"
     ],
     [
-     10.826,
+     11.633,
      "RECUPERADO carv_001217879428.jpg (264730 bytes, varredura, estado=ok)"
     ],
     [
-     11.468,
+     12.276,
      "RECUPERADO carv_001277190136.jpg (264445 bytes, varredura, estado=ok)"
     ],
     [
-     11.563,
+     12.368,
      "RECUPERADO carv_001282030188.jpg (264602 bytes, varredura, estado=ok)"
     ],
     [
-     12.105,
+     12.897,
      "RECUPERADO carv_001333600992.jpg (264938 bytes, varredura, estado=ok)"
     ],
     [
-     12.196,
+     13.006,
      "RECUPERADO carv_001345185108.jpg (264451 bytes, varredura, estado=ok)"
     ],
     [
-     12.823,
+     13.715,
      "RECUPERADO carv_001404556744.jpg (264812 bytes, varredura, estado=ok)"
     ],
     [
-     12.996,
+     13.922,
      "RECUPERADO carv_001418119228.jpg (264944 bytes, varredura, estado=ok)"
     ],
     [
-     13.262,
+     14.245,
      "RECUPERADO carv_001442602160.jpg (264804 bytes, varredura, estado=ok)"
     ],
     [
-     13.865,
+     14.936,
      "RECUPERADO carv_001500062500.jpg (264892 bytes, varredura, estado=ok)"
     ],
     [
-     14.137,
+     15.204,
      "RECUPERADO carv_001528329624.jpg (264674 bytes, varredura, estado=ok)"
     ],
     [
-     14.599,
+     15.679,
      "RECUPERADO carv_001567009804.jpg (264713 bytes, varredura, estado=ok)"
     ],
     [
-     14.958,
+     16.103,
      "RECUPERADO carv_001598487168.jpg (264782 bytes, varredura, estado=ok)"
     ],
     [
-     14.971,
+     16.119,
      "RECUPERADO carv_001600097524.jpg (264874 bytes, varredura, estado=ok)"
     ],
     [
-     15.577,
+     16.849,
      "RECUPERADO carv_001660320104.jpg (264954 bytes, varredura, estado=ok)"
     ],
     [
-     15.856,
+     17.135,
      "RECUPERADO carv_001686013404.jpg (264880 bytes, varredura, estado=ok)"
     ],
     [
-     16.238,
+     17.567,
      "RECUPERADO carv_001715968592.jpg (264962 bytes, varredura, estado=ok)"
     ],
     [
-     16.527,
+     17.921,
      "RECUPERADO carv_001740150468.jpg (265016 bytes, varredura, estado=ok)"
     ],
     [
-     16.801,
+     18.281,
      "RECUPERADO carv_001770621752.jpg (264779 bytes, varredura, estado=ok)"
     ],
     [
-     17.266,
+     18.845,
      "RECUPERADO carv_001812783532.jpg (264744 bytes, varredura, estado=ok)"
     ],
     [
-     17.54,
+     19.205,
      "RECUPERADO carv_001834330144.jpg (264810 bytes, varredura, estado=ok)"
     ],
     [
-     17.842,
+     19.554,
      "RECUPERADO carv_001861139604.jpg (264891 bytes, varredura, estado=ok)"
     ],
     [
-     18.427,
+     20.185,
      "RECUPERADO carv_001910893832.jpg (264648 bytes, varredura, estado=ok)"
     ],
     [
-     18.803,
+     20.628,
      "RECUPERADO carv_001944265596.jpg (264715 bytes, varredura, estado=ok)"
     ],
     [
-     19.256,
+     21.144,
      "RECUPERADO carv_001983323120.jpg (265001 bytes, varredura, estado=ok)"
     ],
     [
-     19.351,
+     21.243,
      "RECUPERADO carv_001993324132.jpg (264699 bytes, varredura, estado=ok)"
     ],
     [
-     19.737,
+     21.637,
      "RECUPERADO carv_002028951256.jpg (264632 bytes, varredura, estado=ok)"
     ],
     [
-     20.176,
+     22.186,
      "RECUPERADO carv_002067475788.jpg (264722 bytes, varredura, estado=ok)"
     ],
     [
-     20.359,
+     22.399,
      "RECUPERADO carv_002087060416.jpg (264935 bytes, varredura, estado=ok)"
     ],
     [
-     21.022,
+     23.131,
      "RECUPERADO carv_002142359092.jpg (264857 bytes, varredura, estado=ok)"
     ],
     [
-     21.114,
+     23.235,
      "Etapa 2 concluída: 95 candidato(s) analisado(s)."
     ]
    ]
@@ -1505,15 +1507,16 @@
     "verificar": false,
     "sem_verificar": true
    },
-   "cpu_usuario_s": 19.915,
-   "cpu_sistema_s": 0.564,
-   "rss_pico_mb": 53.3,
-   "segundos": 20.484365463256836,
-   "segundos_etapa1": 0.013237714767456055,
-   "segundos_etapa2": 20.47112774848938,
+   "cpu_usuario_s": 21.493,
+   "cpu_sistema_s": 0.696,
+   "rss_durante_mb": 25.6,
+   "rss_pico_processo_mb": 53.0,
+   "segundos": 22.206836938858032,
+   "segundos_etapa1": 0.01689887046813965,
+   "segundos_etapa2": 22.189938068389893,
    "bytes_varridos": 2147483648,
    "varrido_txt": "o cartão inteiro",
-   "mbps_efetivo": 99.97868880408004,
+   "mbps_efetivo": 92.22385005297006,
    "recuperados": 125,
    "candidatos": 125,
    "rejeitados": 0,
@@ -1543,7 +1546,7 @@
    ],
    "cancelado": false,
    "pausado": false,
-   "tempo_interno": 20.483535289764404,
+   "tempo_interno": 22.206021785736084,
    "fases_observadas": [
     [
      0.0,
@@ -1551,7 +1554,7 @@
      0.05
     ],
     [
-     0.139,
+     0.187,
      "carving",
      0.6013565063476562
     ]
@@ -1574,11 +1577,11 @@
      "Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)"
     ],
     [
-     0.0,
+     0.001,
      "Sistema de arquivos identificado: fat32"
     ],
     [
-     0.001,
+     0.002,
      "RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=nao_verificado)"
     ],
     [
@@ -1586,7 +1589,7 @@
      "RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.002,
+     0.003,
      "RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=nao_verificado)"
     ],
     [
@@ -1594,499 +1597,499 @@
      "RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.003,
+     0.004,
      "RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.003,
+     0.004,
      "RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.004,
+     0.005,
      "RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.004,
+     0.005,
      "RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.005,
+     0.006,
      "RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.005,
+     0.006,
      "RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.005,
+     0.007,
      "RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.006,
+     0.007,
      "RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.006,
+     0.008,
      "RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.007,
+     0.008,
      "RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.007,
+     0.009,
      "RECUPERADO IMG_2014.JPG (222719 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.007,
+     0.009,
      "RECUPERADO IMG_2015.JPG (222609 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.008,
+     0.01,
      "RECUPERADO IMG_2016.JPG (222599 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.008,
+     0.011,
      "RECUPERADO IMG_2017.JPG (222634 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.009,
+     0.011,
      "RECUPERADO IMG_2018.JPG (222618 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.009,
+     0.012,
      "RECUPERADO IMG_2019.JPG (222910 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.01,
+     0.012,
      "RECUPERADO IMG_2020.JPG (222691 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.01,
+     0.013,
      "RECUPERADO IMG_2021.JPG (222733 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.01,
+     0.013,
      "RECUPERADO IMG_2022.JPG (222492 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.011,
+     0.014,
      "RECUPERADO IMG_2023.JPG (222751 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.011,
+     0.014,
      "RECUPERADO IMG_2024.JPG (222652 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.011,
+     0.015,
      "RECUPERADO IMG_2025.JPG (222667 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.012,
+     0.015,
      "RECUPERADO IMG_2026.JPG (222917 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.012,
+     0.016,
      "RECUPERADO IMG_2027.JPG (222918 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.013,
+     0.016,
      "RECUPERADO IMG_2028.JPG (222624 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.013,
+     0.017,
      "RECUPERADO IMG_2029.JPG (222687 bytes, pasta, estado=nao_verificado)"
     ],
     [
-     0.013,
+     0.017,
      "Etapa 1 concluída: 30 candidato(s) processado(s)."
     ],
     [
-     0.013,
+     0.017,
      "Etapa 2: varredura por assinatura (file carving)"
     ],
     [
-     0.027,
+     0.035,
      "RECUPERADO carv_000001163264.jpg (245579 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.035,
+     0.047,
      "RECUPERADO carv_000001425408.jpg (245505 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.043,
+     0.058,
      "RECUPERADO carv_000001687552.jpg (245570 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.05,
+     0.068,
      "RECUPERADO carv_000001949696.jpg (245585 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.056,
+     0.077,
      "RECUPERADO carv_000002211840.jpg (245627 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.059,
+     0.087,
      "RECUPERADO carv_000002473984.jpg (245415 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.064,
+     0.089,
      "RECUPERADO carv_000002736128.jpg (245598 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.066,
+     0.092,
      "RECUPERADO carv_000002998272.jpg (245370 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.068,
+     0.094,
      "RECUPERADO carv_000003260416.jpg (245400 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.069,
+     0.097,
      "RECUPERADO carv_000003522560.jpg (245516 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.071,
+     0.099,
      "RECUPERADO carv_000003784704.jpg (245544 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.073,
+     0.101,
      "RECUPERADO carv_000004046848.jpg (245653 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.074,
+     0.104,
      "RECUPERADO carv_000004308992.jpg (245636 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.076,
+     0.106,
      "RECUPERADO carv_000004571136.jpg (245548 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.077,
+     0.108,
      "RECUPERADO carv_000004833280.jpg (245655 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.079,
+     0.11,
      "RECUPERADO carv_000005095424.jpg (245639 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.08,
+     0.112,
      "RECUPERADO carv_000005357568.jpg (245448 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.082,
+     0.114,
      "RECUPERADO carv_000005619712.jpg (245655 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.083,
+     0.116,
      "RECUPERADO carv_000005881856.jpg (245240 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.085,
+     0.118,
      "RECUPERADO carv_000006144000.jpg (245550 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.086,
+     0.12,
      "RECUPERADO carv_000006406144.jpg (245552 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.087,
+     0.122,
      "RECUPERADO carv_000006668288.jpg (245544 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.089,
+     0.123,
      "RECUPERADO carv_000006930432.jpg (245450 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.09,
+     0.125,
      "RECUPERADO carv_000007192576.jpg (245399 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.091,
+     0.127,
      "RECUPERADO carv_000007454720.jpg (245698 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.092,
+     0.128,
      "RECUPERADO carv_000007716864.jpg (245494 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.093,
+     0.13,
      "RECUPERADO carv_000007979008.jpg (245565 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.094,
+     0.132,
      "RECUPERADO carv_000008241152.jpg (245577 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.145,
+     0.195,
      "RECUPERADO carv_000008503296.jpg (245540 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.148,
+     0.199,
      "RECUPERADO carv_000008765440.jpg (245530 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.15,
+     0.202,
      "RECUPERADO carv_000009027584.jpg (245560 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.152,
+     0.205,
      "RECUPERADO carv_000009289728.jpg (245637 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.155,
+     0.208,
      "RECUPERADO carv_000009551872.jpg (245396 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.157,
+     0.21,
      "RECUPERADO carv_000009814016.jpg (245297 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.159,
+     0.213,
      "RECUPERADO carv_000010076160.jpg (245640 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.161,
+     0.216,
      "RECUPERADO carv_000010338304.jpg (245684 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.163,
+     0.218,
      "RECUPERADO carv_000010600448.jpg (245368 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.165,
+     0.221,
      "RECUPERADO carv_000010862592.jpg (245544 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.167,
+     0.224,
      "RECUPERADO carv_000011124736.jpg (245675 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.169,
+     0.226,
      "RECUPERADO carv_000011386880.jpg (245392 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.17,
+     0.229,
      "RECUPERADO carv_000011649024.jpg (245482 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.172,
+     0.231,
      "RECUPERADO carv_000011911168.jpg (245544 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.174,
+     0.233,
      "RECUPERADO carv_000012173312.jpg (245488 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.176,
+     0.236,
      "RECUPERADO carv_000012435456.jpg (245479 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     0.177,
+     0.238,
      "RECUPERADO carv_000012697600.jpg (245400 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     3.077,
+     3.581,
      "RECUPERADO carv_000545614336.jpg (264629 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     3.524,
+     4.109,
      "RECUPERADO carv_000585065076.jpg (264702 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     3.878,
+     4.533,
      "RECUPERADO carv_000617242856.jpg (264840 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     4.147,
+     4.839,
      "RECUPERADO carv_000646845276.jpg (264805 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     4.59,
+     5.344,
      "RECUPERADO carv_000685973968.jpg (264518 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     4.871,
+     5.636,
      "RECUPERADO carv_000707903044.jpg (264868 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     5.406,
+     6.169,
      "RECUPERADO carv_000758931128.jpg (264783 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     5.582,
+     6.352,
      "RECUPERADO carv_000774500140.jpg (264567 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     5.947,
+     6.713,
      "RECUPERADO carv_000813448608.jpg (264917 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     6.404,
+     7.162,
      "RECUPERADO carv_000852836372.jpg (264805 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     6.51,
+     7.268,
      "RECUPERADO carv_000861120136.jpg (264924 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     7.106,
+     7.992,
      "RECUPERADO carv_000922925308.jpg (264988 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     7.274,
+     8.194,
      "RECUPERADO carv_000939105648.jpg (264695 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     7.814,
+     8.751,
      "RECUPERADO carv_000986947044.jpg (264755 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     8.099,
+     9.019,
      "RECUPERADO carv_001010936408.jpg (264795 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     8.484,
+     9.418,
      "RECUPERADO carv_001041587916.jpg (264916 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     8.763,
+     9.701,
      "RECUPERADO carv_001071258432.jpg (264793 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     9.028,
+     10.026,
      "RECUPERADO carv_001098153396.jpg (264801 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     9.47,
+     10.608,
      "RECUPERADO carv_001137449512.jpg (264708 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     9.751,
+     10.951,
      "RECUPERADO carv_001159148700.jpg (264673 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     10.293,
+     11.616,
      "RECUPERADO carv_001211055888.jpg (264794 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     10.378,
+     11.735,
      "RECUPERADO carv_001217879428.jpg (264730 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     10.995,
+     12.441,
      "RECUPERADO carv_001277190136.jpg (264445 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     11.083,
+     12.537,
      "RECUPERADO carv_001282030188.jpg (264602 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     11.619,
+     13.076,
      "RECUPERADO carv_001333600992.jpg (264938 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     11.714,
+     13.17,
      "RECUPERADO carv_001345185108.jpg (264451 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     12.351,
+     13.793,
      "RECUPERADO carv_001404556744.jpg (264812 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     12.53,
+     13.977,
      "RECUPERADO carv_001418119228.jpg (264944 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     12.793,
+     14.253,
      "RECUPERADO carv_001442602160.jpg (264804 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     13.414,
+     14.855,
      "RECUPERADO carv_001500062500.jpg (264892 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     13.697,
+     15.119,
      "RECUPERADO carv_001528329624.jpg (264674 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     14.151,
+     15.588,
      "RECUPERADO carv_001567009804.jpg (264713 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     14.495,
+     15.986,
      "RECUPERADO carv_001598487168.jpg (264782 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     14.504,
+     15.996,
      "RECUPERADO carv_001600097524.jpg (264874 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     15.127,
+     16.678,
      "RECUPERADO carv_001660320104.jpg (264954 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     15.416,
+     16.981,
      "RECUPERADO carv_001686013404.jpg (264880 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     15.794,
+     17.372,
      "RECUPERADO carv_001715968592.jpg (264962 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     16.063,
+     17.657,
      "RECUPERADO carv_001740150468.jpg (265016 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     16.321,
+     17.926,
      "RECUPERADO carv_001770621752.jpg (264779 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     16.767,
+     18.397,
      "RECUPERADO carv_001812783532.jpg (264744 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     17.03,
+     18.696,
      "RECUPERADO carv_001834330144.jpg (264810 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     17.302,
+     18.968,
      "RECUPERADO carv_001861139604.jpg (264891 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     17.869,
+     19.499,
      "RECUPERADO carv_001910893832.jpg (264648 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     18.241,
+     19.922,
      "RECUPERADO carv_001944265596.jpg (264715 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     18.703,
+     20.437,
      "RECUPERADO carv_001983323120.jpg (265001 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     18.798,
+     20.524,
      "RECUPERADO carv_001993324132.jpg (264699 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     19.162,
+     20.889,
      "RECUPERADO carv_002028951256.jpg (264632 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     19.598,
+     21.356,
      "RECUPERADO carv_002067475788.jpg (264722 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     19.777,
+     21.522,
      "RECUPERADO carv_002087060416.jpg (264935 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     20.392,
+     22.121,
      "RECUPERADO carv_002142359092.jpg (264857 bytes, varredura, estado=nao_verificado)"
     ],
     [
-     20.484,
+     22.206,
      "Etapa 2 concluída: 95 candidato(s) analisado(s)."
     ]
    ]

@@ -2,7 +2,7 @@
 RECUPERA FOTOS 4.0 — RESULTADO REAL DA SUÍTE DE TESTES
 ========================================================================
 comando          : python rodar_testes.py
-data/hora        : 11/11/2026 05:10:14
+data/hora        : 11/11/2026 09:24:52
 sistema          : Linux 6.1.158+ (x86_64)
 python           : 3.11.2 (CPython)
 Pillow           : 13.0.0
@@ -46,7 +46,7 @@ test_unidade_integralmente_fisica_copiada_sem_descomprimir (test_advanced_ntfs.T
 test_particao_ntfs_dentro_de_imagem_de_disco (test_advanced_ntfs.TesteVolumeDeslocado.test_particao_ntfs_dentro_de_imagem_de_disco) ... ok
 
 ----------------------------------------------------------------------
-Ran 34 tests in 0.595s
+Ran 34 tests in 0.705s
 
 OK
 
@@ -97,7 +97,7 @@ test_validar_destino_inexistente_sem_criar_explica (test_aquisicao.TesteValidaca
 Com criar_se_nao_existe=False (é assim que a interface valida antes ... ok
 
 ----------------------------------------------------------------------
-Ran 44 tests in 0.013s
+Ran 44 tests in 0.017s
 
 OK (skipped=1)
 
@@ -146,7 +146,7 @@ test_verificadores_estruturais_com_bytes_mutados (test_fuzz.TesteFuzzVerificacao
 test_zeros_nunca_sao_ok (test_fuzz.TesteFuzzVerificacao.test_zeros_nunca_sao_ok) ... ok
 
 ----------------------------------------------------------------------
-Ran 37 tests in 9.045s
+Ran 37 tests in 10.130s
 
 OK
 
@@ -215,7 +215,7 @@ test_sem_origem_avisa_e_nao_inicia (test_interface.TesteValidacoesDeInicio.test_
 test_validar_destino_sem_origem_exige_origem (test_interface.TesteValidacoesDeInicio.test_validar_destino_sem_origem_exige_origem) ... ok
 
 ----------------------------------------------------------------------
-Ran 61 tests in 3.001s
+Ran 61 tests in 3.303s
 
 OK
 
@@ -261,7 +261,7 @@ test_run_truncado_interrompe (test_ntfs.TesteRunList.test_run_truncado_interromp
 test_run_unico (test_ntfs.TesteRunList.test_run_unico) ... ok
 
 ----------------------------------------------------------------------
-Ran 40 tests in 0.118s
+Ran 40 tests in 0.134s
 
 OK
 
@@ -413,7 +413,7 @@ test_origem_nao_e_modificada (test_recupera_fotos.TesteSeguranca.test_origem_nao
 test_permitir_mesmo_disco_so_para_imagem (test_recupera_fotos.TesteSeguranca.test_permitir_mesmo_disco_so_para_imagem) ... ok
 
 ----------------------------------------------------------------------
-Ran 134 tests in 15.283s
+Ran 134 tests in 17.158s
 
 OK
 
@@ -529,7 +529,7 @@ test_volume_fat32_tem_tamanho_exato (test_regressions.TesteTamanhoExatoDosVolume
 test_volumes_exfat_e_ntfs_tem_tamanho_exato (test_regressions.TesteTamanhoExatoDosVolumes.test_volumes_exfat_e_ntfs_tem_tamanho_exato) ... ok
 
 ----------------------------------------------------------------------
-Ran 78 tests in 1.761s
+Ran 78 tests in 1.764s
 
 OK
 
@@ -551,7 +551,7 @@ TOTAL                       428   427       0      0      1
 
 
 ========================================================================
-RESULTADO FINAL: 428 teste(s) executado(s) em 29.8s
+RESULTADO FINAL: 428 teste(s) executado(s) em 33.2s
   aprovados : 427
   reprovados: 0
   pulados   : 1

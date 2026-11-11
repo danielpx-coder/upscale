@@ -1,6 +1,6 @@
 # Recupera Fotos 4.0 — benchmark real em imagem de 2048.0 MiB
 
-*Gerado por `python benchmark.py--reusar` em 11/11/2026 05:00:29. Todos os números foram medidos nesta execução; nenhum é estimado.*
+*Gerado por `python benchmark.py--reusar` em 11/11/2026 09:22:26. Todos os números foram medidos nesta execução; nenhum é estimado.*
 
 ## Ambiente
 
@@ -8,7 +8,7 @@
 - python: 3.11.2
 - Pillow: 13.0.0
 - imagem: `/tmp/rf4_bench/cartao_benchmark.img` — 2147483648 bytes (2.000 GiB), arquivo real em disco, fora do repositório
-- construção da imagem: 14.9s
+- construção da imagem: 22.2s
 - volume FAT32: LBA 2048 (1048576 B), 512.0 MiB, 16381 clusters de 32 KiB
 - espaço livre dentro do volume (lendo a FAT): 15643 clusters = 488.8 MiB — é isso o que o cenário A varre
 - área não alocada: 537919488 .. 2147483648 (1535.0 MiB) de dados aleatórios com as assinaturas de imagem neutralizadas
@@ -22,23 +22,23 @@
 
 ## Leitura bruta (teto de I/O do ambiente)
 
-- 2147483648 bytes lidos em 0.3s = **6738 MB/s** (blocos de 4 MiB, erros de leitura: 0)
+- 2147483648 bytes lidos em 0.4s = **5198 MB/s** (blocos de 4 MiB, erros de leitura: 0)
 - atenção: a imagem acabou de ser gravada, então o Linux a serve do cache de página (o sandbox não permite descartar o cache com `echo 3 > /proc/sys/vm/drop_caches`). Este número é o teto de leitura+CPU do ambiente, não a velocidade de um cartão físico.
 
 ## Resultados
 
 | cenário | varrido | tempo total | etapa 1 | etapa 2 | MB/s | gravados | idênticos ao alvo | vivos reencontrados | fora do gabarito | apagadas | órfãs |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| A — padrão da interface (só espaço livre) | 488.8 MiB | 2.9s | 0.2s | 2.8s | 167 | 30 | 30 | 0 | 0 | 30/30 | 0/50 |
-| B — cartão inteiro com verificação | 2048.0 MiB | 21.1s | 0.1s | 21.0s | 97 | 125 | 80 | 45 | 0 | 30/30 | 50/50 |
-| C — cartão inteiro sem verificação | 2048.0 MiB | 20.5s | 0.0s | 20.5s | 100 | 125 | 80 | 45 | 0 | 30/30 | 50/50 |
+| A — padrão da interface (só espaço livre) | 488.8 MiB | 3.9s | 0.2s | 3.7s | 124 | 30 | 30 | 0 | 0 | 30/30 | 0/50 |
+| B — cartão inteiro com verificação | 2048.0 MiB | 23.2s | 0.2s | 23.1s | 88 | 125 | 80 | 45 | 0 | 30/30 | 50/50 |
+| C — cartão inteiro sem verificação | 2048.0 MiB | 22.2s | 0.0s | 22.2s | 92 | 125 | 80 | 45 | 0 | 30/30 | 50/50 |
 
 ### A — padrão da interface (só espaço livre)
 
 - opções: `{"apenas_espaco_livre": true, "verificar": true}`
 - o que foi varrido: só os clusters livres do volume (488.8 MiB)
-- tempo: 2.9s total (etapa 1 0.2s + etapa 2 2.8s) | 488.8 MiB varridos | 167 MB/s
-- cpu: 2.8s usuário + 0.1s sistema | pico de memória do processo (RSS): 42 MB
+- tempo: 3.9s total (etapa 1 0.2s + etapa 2 3.7s) | 488.8 MiB varridos | 124 MB/s
+- cpu: 3.8s usuário + 0.1s sistema | memória durante o cenário (RSS): 25 MB | pico do processo inteiro: 42 MB
 - recuperados: 30 | candidatos em memória: 30 | rejeitados: 0 | recusas NTFS: 0
 - gravados no destino: 30 arquivo(s), 6.4 MiB | volumes: `['fat32@1048576']`
 - por estado: `{"ok": 30, "nao_verificado": 0, "corrompido": 0, "parcial": 0}`
@@ -52,27 +52,27 @@
 - registro da execução:
     - +0.001s — Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)
     - +0.001s — Sistema de arquivos identificado: fat32
-    - +0.021s — RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)
-    - +0.026s — RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)
-    - +0.031s — RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)
-    - +0.036s — RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)
-    - +0.041s — RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)
-    - +0.046s — RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)
-    - +0.051s — RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)
-    - +0.056s — RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)
-    - +0.06s — RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)
-    - +0.065s — RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)
-    - +0.07s — RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)
-    - +0.075s — RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)
-    - +0.08s — RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)
-    - +0.084s — RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)
+    - +0.024s — RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)
+    - +0.031s — RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)
+    - +0.037s — RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)
+    - +0.043s — RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)
+    - +0.049s — RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)
+    - +0.056s — RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)
+    - +0.062s — RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)
+    - +0.068s — RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)
+    - +0.074s — RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)
+    - +0.08s — RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)
+    - +0.086s — RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)
+    - +0.092s — RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)
+    - +0.098s — RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)
+    - +0.104s — RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)
 
 ### B — cartão inteiro com verificação
 
 - opções: `{"cartao_inteiro": true, "apenas_espaco_livre": false, "verificar": true}`
 - o que foi varrido: o cartão inteiro (2048.0 MiB)
-- tempo: 21.1s total (etapa 1 0.1s + etapa 2 21.0s) | 2048.0 MiB varridos | 97 MB/s
-- cpu: 20.5s usuário + 0.6s sistema | pico de memória do processo (RSS): 53 MB
+- tempo: 23.2s total (etapa 1 0.2s + etapa 2 23.1s) | 2048.0 MiB varridos | 88 MB/s
+- cpu: 22.4s usuário + 0.8s sistema | memória durante o cenário (RSS): 26 MB | pico do processo inteiro: 53 MB
 - recuperados: 125 | candidatos em memória: 125 | rejeitados: 0 | recusas NTFS: 0
 - gravados no destino: 125 arquivo(s), 29.5 MiB | volumes: `['fat32@1048576']`
 - por estado: `{"ok": 125, "nao_verificado": 0, "corrompido": 0, "parcial": 0}`
@@ -85,28 +85,28 @@
 - avisos: origem é um arquivo de imagem; gravação no mesmo disco autorizada
 - registro da execução:
     - +0.0s — Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)
-    - +0.0s — Sistema de arquivos identificado: fat32
-    - +0.006s — RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)
-    - +0.01s — RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)
-    - +0.014s — RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)
-    - +0.019s — RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)
-    - +0.024s — RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)
-    - +0.028s — RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)
-    - +0.032s — RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)
-    - +0.037s — RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)
-    - +0.041s — RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)
-    - +0.045s — RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)
-    - +0.049s — RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)
-    - +0.053s — RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)
-    - +0.058s — RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)
-    - +0.062s — RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)
+    - +0.001s — Sistema de arquivos identificado: fat32
+    - +0.007s — RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=ok)
+    - +0.012s — RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=ok)
+    - +0.017s — RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=ok)
+    - +0.022s — RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=ok)
+    - +0.027s — RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=ok)
+    - +0.032s — RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=ok)
+    - +0.037s — RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=ok)
+    - +0.042s — RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=ok)
+    - +0.047s — RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=ok)
+    - +0.052s — RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=ok)
+    - +0.058s — RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=ok)
+    - +0.063s — RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=ok)
+    - +0.067s — RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=ok)
+    - +0.072s — RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=ok)
 
 ### C — cartão inteiro sem verificação
 
 - opções: `{"cartao_inteiro": true, "apenas_espaco_livre": false, "verificar": false, "sem_verificar": true}`
 - o que foi varrido: o cartão inteiro (2048.0 MiB)
-- tempo: 20.5s total (etapa 1 0.0s + etapa 2 20.5s) | 2048.0 MiB varridos | 100 MB/s
-- cpu: 19.9s usuário + 0.6s sistema | pico de memória do processo (RSS): 53 MB
+- tempo: 22.2s total (etapa 1 0.0s + etapa 2 22.2s) | 2048.0 MiB varridos | 92 MB/s
+- cpu: 21.5s usuário + 0.7s sistema | memória durante o cenário (RSS): 26 MB | pico do processo inteiro: 53 MB
 - recuperados: 125 | candidatos em memória: 125 | rejeitados: 0 | recusas NTFS: 0
 - gravados no destino: 125 arquivo(s), 29.5 MiB | volumes: `['fat32@1048576']`
 - por estado: `{"ok": 0, "nao_verificado": 125, "corrompido": 0, "parcial": 0}`
@@ -119,21 +119,23 @@
 - avisos: origem é um arquivo de imagem; gravação no mesmo disco autorizada
 - registro da execução:
     - +0.0s — Etapa 1: recuperação por sistema de arquivos (origem: /tmp/rf4_bench/cartao_benchmark.img)
-    - +0.0s — Sistema de arquivos identificado: fat32
-    - +0.001s — RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=nao_verificado)
+    - +0.001s — Sistema de arquivos identificado: fat32
+    - +0.002s — RECUPERADO IMG_2000.JPG (222650 bytes, pasta, estado=nao_verificado)
     - +0.002s — RECUPERADO IMG_2001.JPG (222623 bytes, pasta, estado=nao_verificado)
-    - +0.002s — RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=nao_verificado)
+    - +0.003s — RECUPERADO IMG_2002.JPG (222591 bytes, pasta, estado=nao_verificado)
     - +0.003s — RECUPERADO IMG_2003.JPG (222762 bytes, pasta, estado=nao_verificado)
-    - +0.003s — RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=nao_verificado)
-    - +0.003s — RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=nao_verificado)
-    - +0.004s — RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=nao_verificado)
-    - +0.004s — RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=nao_verificado)
-    - +0.005s — RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=nao_verificado)
-    - +0.005s — RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=nao_verificado)
-    - +0.005s — RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=nao_verificado)
-    - +0.006s — RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=nao_verificado)
-    - +0.006s — RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=nao_verificado)
-    - +0.007s — RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=nao_verificado)
+    - +0.004s — RECUPERADO IMG_2004.JPG (222675 bytes, pasta, estado=nao_verificado)
+    - +0.004s — RECUPERADO IMG_2005.JPG (222657 bytes, pasta, estado=nao_verificado)
+    - +0.005s — RECUPERADO IMG_2006.JPG (222964 bytes, pasta, estado=nao_verificado)
+    - +0.005s — RECUPERADO IMG_2007.JPG (222787 bytes, pasta, estado=nao_verificado)
+    - +0.006s — RECUPERADO IMG_2008.JPG (222837 bytes, pasta, estado=nao_verificado)
+    - +0.006s — RECUPERADO IMG_2009.JPG (222852 bytes, pasta, estado=nao_verificado)
+    - +0.007s — RECUPERADO IMG_2010.JPG (222384 bytes, pasta, estado=nao_verificado)
+    - +0.007s — RECUPERADO IMG_2011.JPG (222611 bytes, pasta, estado=nao_verificado)
+    - +0.008s — RECUPERADO IMG_2012.JPG (222656 bytes, pasta, estado=nao_verificado)
+    - +0.008s — RECUPERADO IMG_2013.JPG (222546 bytes, pasta, estado=nao_verificado)
+
+- **memória durante o cenário** (VmRSS) é o que o processo ocupa enquanto varre o cartão. O **pico do processo inteiro** (VmHWM) é o maior valor já atingido desde o início do processo: numa execução que também constrói a imagem (`python benchmark.py` sem `--reusar`) esse pico passa de 1 GB, porque o volume FAT32 de 512 MiB é montado em memória antes de ser gravado — isso é custo do gerador de teste, não do recuperador. Com `--reusar`, o pico mede só a recuperação.
 
 ## Como interpretar
 

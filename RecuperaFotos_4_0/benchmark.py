@@ -83,6 +83,30 @@ def sha(dados: bytes) -> str:
     return hashlib.sha256(dados).hexdigest()
 
 
+def _status_memoria() -> dict:
+    """RSS atual e pico (VmHWM) do processo, em MB.
+
+    ru_maxrss (getrusage) é o pico do processo INTEIRO e não diminui nunca: se
+    a imagem de 2 GiB foi construída no mesmo processo, aquele pico fala da
+    construção, não da recuperação. VmRSS é o que o processo ocupa de fato
+    enquanto varre o cartão — é esse o número que interessa aqui.
+    """
+    rss = pico = None
+    try:
+        with open("/proc/self/status", encoding="utf-8") as f:
+            for linha in f:
+                if linha.startswith("VmRSS:"):
+                    rss = int(linha.split()[1]) / 1024
+                elif linha.startswith("VmHWM:"):
+                    pico = int(linha.split()[1]) / 1024
+    except OSError:
+        pass
+    if rss is None:                       # fora do Linux: só o getrusage
+        rss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024
+        pico = rss
+    return {"rss_mb": round(rss, 1), "pico_mb": round(pico or rss, 1)}
+
+
 def foto(semente: int, largura=LARGURA, altura=ALTURA, qualidade=88) -> bytes:
     """JPEG real (decodificável pelo Pillow), com tamanho de foto de verdade.
 
@@ -304,6 +328,7 @@ def rodar_cenario(nome: str, gab: dict, destino: str, **opcoes) -> dict:
     res = motor.Motor(op, progresso=progresso, log=log).executar()
     dur = time.time() - t0
     cpu1 = resource.getrusage(resource.RUSAGE_SELF)
+    mem = _status_memoria()
 
     t_etapa2 = next((t for t, msg in marcos if msg.startswith("Etapa 2:")), None)
     dur_e1 = (t_etapa2 - t0) if t_etapa2 else dur
@@ -344,7 +369,8 @@ def rodar_cenario(nome: str, gab: dict, destino: str, **opcoes) -> dict:
         "opcoes": dict(opcoes),
         "cpu_usuario_s": round(cpu1.ru_utime - cpu0.ru_utime, 3),
         "cpu_sistema_s": round(cpu1.ru_stime - cpu0.ru_stime, 3),
-        "rss_pico_mb": round(cpu1.ru_maxrss / 1024, 1),
+        "rss_durante_mb": mem["rss_mb"],
+        "rss_pico_processo_mb": mem["pico_mb"],
         "segundos": dur, "segundos_etapa1": dur_e1, "segundos_etapa2": dur_e2,
         "bytes_varridos": varridos, "varrido_txt": varrido_txt,
         "mbps_efetivo": _mbps(varridos, dur),
@@ -463,7 +489,9 @@ def escrever_relatorio(gab: dict, bruta: dict, cenarios: list[dict],
           f"{c['segundos_etapa2']:.1f}s) | {_mi(c['bytes_varridos'])} varridos | "
           f"{c['mbps_efetivo']:.0f} MB/s\n")
         w(f"- cpu: {c['cpu_usuario_s']:.1f}s usuário + {c['cpu_sistema_s']:.1f}s "
-          f"sistema | pico de memória do processo (RSS): {c['rss_pico_mb']:.0f} MB\n")
+          f"sistema | memória durante o cenário (RSS): "
+          f"{c['rss_durante_mb']:.0f} MB | pico do processo inteiro: "
+          f"{c['rss_pico_processo_mb']:.0f} MB\n")
         w(f"- recuperados: {c['recuperados']} | candidatos em memória: "
           f"{c['candidatos']} | rejeitados: {c['rejeitados']} | "
           f"recusas NTFS: {c['recusados_ntfs']}\n")
@@ -494,6 +522,13 @@ def escrever_relatorio(gab: dict, bruta: dict, cenarios: list[dict],
         for t, msg in c["marcos"][:16]:
             w(f"    - +{t}s — {msg}\n")
         w("\n")
+    w("- **memória durante o cenário** (VmRSS) é o que o processo ocupa "
+      "enquanto varre o cartão. O **pico do processo inteiro** (VmHWM) é o "
+      "maior valor já atingido desde o início do processo: numa execução que "
+      "também constrói a imagem (`python benchmark.py` sem `--reusar`) esse "
+      "pico passa de 1 GB, porque o volume FAT32 de 512 MiB é montado em "
+      "memória antes de ser gravado — isso é custo do gerador de teste, não do "
+      "recuperador. Com `--reusar`, o pico mede só a recuperação.\n\n")
     w("## Como interpretar\n\n")
     w("- **MB/s efetivo** = bytes varridos no cenário ÷ tempo total. O teto de "
       "leitura bruta medido acima é o limite físico do ambiente: tudo o que "

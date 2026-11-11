@@ -259,7 +259,7 @@ Quando o estado sair `parcial` ou `corrompido`, abra o CSV e leia a coluna
 | `aquisicao.py` | leitores (arquivo, dispositivo, recorte), imagem forense, validação de destino |
 | `particoes.py` | MBR, GPT, EBR, boot de reserva, partições perdidas |
 | `fatfs.py` / `exfat.py` / `ntfs.py` | os três sistemas de arquivos |
-| `assinaturas.py` | carving: 14 famílias de formato e seus analisadores |
+| `assinaturas.py` | carving: 14 assinaturas de início de arquivo e 11 analisadores de formato |
 | `verificacao.py` | classificação de integridade (estrutural + Pillow) e EXIF |
 | `candidatos.py` | o modelo de arquivo candidato e seus estados |
 | `rodar_testes.py` | executa a suíte e grava `resultado_testes.txt` |

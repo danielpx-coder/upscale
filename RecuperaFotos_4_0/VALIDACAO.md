@@ -45,7 +45,7 @@ test_regressions             78    78       0      0      0
 ------------------------------------------------------------------------
 TOTAL                       428   427       0      0      1
 
-RESULTADO FINAL: 428 teste(s) executado(s) em 29.8s
+RESULTADO FINAL: 428 teste(s) executado(s) em 33.2s
   aprovados : 427     reprovados: 0     pulados: 1
   STATUS    : TODOS OS TESTES PASSARAM
 ```
@@ -115,7 +115,7 @@ SHA-256 de cada foto):
 Espaço livre dentro do volume, medido lendo a FAT: **15.643 clusters =
 488,8 MiB** (é o que o cenário A varre).
 
-**Leitura bruta:** 2.147.483.648 bytes em 0,3 s = **6.738 MB/s**, 0 erros.
+**Leitura bruta:** 2.147.483.648 bytes em 0,4 s = **5.198 MB/s**, 0 erros.
 *Atenção:* a imagem acabara de ser gravada, então o Linux a serviu do cache de
 página (o sandbox não permite `drop_caches`). É o teto de leitura+CPU do
 ambiente, **não** a velocidade de um cartão físico.
@@ -124,9 +124,12 @@ ambiente, **não** a velocidade de um cartão físico.
 
 | cenário | varrido | tempo | etapa 1 | etapa 2 | MB/s | gravados | idênticos ao alvo | vivos reencontrados | fora do gabarito | apagadas | órfãs |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| A — padrão da interface (só espaço livre) | 488,8 MiB | 2,9 s | 0,2 s | 2,8 s | 167 | 30 | 30 | 0 | 0 | **30/30** | 0/50 |
-| B — cartão inteiro com verificação | 2.048 MiB | 21,1 s | 0,1 s | 21,0 s | 97 | 125 | 80 | 45 | 0 | **30/30** | **50/50** |
-| C — cartão inteiro sem verificação | 2.048 MiB | 20,5 s | 0,0 s | 20,5 s | 100 | 125 | 80 | 45 | 0 | **30/30** | **50/50** |
+| A — padrão da interface (só espaço livre) | 488,8 MiB | 3,9 s | 0,2 s | 3,7 s | 124 | 30 | 30 | 0 | 0 | **30/30** | 0/50 |
+| B — cartão inteiro com verificação | 2.048 MiB | 23,2 s | 0,2 s | 23,1 s | 88 | 125 | 80 | 45 | 0 | **30/30** | **50/50** |
+| C — cartão inteiro sem verificação | 2.048 MiB | 22,2 s | 0,0 s | 22,2 s | 92 | 125 | 80 | 45 | 0 | **30/30** | **50/50** |
+
+*(memória e CPU do artefato: 25–26 MB de RSS durante a varredura, pico de
+42–53 MB no processo; 3,8 s de CPU usuário no cenário A e 22,4 s no B.)*
 
 Leituras que interessam:
 
@@ -144,13 +147,16 @@ Leituras que interessam:
   espaço livre o carving devolve também as fotos que nunca foram apagadas (elas
   estão lá). É o comportamento esperado do "cartão inteiro", e está explicado
   no relatório.
-- **Custo da verificação: ~0,6 s em 21 s (≈3%)** — diferença B×C. Barata perto
+- **Custo da verificação: ~1,0 s em 23 s (≈4%)** — diferença B×C. Barata perto
   do que ela entrega (separar `ok` de `parcial`/`corrompido`). No cenário C
   todos os 125 saem como `nao_verificado`, como prometido.
-- **Memória: pico de RSS de 53 MB** varrendo 2 GiB. O programa não carrega a
-  imagem na memória: lê em blocos de no máximo 8 MiB.
-- **Vazão real: ~97–167 MB/s** neste sandbox, com a análise de 14 famílias de
-  assinatura rodando em Python puro sobre cada bloco. Num cartão físico o
+- **Memória: 26 MB de RSS varrendo 2 GiB** (pico do processo: 53 MB). O
+  programa não carrega a imagem na memória: lê em blocos de no máximo 8 MiB.
+  Esse pico só passa de 1 GB quando a **construção** da imagem acontece na
+  mesma execução — o gerador de teste monta o volume FAT32 de 512 MiB em
+  memória antes de gravá-lo; é custo do `benchmark.py`, não do recuperador.
+- **Vazão real: ~88–124 MB/s** neste sandbox, com 14 assinaturas (11
+  analisadores de formato) rodando em Python puro sobre cada bloco de 8 MiB. Num cartão físico o
   limite passa a ser a mídia (USB 2.0 ≈ 20 MB/s), não o programa.
 - **Duplicatas: 0** por hash e 0 por região nos três cenários — a etapa 2
   respeita as regiões já recuperadas pela etapa 1.
@@ -162,6 +168,26 @@ Os relatórios CSV dos três cenários estão copiados em
 `benchmark_saida/relatorio_cenario_{0,1,2}.csv` — dá para abrir no Excel e
 conferir arquivo por arquivo (posição no cartão, estado, fração recuperada e
 motivo).
+### Reprodutibilidade
+
+O benchmark foi executado quatro vezes neste ambiente (duas construindo a
+imagem, duas reaproveitando-a). Em **todas** o acerto foi idêntico: 30/30
+apagadas, 50/50 órfãs, 80 arquivos byte a byte idênticos ao gabarito, 0 fora do
+gabarito, 0 duplicata, 0 erro de leitura e 45 vivos reencontrados no modo
+cartão inteiro. Só o tempo variou, com a carga da máquina:
+
+| execução | A | B | C |
+|---|---|---|---|
+| 1ª (constrói a imagem) | 2,9 s | 21,1 s | 20,5 s |
+| 2ª (ambiente novo, constrói) | 3,4 s | 21,4 s | 20,2 s |
+| 3ª (`--reusar`) | 3,4 s | 22,8 s | 20,6 s |
+| 4ª (`--reusar`; é a que está nos artefatos) | 3,9 s | 23,2 s | 22,2 s |
+
+A suíte de testes também foi reexecutada em um ambiente recém-criado (venv novo,
+Pillow reinstalado, `/tmp` vazio, sem `__pycache__`): **428 testes, 427
+aprovados, 0 reprovados, 1 pulo** — o mesmo resultado, em 34,0 s e depois
+33,2 s, contra 29,8 s da primeira execução. O tempo varia com a carga; a
+contagem não.
 
 ---
 
@@ -244,8 +270,8 @@ Estas não são desempenho: são o compromisso de não inventar resultado.
    (por isso os testes de NTFS/exFAT/FAT conferem campos byte a byte contra
    MS-FNTFS/MS-FAT32), mas um cartão formatado por uma câmera real tem
    detalhes que só a mídia mostra.
-4. **A leitura bruta de 6.738 MB/s é cache de página**, como está dito na
-   seção 3. A vazão real dos cenários (97–167 MB/s) é limitada por CPU/Python,
+4. **A leitura bruta de 5.198 MB/s é cache de página**, como está dito na
+   seção 3. A vazão real dos cenários (88–124 MB/s) é limitada por CPU/Python,
    e não representa um cartão SD de verdade.
 5. **HEIC/AVIF/CR3 são validados no nível de contêiner ISO-BMFF**, não do
    fluxo HEVC: o programa acha o arquivo e mede seu comprimento, mas não
@@ -267,8 +293,8 @@ Estas não são desempenho: são o compromisso de não inventar resultado.
   (só Windows).
 - Em uma imagem real de 2 GiB com gabarito SHA-256: **100% das fotos apagadas e
   100% das fotos órfãs recuperadas byte a byte idênticas**, **0 falso
-  positivo**, 0 duplicata, 0 erro de leitura, origem intacta, pico de memória
-  de 53 MB e 2 GiB varridos em 21 s neste ambiente.
+  positivo**, 0 duplicata, 0 erro de leitura, origem intacta, 26 MB de memória
+  e 2 GiB varridos em 23 s neste ambiente.
 - 28 defeitos reais encontrados e corrigidos, cada um com teste de regressão.
 - As limitações da seção 6 são de **ambiente** (sem Windows, sem mídia física),
   não de cobertura de código: onde foi possível executar, foi executado.

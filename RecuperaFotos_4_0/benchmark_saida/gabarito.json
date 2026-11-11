@@ -677,8 +677,8 @@
    "sha256": "9e3ce4ecbf33aa9bf14c92d94674348adf9ba8efcff2e5f2d8215b137e4ba5f8"
   }
  ],
- "segundos_para_construir": 14.929865598678589,
- "gerado_em": "11/11/2026 04:57:12",
+ "segundos_para_construir": 22.150495052337646,
+ "gerado_em": "11/11/2026 09:18:28",
  "python": "3.11.2",
  "plataforma": "Linux 6.1.158+ (x86_64)"
 }
