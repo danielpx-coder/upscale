@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 fatfs.py — Interpretador e recuperador de sistemas de arquivos FAT16/FAT32.
 
@@ -22,8 +21,7 @@ from __future__ import annotations
 import struct
 from datetime import datetime
 
-from candidatos import (CandidatoArquivo, Fragmento, METODO_PASTA,
-                        METODO_VARREDURA, dos_para_datetime)
+from candidatos import METODO_PASTA, METODO_VARREDURA, CandidatoArquivo, Fragmento, dos_para_datetime
 from particoes import _info_fat
 
 ATTR_READ_ONLY = 0x01

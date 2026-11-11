@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 rodar_testes.py — executa TODA a suíte de testes e grava o relatório real.
 
@@ -93,11 +92,11 @@ def rodar(modulos: list[str] | None = None):
         buffer_saida.write("\n")
     duracao = time.time() - inicio
     totais = {
-        "executados": sum(l[1] for l in tabela),
-        "ok": sum(l[2] for l in tabela),
-        "falhas": sum(l[3] for l in tabela),
-        "erros": sum(l[4] for l in tabela),
-        "pulos": sum(l[5] for l in tabela),
+        "executados": sum(linha[1] for linha in tabela),
+        "ok": sum(linha[2] for linha in tabela),
+        "falhas": sum(linha[3] for linha in tabela),
+        "erros": sum(linha[4] for linha in tabela),
+        "pulos": sum(linha[5] for linha in tabela),
     }
     return buffer_saida.getvalue(), tabela, totais, todos_pulados, duracao
 

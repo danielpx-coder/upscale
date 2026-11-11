@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 benchmark.py — medição REAL de desempenho e de acerto em uma imagem de 2 GiB.
 
@@ -33,12 +32,12 @@ from __future__ import annotations
 
 import gc
 import hashlib
-import resource
 import io
 import json
 import os
 import platform
 import random
+import resource
 import shutil
 import sys
 import time
@@ -48,9 +47,9 @@ RAIZ = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, RAIZ)
 sys.path.insert(0, os.path.join(RAIZ, "tests"))
 
-import motor                                     # noqa: E402
-from aquisicao import LeitorArquivo              # noqa: E402
-import construtor                                # noqa: E402
+import construtor  # noqa: E402
+import motor  # noqa: E402
+from aquisicao import LeitorArquivo  # noqa: E402
 
 SAIDA = os.path.join(RAIZ, "benchmark_saida")
 TRABALHO = "/tmp/rf4_bench"          # fora do repositório: não vai para o Git

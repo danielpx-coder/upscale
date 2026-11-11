@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 test_recupera_fotos.py — testes ponta-a-ponta do Recupera Fotos 4.0.
 
@@ -19,7 +18,6 @@ import io
 import os
 import re
 import shutil
-import struct
 import sys
 import tempfile
 import threading
@@ -31,20 +29,39 @@ sys.path.insert(0, RAIZ)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import aquisicao
+import auxiliar as A
 import motor
 import particoes
-from candidatos import (ESTADO_CORROMPIDO, ESTADO_NAO_VERIFICADO, ESTADO_OK,
-                        ESTADO_PARCIAL, METODO_MFT, METODO_MFT_ORFA,
-                        METODO_PASTA, METODO_VARREDURA)
-import auxiliar as A
-from construtor import (ArquivoTeste, construir_exfat, construir_fat16,
-                        construir_fat32, construir_ntfs, dados_pseudo_aleatorios,
-                        formatar_rapido_fat32, formatar_rapido_ntfs, gravar,
-                        jpeg_grande_com_rst, jpeg_real, montar_disco_ebr,
-                        montar_disco_gpt, montar_disco_mbr, png_real)
+from candidatos import (
+    ESTADO_CORROMPIDO,
+    ESTADO_NAO_VERIFICADO,
+    ESTADO_OK,
+    ESTADO_PARCIAL,
+    METODO_MFT,
+    METODO_MFT_ORFA,
+    METODO_PASTA,
+    METODO_VARREDURA,
+)
+from construtor import (
+    ArquivoTeste,
+    construir_exfat,
+    construir_fat16,
+    construir_fat32,
+    construir_ntfs,
+    dados_pseudo_aleatorios,
+    formatar_rapido_fat32,
+    formatar_rapido_ntfs,
+    gravar,
+    jpeg_grande_com_rst,
+    jpeg_real,
+    montar_disco_ebr,
+    montar_disco_gpt,
+    montar_disco_mbr,
+    png_real,
+)
 
 try:
-    from PIL import Image
+    from PIL import Image  # noqa: F401 - só sondando se o Pillow está instalado
     PIL_OK = True
 except ImportError:
     PIL_OK = False
@@ -641,7 +658,7 @@ class TesteDeduplicacao(BaseMotor):
         self.assertEqual(len(jpgs), 1)
         self.assertEqual(jpgs[0].metodo, METODO_PASTA)
         gravados = []
-        for raiz, _dirs, files in os.walk(res._destino_teste):
+        for _raiz, _dirs, files in os.walk(res._destino_teste):
             gravados += [f for f in files if f.lower().endswith((".jpg", ".jpeg"))]
         self.assertEqual(len(gravados), 1)
         hashes = {c.sha256 for c in res.candidatos if c.sha256}
@@ -977,8 +994,10 @@ class TesteSeguranca(BaseMotor):
         caminho = self.imagem(img)
         leitor = aquisicao.abrir_origem(caminho)
         self.assertFalse(getattr(leitor, "gravavel", False))
-        with self.assertRaises(Exception):
-            leitor.write(0, b"\xFF" * 16)      # não deve existir/gravar
+        # nenhum leitor do programa expõe gravação: ou o método não existe
+        # (AttributeError) ou a tentativa é recusada (OSError/ErroLeitura)
+        with self.assertRaises((AttributeError, OSError)):
+            leitor.write(0, b"\xFF" * 16)
         leitor.fechar()
 
 
@@ -1038,14 +1057,14 @@ class TesteOpcoesExecucao(BaseMotor):
         t.start()
         self.assertTrue(trava.wait(15), "o motor não pausou após a etapa 1")
         self.assertTrue(t.is_alive())                       # realmente parado
-        self.assertFalse(any("Etapa 2" in l for l in logs))
+        self.assertFalse(any("Etapa 2" in linha for linha in logs))
         continuar.set()                                     # usuário: continuar
         t.join(timeout=20)
         self.assertFalse(t.is_alive())
         res = resultado["res"]
         self.assertTrue(res.pausado)
         self.assertFalse(res.cancelado)
-        self.assertTrue(any("Etapa 2" in l for l in logs))
+        self.assertTrue(any("Etapa 2" in linha for linha in logs))
         self.assertEqual(res.recuperados, 1)
 
     def test_pausa_e_finalizar_encerra_sem_etapa2(self):
@@ -1072,7 +1091,7 @@ class TesteOpcoesExecucao(BaseMotor):
         self.assertFalse(t.is_alive())
         res = resultado["res"]
         self.assertTrue(res.pausado)
-        self.assertFalse(any("Etapa 2 concluída" in l for l in logs))
+        self.assertFalse(any("Etapa 2 concluída" in linha for linha in logs))
         self.assertEqual(res.por_metodo.get(METODO_VARREDURA, 0), 0)
 
     def test_etapa2_desativada(self):

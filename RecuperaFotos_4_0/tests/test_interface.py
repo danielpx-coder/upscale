@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 test_interface.py — testes da interface gráfica (interface.py) sem servidor
 gráfico.
@@ -57,12 +56,9 @@ def tearDownModule():
     _SALVOS.clear()
 
 
-import motor                                                    # noqa: E402
-from candidatos import (ESTADO_CORROMPIDO, ESTADO_NAO_VERIFICADO,  # noqa: E402
-                        ESTADO_OK, ESTADO_PARCIAL, METODO_PASTA,
-                        METODO_VARREDURA)
-from construtor import (ArquivoTeste, construir_fat32, gravar,  # noqa: E402
-                        jpeg_real, png_real)
+import motor  # noqa: E402
+from candidatos import ESTADO_CORROMPIDO, ESTADO_OK, METODO_PASTA, METODO_VARREDURA  # noqa: E402
+from construtor import ArquivoTeste, construir_fat32, gravar, jpeg_real  # noqa: E402
 
 OUTRO_DISCO = "/dev/shm" if os.path.isdir("/dev/shm") else None
 
@@ -71,6 +67,7 @@ def png_ruidoso(largura: int, altura: int) -> bytes:
     """PNG de ruído (grande o bastante para passar no filtro de 8 KB)."""
     import io
     import random
+
     from PIL import Image
     rnd = random.Random(largura * 1000 + altura)
     brutos = bytes(rnd.randrange(256) for _ in range(largura * altura * 3))

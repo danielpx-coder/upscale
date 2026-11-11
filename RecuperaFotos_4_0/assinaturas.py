@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 assinaturas.py — Varredura por assinatura (file carving) com análise
 estrutural para determinação do tamanho.

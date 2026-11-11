@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 """Testes do parser NTFS: fixup, registros, data runs, LZNT1 e recuperação."""
 
 from __future__ import annotations
 
 import os
+import shutil
 import struct
 import sys
 import tempfile
-import shutil
 import unittest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -15,10 +14,15 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import ntfs
 from aquisicao import LeitorArquivo
-from construtor import (ArquivoTeste, construir_ntfs, jpeg_real, png_real,
-                        _registro_mft, _attr_file_name, _attr_data_nao_residente,
-                        _attr_data_residente, lznt1_comprimir_unidade,
-                        NTFS_REC_SIZE)
+from construtor import (
+    ArquivoTeste,
+    _attr_file_name,
+    _registro_mft,
+    construir_ntfs,
+    jpeg_real,
+    lznt1_comprimir_unidade,
+    png_real,
+)
 
 
 def _fs_de_imagem(img: bytes, pasta: str) -> tuple[ntfs.SistemaNTFS, str]:

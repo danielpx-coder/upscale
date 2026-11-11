@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Recupera Fotos 4.0 — ponto de entrada (CLI + interface gráfica).
 

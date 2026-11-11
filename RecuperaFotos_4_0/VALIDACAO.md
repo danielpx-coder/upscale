@@ -31,7 +31,7 @@ repositório), com gabarito conhecido, e a apaga quando você quiser.
 ## 2. Testes automatizados — resultado real
 
 Arquivo: **`resultado_testes.txt`** (gerado, 52 KB, com o nome e o resultado de
-cada um dos 428 testes).
+cada um dos 431 testes).
 
 ```
 módulo                    exec.    ok  falhas  erros  pulos
@@ -41,12 +41,12 @@ test_fuzz                    37    37       0      0      0
 test_interface               61    61       0      0      0
 test_ntfs                    40    40       0      0      0
 test_recupera_fotos         134   134       0      0      0
-test_regressions             78    78       0      0      0
+test_regressions             81    81       0      0      0
 ------------------------------------------------------------------------
-TOTAL                       428   427       0      0      1
+TOTAL                       431   430       0      0      1
 
-RESULTADO FINAL: 428 teste(s) executado(s) em 33.2s
-  aprovados : 427     reprovados: 0     pulados: 1
+RESULTADO FINAL: 431 teste(s) executado(s) em 30.8s
+  aprovados : 430     reprovados: 0     pulados: 1
   STATUS    : TODOS OS TESTES PASSARAM
 ```
 
@@ -61,7 +61,7 @@ Linux. Não há teste pulado por conveniência.
 | `test_aquisicao` | leitores de arquivo/dispositivo/recorte, leitura além do fim, contagem de erros, `listar_dispositivos`, `destino_mesmo_disco_fisico`, `validar_destino`, `Intervalos`, `Adquiridor` (blocos de 4 MiB, SHA-256, `.map.jsonl` v1, retomada, `0xF8` em setor ilegível) |
 | `test_ntfs` | fixup/USA, `RunList`, LZNT1, `RegistroMFT`, `SistemaNTFS.recuperar` e `recuperar_mft_orfa` (que devolvem `(candidatos, recusas)`) |
 | `test_advanced_ntfs` | ATTRIBUTE_LIST com extents em registros distintos, atributos comprimidos, boot de reserva do NTFS, MFT órfã, confiabilidade |
-| `test_regressions` | **78 travas de regressão**: cada uma existe porque um defeito real foi encontrado e corrigido (lista na seção 4) |
+| `test_regressions` | **81 travas de regressão**: cada uma existe porque um defeito real foi encontrado e corrigido (lista na seção 4) |
 | `test_fuzz` | 37 testes com entradas hostis: run lists assimétricas/sparse/degeneradas/truncadas, correntes de FAT cíclicas, EBR auto-referentes, GPT com entradas sobrepostas, nomes com `..\..\`, imagens só de zeros e só de `0xFF` |
 | `test_recupera_fotos` | 134 testes de integração: FAT16/FAT32/exFAT/NTFS montados de verdade, formatação rápida, MBR/GPT/EBR/partição perdida, carving em 20+ formatos, deduplicação, CSV, filtros de data e de tamanho, e a CLI (saída e códigos de saída) |
 | `test_interface` | 61 testes da **janela**, executados com um Tk sem tela (`tests/tk_stub.py`), inclusive um fluxo completo de recuperação |
@@ -185,8 +185,9 @@ cartão inteiro. Só o tempo variou, com a carga da máquina:
 
 A suíte de testes também foi reexecutada em um ambiente recém-criado (venv novo,
 Pillow reinstalado, `/tmp` vazio, sem `__pycache__`): **428 testes, 427
-aprovados, 0 reprovados, 1 pulo** — o mesmo resultado, em 34,0 s e depois
-33,2 s, contra 29,8 s da primeira execução. O tempo varia com a carga; a
+aprovados, 0 reprovados, 1 pulo** — o mesmo resultado, em 34,0 s, 33,2 s e
+30,8 s, contra 29,8 s da primeira execução (a contagem subiu de 428 para 431
+quando os três testes do FileNameLength do exFAT foram acrescentados). O tempo varia com a carga; a
 contagem não.
 
 ---
@@ -227,6 +228,10 @@ Os nomes de teste citados existem em `tests/`.
 | 26 | Em `.exe` sem console, `sys.stdout` é `None` e o primeiro `print()` da CLI derrubaria o programa | `test_cli_sem_console_grava_log_em_vez_de_quebrar`, `test_cli_com_console_nao_cria_arquivo_de_log` |
 | 27 | Nomes hostis vindos do cartão (`..\..\evil.jpg`) podiam escapar da pasta de destino | `test_nome_invalido_e_saneado` + os testes de `realpath` em `test_fuzz.py` |
 | 28 | Destino no mesmo disco físico aceito sem autorização explícita | `test_destino_no_mesmo_disco_da_origem_e_recusado`, `test_cli_bloqueia_imagem_no_mesmo_disco`, `test_nunca_autoriza_mesmo_disco_por_conta_propria` |
+| 29 | **FileNameLength do exFAT lido e descartado**: se faltassem entradas de nome no conjunto, o nome era montado incompleto e ainda "validado" pelo hash (que não pode bater) | `TesteExFatComprimentoDoNome` (3 testes) |
+| 30 | `tests/auxiliar.py` levantava `unittest.SkipTest` sem importar `unittest` no caminho "Pillow ausente" — daria NameError em vez do erro pretendido | `ruff` (F821) no CI |
+| 31 | `_modelo_windows` importava `wmi` e em seguida forçava `raise ImportError` para cair no fallback: código morto e enganoso | `ruff` (F401) no CI |
+| 32 | `_ebml_uint` em `tests/auxiliar.py` terminava em `... if False else None` — função morta que sempre devolvia None | `ruff` (E501/F841) no CI |
 
 ---
 
@@ -287,14 +292,54 @@ Estas não são desempenho: são o compromisso de não inventar resultado.
 
 ---
 
-## 7. Conclusão
+## 7. Lint e integração contínua
 
-- 428 testes automatizados: **427 aprovados, 0 reprovados, 1 pulo justificado**
+O repositório já tinha um CI (`ruff check .` + `pytest -q`) que, com esta pasta
+nova, passou a falhar: **129 violações** das regras `E, F, I, UP, B` do ruff,
+todas dentro de `RecuperaFotos_4_0/`. Elas foram tratadas uma a uma — e quatro
+delas eram defeitos de verdade, não estilo (itens 29 a 32 da tabela acima):
+
+- 31 × `E402`: os módulos ajustam o `sys.path` antes de importar os vizinhos
+  para o programa rodar sem instalação (`python recupera_fotos.py`,
+  `python rodar_testes.py`). Isso é estrutural, então a exceção foi declarada
+  em `[tool.ruff.lint.per-file-ignores]` no `pyproject.toml`, com o motivo
+  escrito — e apenas essa regra, para essa pasta.
+- 23 × `UP009`: declarações `# -*- coding: utf-8 -*-` removidas (redundantes
+  em Python 3, PEP 3120).
+- 16 × `I001`, 4 × `UP037`, 1 × `UP034`, 1 × `UP015`: correções automáticas do
+  ruff, com a suíte reexecutada depois.
+- 14 × `E741`, 11 × `B007`: nomes ambíguos (`l`) e variáveis de laço sem uso
+  renomeados.
+- 3 × `B017`: `assertRaises(Exception)` trocado pela exceção real
+  (`aquisicao.ErroLeitura`, `io.UnsupportedOperation`,
+  `(AttributeError, OSError)`), que é um teste mais forte.
+- 18 × `F401`: imports sem uso removidos; as duas sondas de disponibilidade do
+  Pillow ficaram com `# noqa: F401` e o motivo escrito.
+
+Estado final: `ruff check .` → **All checks passed!** (repositório inteiro,
+incluindo o projeto `videoupscale` que já existia).
+
+O `pytest -q` da raiz não coleta esta suíte (`testpaths = ["tests"]`), então o
+`.github/workflows/ci.yml` ganhou um segundo job, **`recupera-fotos`**, que
+instala o Pillow e roda `python rodar_testes.py` dentro de `RecuperaFotos_4_0`,
+publicando o `resultado_testes.txt` como artefato da execução. O job `test`
+original (do videoupscale) não foi alterado.
+
+---
+
+## 8. Conclusão
+
+- 431 testes automatizados: **430 aprovados, 0 reprovados, 1 pulo justificado**
   (só Windows).
 - Em uma imagem real de 2 GiB com gabarito SHA-256: **100% das fotos apagadas e
   100% das fotos órfãs recuperadas byte a byte idênticas**, **0 falso
   positivo**, 0 duplicata, 0 erro de leitura, origem intacta, 26 MB de memória
   e 2 GiB varridos em 23 s neste ambiente.
-- 28 defeitos reais encontrados e corrigidos, cada um com teste de regressão.
+- 32 defeitos reais encontrados e corrigidos, cada um com teste de regressão
+  ou com o lint do CI travando (quatro deles achados pela passada de ruff:
+  FileNameLength do exFAT descartado, `unittest` não importado em
+  `tests/auxiliar.py`, sonda `wmi` morta e função `_ebml_uint` morta).
+- `ruff check .` limpo no repositório inteiro e dois jobs no CI: o do
+  videoupscale (inalterado) e o desta suíte.
 - As limitações da seção 6 são de **ambiente** (sem Windows, sem mídia física),
   não de cobertura de código: onde foi possível executar, foi executado.

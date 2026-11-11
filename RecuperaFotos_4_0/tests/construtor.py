@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 construtor.py — Construtores de imagens sintéticas INDEPENDENTES dos parsers.
 
@@ -320,7 +319,8 @@ def construir_fat16(arquivos: list[ArquivoTeste], tam_setores: int = 32768,
                     spc: int = 4, tam_setor: int = 512) -> bytes:
     reservados = 8
     nfats = 2
-    fat_setores = 32   # 8192 clusters máx (16 bits / 2 bytes = 256 setores; 32 setores = 8192 entradas? 32*512/2=8192 ok)
+    # 32 setores de FAT = 32*512/2 = 8192 entradas -> teto de 8192 clusters
+    fat_setores = 32
     raiz_entradas = 512
     raiz_setores = raiz_entradas * 32 // tam_setor
     dados_inicio_setor = reservados + nfats * fat_setores + raiz_setores
@@ -708,7 +708,7 @@ def _attr_attribute_list(entradas: list[tuple[int, int, int, int, int]]) -> byte
     ATTRIBUTE_LIST residente (tipo 0x20). Entrada de 32 bytes (28 + padding),
     conforme o layout real: VCN em 0x0C e referência ao registro em 0x14."""
     corpo = bytearray()
-    for k, (tipo, vcn, reg_num, seq, attr_id) in enumerate(entradas):
+    for tipo, vcn, reg_num, seq, attr_id in entradas:
         e = bytearray(32)
         struct.pack_into("<I", e, 0, tipo)
         struct.pack_into("<H", e, 4, 32)      # comprimento da entrada
@@ -1008,7 +1008,7 @@ def construir_ntfs(arquivos: list[ArquivoTeste], tam_setores: int = 16384,
     bitmap = bytearray((total_clusters + 7) // 8)
     for c in range(0, bitmap_cluster + 1):
         bitmap[c // 8] |= 1 << (c % 8)
-    for nome, (_runs, clusters) in alocacoes.items():
+    for _nome, (_runs, clusters) in alocacoes.items():
         for c in clusters:
             bitmap[c // 8] |= 1 << (c % 8)
     off_bm = bitmap_cluster * cluster_bytes
@@ -1165,7 +1165,7 @@ def montar_disco_gpt(particoes: list[tuple[int, int, bytes, str]],
     img[(fim - 1) * tam_setor:fim * tam_setor] = bytes(h2f[:tam_setor])
     img[(fim - 1 - tam_tabela_setores) * tam_setor:(fim - 1) * tam_setor] = \
         tabela.ljust(tam_tabela_setores * tam_setor, b"\x00")
-    for ini, fim2, conteudo, _nome in particoes:
+    for ini, _fim2, conteudo, _nome in particoes:
         off = ini * tam_setor
         img[off:off + len(conteudo)] = conteudo
     return bytes(img)
@@ -1180,7 +1180,7 @@ def montar_disco_mbr(particoes: list[tuple[int, int, bytes, int]],
                         tam_setor, disco_setores)
     if not apagar_mbr:
         img[0:tam_setor] = mbr
-    for ini, n, conteudo, _t in particoes:
+    for ini, _n, conteudo, _t in particoes:
         off = ini * tam_setor
         img[off:off + len(conteudo)] = conteudo
     return bytes(img)

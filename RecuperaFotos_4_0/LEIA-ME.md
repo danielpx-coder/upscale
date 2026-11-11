@@ -37,7 +37,7 @@ Para gerar um `.exe` portátil: dois cliques em **`Gerar_EXE.bat`** (instala o
 PyInstaller e produz `dist\RecuperaFotos\RecuperaFotos.exe`; copie a pasta
 inteira para onde quiser).
 
-Para conferir o programa: **`Executar_Testes.bat`** roda os 428 testes e grava
+Para conferir o programa: **`Executar_Testes.bat`** roda os 431 testes e grava
 `resultado_testes.txt`.
 
 ### Qualquer sistema (Linux, macOS, Windows)
@@ -264,7 +264,7 @@ Quando o estado sair `parcial` ou `corrompido`, abra o CSV e leia a coluna
 | `candidatos.py` | o modelo de arquivo candidato e seus estados |
 | `rodar_testes.py` | executa a suíte e grava `resultado_testes.txt` |
 | `benchmark.py` | constrói uma imagem de 2 GiB com gabarito e mede desempenho e acerto |
-| `tests/` | 428 testes (inclui um Tk sem tela, para testar a janela em qualquer sistema) |
+| `tests/` | 431 testes (inclui um Tk sem tela, para testar a janela em qualquer sistema) |
 | `Iniciar.bat`, `Executar_Testes.bat`, `Gerar_EXE.bat` | atalhos do Windows |
 | `RecuperaFotos.spec`, `requirements.txt` | empacotamento |
 | `resultado_testes.txt`, `benchmark_saida/` | **saídas reais**, geradas pelos comandos acima |

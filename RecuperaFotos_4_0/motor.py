@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 motor.py — Motor de recuperação em duas etapas.
 
@@ -36,11 +35,21 @@ import ntfs
 import particoes
 import verificacao
 from aquisicao import Intervalos, OrigemPasta, validar_destino
-from candidatos import (CandidatoArquivo, ESTADO_CORROMPIDO,
-                        ESTADO_NAO_VERIFICADO, ESTADO_OK, ESTADO_PARCIAL,
-                        EXTENSOES_FOTO, EXTENSOES_VIDEO, METODO_MFT,
-                        METODO_MFT_ORFA, METODO_PASTA, METODO_VARREDURA,
-                        Fragmento, nome_unico)
+from candidatos import (
+    ESTADO_CORROMPIDO,
+    ESTADO_NAO_VERIFICADO,
+    ESTADO_OK,
+    ESTADO_PARCIAL,
+    EXTENSOES_FOTO,
+    EXTENSOES_VIDEO,
+    METODO_MFT,
+    METODO_MFT_ORFA,
+    METODO_PASTA,
+    METODO_VARREDURA,
+    CandidatoArquivo,
+    Fragmento,
+    nome_unico,
+)
 
 PASTA_CORROMPIDAS = "_corrompidas"
 COLUNAS_CSV = ["arquivo", "tipo", "encontrado_por", "caminho_original",
@@ -49,7 +58,7 @@ COLUNAS_CSV = ["arquivo", "tipo", "encontrado_por", "caminho_original",
 COLUNAS_DIAG = ["registro_MFT", "nome", "motivo"]
 
 
-def parsear_desde(desde: str) -> "datetime | None":
+def parsear_desde(desde: str) -> datetime | None:
     """Converte a opção de período em um limite de data (None = sem filtro).
 
     Aceita: "hoje", "ontem"/"ontem_e_hoje", "Nd" (últimos N dias) e

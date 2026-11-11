@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 aquisicao.py — Acesso físico a dispositivos, leitura somente-leitura e
 aquisição forense de imagens de disco (Recupera Fotos 4.0).
@@ -25,7 +24,6 @@ import hashlib
 import json
 import os
 import re
-import struct
 import sys
 import threading
 import time
@@ -357,29 +355,32 @@ def _listar_windows(todos: bool) -> list[dict]:
 
 
 def _modelo_windows(i: int):
+    """Modelo/capacidade/tipo de um disco pelo wmic.
+
+    O pacote Python "wmi" NÃO é usado de propósito: o programa não tem
+    dependência obrigatória nenhuma, e o wmic (presente no Windows) resolve.
+    Qualquer falha aqui é não-fatal — devolve campos vazios e a lista de
+    dispositivos continua sendo mostrada sem o modelo.
+    """
     modelo, capacidade, removivel = "", 0, False
     try:
-        import wmi  # opcional; sem ele usa fallback WMI via subprocess
-        raise ImportError
+        import subprocess
+        out = subprocess.run(
+            ["wmic", "diskdrive", "get", "Index,Model,Size,MediaType",
+             "/format:csv"],
+            capture_output=True, text=True, timeout=30).stdout
+        for linha in out.splitlines():
+            campos = linha.split(",")
+            if len(campos) >= 5 and campos[1].strip() == str(i):
+                modelo = campos[2].strip()
+                try:
+                    capacidade = int(campos[4].strip())
+                except ValueError:
+                    capacidade = 0
+                mt = campos[3].strip().lower()
+                removivel = "removable" in mt or "usb" in modelo.lower()
     except Exception:
-        try:
-            import subprocess
-            out = subprocess.run(
-                ["wmic", "diskdrive", "get", "Index,Model,Size,MediaType",
-                 "/format:csv"],
-                capture_output=True, text=True, timeout=30).stdout
-            for linha in out.splitlines():
-                campos = linha.split(",")
-                if len(campos) >= 5 and campos[1].strip() == str(i):
-                    modelo = campos[2].strip()
-                    try:
-                        capacidade = int(campos[4].strip())
-                    except ValueError:
-                        capacidade = 0
-                    mt = campos[3].strip().lower()
-                    removivel = "removable" in mt or "usb" in modelo.lower()
-        except Exception:
-            pass
+        pass
     return modelo, capacidade, removivel
 
 
@@ -818,7 +819,7 @@ class Intervalos:
         return len(self._lista)
 
     def __iter__(self):
-        return iter((tuple(x) for x in self._lista))
+        return iter(tuple(x) for x in self._lista)
 
 
 # ---------------------------------------------------------------------------
@@ -860,7 +861,7 @@ class Adquiridor:
         cab = None
         if os.path.exists(self.caminho_mapa):
             try:
-                with open(self.caminho_mapa, "r", encoding="utf-8") as f:
+                with open(self.caminho_mapa, encoding="utf-8") as f:
                     for linha in f:
                         linha = linha.strip()
                         if not linha:

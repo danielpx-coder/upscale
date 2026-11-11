@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 test_fuzz.py — robustez do Recupera Fotos 4.0 com dados hostis/aleatórios.
 
@@ -36,23 +35,30 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import aquisicao
 import assinaturas
+import auxiliar as A
 import exfat
 import fatfs
 import motor
 import ntfs
 import particoes
 import verificacao
-from candidatos import (ESTADO_CORROMPIDO, ESTADO_NAO_VERIFICADO, ESTADO_OK,
-                        ESTADO_PARCIAL)
+from candidatos import ESTADO_CORROMPIDO, ESTADO_NAO_VERIFICADO, ESTADO_OK, ESTADO_PARCIAL
+from construtor import (
+    ArquivoTeste,
+    construir_exfat,
+    construir_fat16,
+    construir_fat32,
+    construir_ntfs,
+    gravar,
+    jpeg_real,
+    montar_disco_gpt,
+    montar_disco_mbr,
+    png_real,
+)
 from verificacao import LeitorBytes
 
-import auxiliar as A
-from construtor import (ArquivoTeste, construir_exfat, construir_fat16,
-                        construir_fat32, construir_ntfs, gravar, jpeg_real,
-                        montar_disco_gpt, montar_disco_mbr, png_real)
-
 try:
-    from PIL import Image
+    from PIL import Image  # noqa: F401 - só sondando se o Pillow está instalado
     PIL_OK = True
 except ImportError:
     PIL_OK = False
@@ -137,7 +143,7 @@ class TesteFuzzAnalisadores(unittest.TestCase):
 
     def test_bytes_aleatorios_nao_quebram_os_analisadores(self):
         rnd = random.Random(1234)
-        for k in range(40):
+        for _ in range(40):
             n = rnd.choice([0, 1, 7, 64, 511, 4096, 70000])
             dados = bytes(rnd.randrange(256) for _ in range(n))
             for nome, fn in self.ANALISADORES:
@@ -240,14 +246,14 @@ class TesteFuzzVerificacao(unittest.TestCase):
 
     def test_data_exif_com_tiff_corrompido(self):
         rnd = random.Random(5)
-        for k in range(30):
+        for _ in range(30):
             dados = bytes(rnd.randrange(256) for _ in range(rnd.randrange(0, 4096)))
             self.assertIsInstance(verificacao.data_exif(dados), (tuple, type(None)))
 
     def test_verificadores_estruturais_com_bytes_mutados(self):
         blob = jpeg_real(80, 60, semente=3)
         rnd = random.Random(11)
-        for k in range(40):
+        for k in range(40):          # k é a semente de cada mutação
             mutado = flipar(blob, semente=k, n_flips=rnd.randrange(1, 40))
             v = verificacao.verificar_jpeg_estrutural(bytes(mutado))
             self.assertIn(v.estado, (ESTADO_OK, ESTADO_PARCIAL,
@@ -269,7 +275,7 @@ class TesteFuzzVerificacao(unittest.TestCase):
 class TesteFuzzNTFS(unittest.TestCase):
     def test_runlist_aleatoria(self):
         rnd = random.Random(31)
-        for k in range(200):
+        for _ in range(200):
             n = rnd.randrange(0, 200)
             dados = bytes(rnd.randrange(256) for _ in range(n))
             rl = ntfs.RunList.parsear(dados)
@@ -289,7 +295,7 @@ class TesteFuzzNTFS(unittest.TestCase):
 
     def test_registro_mft_aleatorio(self):
         rnd = random.Random(32)
-        for k in range(120):
+        for _ in range(120):
             rec = bytearray(bytes(rnd.randrange(256) for _ in range(1024)))
             rec[0:4] = rnd.choice([b"FILE", b"BAAD", b"\x00\x00\x00\x00", b"XYZW"])
             reg = ntfs.parsear_registro(rnd.randrange(0, 100), bytes(rec), 1024, 512)
@@ -300,7 +306,7 @@ class TesteFuzzNTFS(unittest.TestCase):
 
     def test_lznt1_aleatorio(self):
         rnd = random.Random(33)
-        for k in range(120):
+        for _ in range(120):
             n = rnd.randrange(0, 20000)
             dados = bytes(rnd.randrange(256) for _ in range(n))
             saida = ntfs.descomprimir_lznt1(dados, 1 << 20)
@@ -387,7 +393,7 @@ class TesteFuzzSistemasDeArquivos(unittest.TestCase):
 
     def test_boot_aleatorio_nao_vira_sistema_de_arquivos(self):
         rnd = random.Random(41)
-        for k in range(300):
+        for _ in range(300):
             setor = bytearray(bytes(rnd.randrange(256) for _ in range(512)))
             setor[510:512] = b"\x55\xAA"
             tipo, info = particoes.identificar_boot(bytes(setor))

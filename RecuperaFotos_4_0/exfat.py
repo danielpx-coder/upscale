@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 exfat.py — Interpretador e recuperador de volumes exFAT.
 
@@ -22,8 +21,7 @@ from __future__ import annotations
 import struct
 from datetime import datetime, timedelta, timezone
 
-from candidatos import (CandidatoArquivo, Fragmento, METODO_PASTA,
-                        METODO_VARREDURA)
+from candidatos import METODO_PASTA, METODO_VARREDURA, CandidatoArquivo, Fragmento
 
 ENT_FILE = 0x85
 ENT_FILE_DEL = 0x05
@@ -230,15 +228,22 @@ class SistemaExFAT:
             return None
         nomes = []
         completo = True
+        caracteres = 0
         # conj = File + n_entradas secundárias (Stream + nomes)
         for k in range(2, min(n_entradas + 1, len(conj) // 32)):
             ent = conj[k * 32:(k + 1) * 32]
             if ent[0] not in (ENT_NAME, ENT_NAME_DEL):
                 completo = False
                 break
-            txt = ent[4:32].decode("utf-16-le", "replace")
-            nomes.append(txt.rstrip("\x00"))
+            txt = ent[4:32].decode("utf-16-le", "replace").rstrip("\x00")
+            nomes.append(txt)
+            caracteres += len(txt)
         nome = "".join(nomes).strip()
+        # FileNameLength (byte 3 do Stream) declara quantos caracteres o nome
+        # tem. Se o conjunto trouxe menos, faltam entradas de nome: o nome está
+        # truncado e não serve para validar nada (o hash não bateria mesmo).
+        if tam_nome and caracteres != tam_nome:
+            completo = False
         if not nome:
             return None
         nome = "".join(ch if ch.isprintable() else "_" for ch in nome)

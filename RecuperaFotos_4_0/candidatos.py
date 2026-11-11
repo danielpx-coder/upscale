@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 candidatos.py — Estruturas comuns entre os módulos do motor de recuperação.
 

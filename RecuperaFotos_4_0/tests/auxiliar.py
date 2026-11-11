@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 auxiliar.py — utilidades e construtores de arquivos sintéticos para testes
 de carving/verificação. Independentes dos parsers do aplicativo.
@@ -192,8 +191,8 @@ def webp_real(largura=24, altura=18) -> bytes:
     """WebP real (codificado pelo Pillow), decodificável."""
     try:
         from PIL import Image
-    except ImportError:
-        raise unittest.SkipTest if False else RuntimeError("Pillow indisponível")
+    except ImportError as exc:
+        raise RuntimeError("Pillow indisponível") from exc
     from io import BytesIO
     img = Image.new("RGB", (largura, altura), (10, 200, 120))
     bio = BytesIO()
@@ -462,13 +461,6 @@ def mpegts_sintetico(n_pacotes=40, pacote=188) -> bytes:
 
 
 # ---------------------------------------------------------------- MKV
-
-def _ebml_uint(v: int) -> bytes:
-    for comp in range(1, 9):
-        if v < (1 << (7 * comp)) - 1:
-            return bytes([(1 << (7 - comp)) | (v >> (8 * (comp - 1)) & 0xFF if comp > 1 else v & 0x7F)] ) if False else None
-    return None
-
 
 def _vint_valor(v: int, comp: int) -> bytes:
     marcador = 1 << (7 * comp)

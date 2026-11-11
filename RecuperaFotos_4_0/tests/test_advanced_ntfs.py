@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 test_advanced_ntfs.py — casos avançados do parser NTFS:
 ATTRIBUTE_LIST multi-extent, sparse, LZNT1 real, MFT órfã após formatação
@@ -22,11 +21,20 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ntfs
 import particoes
 from aquisicao import LeitorArquivo
-from construtor import (ArquivoTeste, NTFS_REC_SIZE, construir_ntfs,
-                        formatar_rapido_ntfs, jpeg_real, png_real,
-                        lznt1_comprimir_unidade, _registro_mft, _attr_file_name,
-                        _attr_data_nao_residente, _attr_data_residente,
-                        _attr_attribute_list)
+from construtor import (
+    NTFS_REC_SIZE,
+    ArquivoTeste,
+    _attr_attribute_list,
+    _attr_data_nao_residente,
+    _attr_data_residente,
+    _attr_file_name,
+    _registro_mft,
+    construir_ntfs,
+    formatar_rapido_ntfs,
+    jpeg_real,
+    lznt1_comprimir_unidade,
+    png_real,
+)
 
 
 def gravar(pasta: str, nome: str, img: bytes) -> str:

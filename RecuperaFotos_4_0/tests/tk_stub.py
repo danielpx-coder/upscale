@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 tk_stub.py — Tkinter headless para testes (sem servidor gráfico).
 
@@ -22,7 +21,7 @@ from __future__ import annotations
 import types
 
 # ------------------------------------------------------------------ registros
-REGISTRO: list["Widget"] = []          # todos os widgets criados
+REGISTRO: list[Widget] = []          # todos os widgets criados
 FILA_AFTER: list[tuple] = []           # callbacks agendados com after()
 MENSAGENS: list[tuple] = []            # (tipo, titulo, texto) de messagebox
 RESPOSTAS_ARQUIVO: list[str] = []      # fila de respostas do askopenfilename

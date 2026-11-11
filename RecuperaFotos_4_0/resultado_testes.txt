@@ -2,7 +2,7 @@
 RECUPERA FOTOS 4.0 — RESULTADO REAL DA SUÍTE DE TESTES
 ========================================================================
 comando          : python rodar_testes.py
-data/hora        : 11/11/2026 09:24:52
+data/hora        : 11/11/2026 10:30:20
 sistema          : Linux 6.1.158+ (x86_64)
 python           : 3.11.2 (CPython)
 Pillow           : 13.0.0
@@ -46,7 +46,7 @@ test_unidade_integralmente_fisica_copiada_sem_descomprimir (test_advanced_ntfs.T
 test_particao_ntfs_dentro_de_imagem_de_disco (test_advanced_ntfs.TesteVolumeDeslocado.test_particao_ntfs_dentro_de_imagem_de_disco) ... ok
 
 ----------------------------------------------------------------------
-Ran 34 tests in 0.705s
+Ran 34 tests in 0.694s
 
 OK
 
@@ -97,7 +97,7 @@ test_validar_destino_inexistente_sem_criar_explica (test_aquisicao.TesteValidaca
 Com criar_se_nao_existe=False (é assim que a interface valida antes ... ok
 
 ----------------------------------------------------------------------
-Ran 44 tests in 0.017s
+Ran 44 tests in 0.013s
 
 OK (skipped=1)
 
@@ -146,7 +146,7 @@ test_verificadores_estruturais_com_bytes_mutados (test_fuzz.TesteFuzzVerificacao
 test_zeros_nunca_sao_ok (test_fuzz.TesteFuzzVerificacao.test_zeros_nunca_sao_ok) ... ok
 
 ----------------------------------------------------------------------
-Ran 37 tests in 10.130s
+Ran 37 tests in 10.208s
 
 OK
 
@@ -215,7 +215,7 @@ test_sem_origem_avisa_e_nao_inicia (test_interface.TesteValidacoesDeInicio.test_
 test_validar_destino_sem_origem_exige_origem (test_interface.TesteValidacoesDeInicio.test_validar_destino_sem_origem_exige_origem) ... ok
 
 ----------------------------------------------------------------------
-Ran 61 tests in 3.303s
+Ran 61 tests in 3.614s
 
 OK
 
@@ -261,7 +261,7 @@ test_run_truncado_interrompe (test_ntfs.TesteRunList.test_run_truncado_interromp
 test_run_unico (test_ntfs.TesteRunList.test_run_unico) ... ok
 
 ----------------------------------------------------------------------
-Ran 40 tests in 0.134s
+Ran 40 tests in 0.126s
 
 OK
 
@@ -413,7 +413,7 @@ test_origem_nao_e_modificada (test_recupera_fotos.TesteSeguranca.test_origem_nao
 test_permitir_mesmo_disco_so_para_imagem (test_recupera_fotos.TesteSeguranca.test_permitir_mesmo_disco_so_para_imagem) ... ok
 
 ----------------------------------------------------------------------
-Ran 134 tests in 17.158s
+Ran 134 tests in 14.296s
 
 OK
 
@@ -476,6 +476,10 @@ Length zero é ignorado, mas o campo de offset continua sendo ... ok
 test_run_sparse_tem_offset_de_zero_bytes (test_regressions.TesteConvencoesDeRunsNTFS.test_run_sparse_tem_offset_de_zero_bytes)
 REGRESSÃO: sparse era codificado como 0x10 (nibble alto). O real é ... ok
 test_run_truncado_interrompe_sem_inventar (test_regressions.TesteConvencoesDeRunsNTFS.test_run_truncado_interrompe_sem_inventar) ... ok
+test_nome_com_zero_declarado_nao_quebra (test_regressions.TesteExFatComprimentoDoNome.test_nome_com_zero_declarado_nao_quebra)
+FileNameLength = 0 (campo zerado por dano) não pode derrubar a ... ok
+test_nome_completo_valida_o_hash (test_regressions.TesteExFatComprimentoDoNome.test_nome_completo_valida_o_hash) ... ok
+test_nome_incompleto_nao_e_validado_pelo_hash (test_regressions.TesteExFatComprimentoDoNome.test_nome_incompleto_nao_e_validado_pelo_hash) ... ok
 test_assinatura_FILE_obrigatoria (test_regressions.TesteFixupNTFS.test_assinatura_FILE_obrigatoria) ... ok
 test_fixup_aplicado_com_setor_512 (test_regressions.TesteFixupNTFS.test_fixup_aplicado_com_setor_512) ... ok
 test_fixup_usa_512_mesmo_em_volume_de_4096 (test_regressions.TesteFixupNTFS.test_fixup_usa_512_mesmo_em_volume_de_4096)
@@ -529,7 +533,7 @@ test_volume_fat32_tem_tamanho_exato (test_regressions.TesteTamanhoExatoDosVolume
 test_volumes_exfat_e_ntfs_tem_tamanho_exato (test_regressions.TesteTamanhoExatoDosVolumes.test_volumes_exfat_e_ntfs_tem_tamanho_exato) ... ok
 
 ----------------------------------------------------------------------
-Ran 78 tests in 1.764s
+Ran 81 tests in 1.846s
 
 OK
 
@@ -545,14 +549,14 @@ test_fuzz                    37    37       0      0      0
 test_interface               61    61       0      0      0
 test_ntfs                    40    40       0      0      0
 test_recupera_fotos         134   134       0      0      0
-test_regressions             78    78       0      0      0
+test_regressions             81    81       0      0      0
 ------------------------------------------------------------------------
-TOTAL                       428   427       0      0      1
+TOTAL                       431   430       0      0      1
 
 
 ========================================================================
-RESULTADO FINAL: 428 teste(s) executado(s) em 33.2s
-  aprovados : 427
+RESULTADO FINAL: 431 teste(s) executado(s) em 30.8s
+  aprovados : 430
   reprovados: 0
   pulados   : 1
      - test_letra_unidade_windows: letras de unidade: só Windows

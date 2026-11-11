@@ -24,3 +24,32 @@ jobs:
         run: ruff check .
       - name: Testes
         run: pytest -q
+
+  # RecuperaFotos_4_0 é um programa independente dentro do repositório, com sua
+  # própria suíte (431 testes, incluindo a interface gráfica rodando contra o Tk
+  # sem tela de tests/tk_stub.py). O pytest da raiz não a coleta porque
+  # [tool.pytest.ini_options] testpaths = ["tests"].
+  recupera-fotos:
+    name: Recupera Fotos 4.0 (431 testes)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: RecuperaFotos_4_0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar Pillow (opcional para o programa, usado pelos testes)
+        run: |
+          python -m pip install --upgrade pip
+          pip install "Pillow>=9.0"
+      - name: Testes (431) e relatório
+        run: python rodar_testes.py
+      - name: Publicar resultado_testes.txt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultado-testes-recupera-fotos
+          path: RecuperaFotos_4_0/resultado_testes.txt
+          if-no-files-found: warn

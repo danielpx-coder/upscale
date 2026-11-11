@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 interface.py — Interface gráfica (Tkinter + ttk) do Recupera Fotos 4.0.
 
@@ -30,8 +29,7 @@ from tkinter import filedialog, messagebox, ttk
 
 import aquisicao
 import motor
-from candidatos import (ESTADO_CORROMPIDO, ESTADO_NAO_VERIFICADO, ESTADO_OK,
-                        ESTADO_PARCIAL)
+from candidatos import ESTADO_CORROMPIDO, ESTADO_NAO_VERIFICADO, ESTADO_OK, ESTADO_PARCIAL
 
 COR_FUNDO = "#f2f3f5"
 COR_CARTAO = "#ffffff"

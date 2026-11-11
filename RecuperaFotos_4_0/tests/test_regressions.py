@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 test_regressions.py — travas de regressão do Recupera Fotos 4.0.
 
@@ -37,12 +36,15 @@ Defeitos cobertos:
   * busca de partições perdidas feita sem avisar o usuário;
   * rótulo do volume FAT32 com 12 bytes em campo de 11, que fazia o
     setor de boot ter 513 bytes e TODA imagem de volume sair 2 bytes
-    maior que tam_setores * tam_setor (achado pelo benchmark).
+    maior que tam_setores * tam_setor (achado pelo benchmark);
+  * FileNameLength do exFAT lido e descartado: nome com entradas faltando
+    era montado incompleto e ainda "validado" pelo hash (achado pelo ruff).
 """
 
 from __future__ import annotations
 
 import hashlib
+import io
 import os
 import shutil
 import struct
@@ -58,23 +60,34 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import aquisicao
 import assinaturas
+import auxiliar as A
 import exfat
 import fatfs
 import motor
 import ntfs
 import particoes
 import verificacao
-from candidatos import (ESTADO_CORROMPIDO, ESTADO_NAO_VERIFICADO, ESTADO_OK,
-                        ESTADO_PARCIAL, METODO_PASTA, METODO_VARREDURA)
+from candidatos import ESTADO_CORROMPIDO, ESTADO_OK, ESTADO_PARCIAL
+from construtor import (
+    ArquivoTeste,
+    _attr_attribute_list,
+    _attr_data_nao_residente,
+    _attr_file_name,
+    _registro_mft,
+    _runs_bytes,
+    _tam_bytes_assinado,
+    construir_exfat,
+    construir_fat16,
+    construir_fat32,
+    construir_ntfs,
+    gravar,
+    jpeg_grande_com_rst,
+    jpeg_real,
+    lznt1_comprimir_unidade,
+    montar_disco_mbr,
+    png_real,
+)
 from verificacao import LeitorBytes
-
-import auxiliar as A
-from construtor import (ArquivoTeste, _attr_attribute_list, _attr_data_nao_residente,
-                        _attr_file_name, _fixup_record, _registro_mft, _runs_bytes,
-                        _tam_bytes_assinado, construir_exfat, construir_fat16,
-                        construir_fat32, construir_ntfs, gravar,
-                        jpeg_grande_com_rst, jpeg_real, lznt1_comprimir_unidade,
-                        montar_disco_mbr, png_real)
 
 
 class LeitorMemoria(aquisicao.LeitorBase):
@@ -863,7 +876,7 @@ class TesteSegurancaRegressoes(BaseImagem):
         leitor = aquisicao.abrir_origem(caminho)
         leitor.fechar()
         self.assertTrue(leitor._fechado)
-        with self.assertRaises(Exception):
+        with self.assertRaises(aquisicao.ErroLeitura):
             leitor.read(0, 512)
         # fechar duas vezes não pode explodir
         leitor.fechar()
@@ -882,7 +895,8 @@ class TesteSegurancaRegressoes(BaseImagem):
         leitor = aquisicao.abrir_origem(caminho)
         try:
             self.assertIn(leitor._fh.mode, ("rb",))
-            with self.assertRaises(Exception):
+            # aberto sem "+": o próprio objeto de arquivo recusa a escrita
+            with self.assertRaises(io.UnsupportedOperation):
                 leitor._fh.write(b"\x00")
         finally:
             leitor.fechar()
@@ -1003,6 +1017,61 @@ class TesteTamanhoExatoDosVolumes(unittest.TestCase):
         # e a área depois da partição continua zerada, não deslocada
         self.assertEqual(disco[(2048 + setores_volume) * 512:],
                          b"\x00" * (64 * 512))
+
+
+class TesteExFatComprimentoDoNome(unittest.TestCase):
+    """O byte 3 do Stream extension declara quantos caracteres o nome tem
+    (FileNameLength). Antes, esse byte era lido e jogado fora: se faltassem
+    entradas de nome no conjunto, o programa montava um nome incompleto e
+    ainda tentava validá-lo pelo hash.
+
+    Agora o total de caracteres trazido pelas entradas é comparado com o
+    declarado; se não bater, o conjunto é tratado como incompleto (e o hash do
+    nome não é usado como validação, porque não pode bater mesmo).
+    """
+
+    NOME = "FOTO_MUITO_LONGA_PARA_EXFAT_2024.JPG"      # 36 caracteres -> 3 entradas
+
+    def _imagem(self, declarado: int | None = None) -> bytes:
+        corpo = jpeg_real(64, 48, semente=5)
+        img = bytearray(construir_exfat(
+            [ArquivoTeste(self.NOME, corpo, apagado=True)]))
+        bruto = self.NOME.encode("utf-16-le")
+        achados = []
+        for off in range(0, len(img) - 96, 32):
+            if img[off] in (0xC0, 0x40) and img[off + 3] == len(self.NOME):
+                if bytes(img[off + 36:off + 36 + 28]) == bruto[:28]:
+                    achados.append(off)
+        self.assertTrue(achados, "entrada de Stream do arquivo não localizada")
+        if declarado is not None:
+            for off in achados:
+                img[off + 3] = declarado
+        return bytes(img)
+
+    def _recuperar(self, img: bytes):
+        _tipo, info = particoes.identificar_boot(img[:512])
+        self.assertEqual(_tipo, "exfat")
+        fs = exfat.SistemaExFAT(LeitorMemoria(img), info, 0, len(img))
+        return [c for c in fs.recuperar() if c.nome == self.NOME]
+
+    def test_nome_completo_valida_o_hash(self):
+        cands = self._recuperar(self._imagem())
+        self.assertEqual(len(cands), 1)
+        self.assertIs(cands[0].extra["hash_nome_ok"], True)
+
+    def test_nome_incompleto_nao_e_validado_pelo_hash(self):
+        # declara mais caracteres do que as entradas de nome realmente trazem
+        cands = self._recuperar(self._imagem(declarado=len(self.NOME) + 2))
+        self.assertEqual(len(cands), 1)
+        self.assertIsNone(cands[0].extra["hash_nome_ok"],
+                          "nome incompleto não pode ser validado pelo hash")
+
+    def test_nome_com_zero_declarado_nao_quebra(self):
+        """FileNameLength = 0 (campo zerado por dano) não pode derrubar a
+        recuperação: o nome lido das entradas continua sendo usado."""
+        cands = self._recuperar(self._imagem(declarado=0))
+        self.assertEqual(len(cands), 1)
+        self.assertEqual(cands[0].nome, self.NOME)
 
 
 if __name__ == "__main__":

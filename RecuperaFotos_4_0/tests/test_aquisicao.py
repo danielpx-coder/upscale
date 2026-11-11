@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Testes de aquisição forense, leitores e validação de origem/destino."""
 
 from __future__ import annotations
@@ -15,9 +14,17 @@ import unittest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import aquisicao
-from aquisicao import (Adquiridor, Intervalos, LeitorArquivo, LeitorRecorte,
-                       ErroLeitura, OrigemPasta, abrir_origem,
-                       destino_mesmo_disco_fisico, validar_destino)
+from aquisicao import (
+    Adquiridor,
+    ErroLeitura,
+    Intervalos,
+    LeitorArquivo,
+    LeitorRecorte,
+    OrigemPasta,
+    abrir_origem,
+    destino_mesmo_disco_fisico,
+    validar_destino,
+)
 
 
 class TesteLeitorArquivo(unittest.TestCase):
@@ -71,8 +78,8 @@ class TesteLeitorArquivo(unittest.TestCase):
         self.assertEqual(modo, "rdonly")
 
     def test_context_manager(self):
-        with LeitorArquivo(self.caminho) as l:
-            self.assertEqual(l.read(0, 4), self.dados[:4])
+        with LeitorArquivo(self.caminho) as leitor:
+            self.assertEqual(leitor.read(0, 4), self.dados[:4])
 
 
 class TesteLeitorRecorte(unittest.TestCase):
@@ -115,9 +122,9 @@ class TesteAbrirOrigem(unittest.TestCase):
         shutil.rmtree(self.pasta, ignore_errors=True)
 
     def test_arquivo_de_imagem(self):
-        l = abrir_origem(self.img)
-        self.assertIsInstance(l, LeitorArquivo)
-        l.fechar()
+        leitor = abrir_origem(self.img)
+        self.assertIsInstance(leitor, LeitorArquivo)
+        leitor.fechar()
 
     def test_pasta_retorna_origem_pasta(self):
         o = abrir_origem(self.pasta)
@@ -134,8 +141,8 @@ class TesteAbrirOrigem(unittest.TestCase):
 
     @unittest.skipUnless(sys.platform == "win32", "letras de unidade: só Windows")
     def test_letra_unidade_windows(self):
-        l = abrir_origem("C:")
-        self.assertTrue(l.e_dispositivo)
+        leitor = abrir_origem("C:")
+        self.assertTrue(leitor.e_dispositivo)
 
     @unittest.skipUnless(sys.platform != "win32", "discoN no Linux usa /sys/block")
     def test_disco_inexistente_linux(self):
@@ -233,7 +240,7 @@ class TesteAdquiridor(unittest.TestCase):
         caminho_mapa = self.img_saida + ".map.jsonl"
         self.assertTrue(os.path.exists(caminho_mapa))
         with open(caminho_mapa, encoding="utf-8") as f:
-            linhas = [json.loads(l) for l in f if l.strip()]
+            linhas = [json.loads(ln) for ln in f if ln.strip()]
         cab = linhas[0]
         self.assertEqual(cab["versao"], 1)
         self.assertEqual(cab["tamanho"], len(self.dados))
@@ -244,7 +251,7 @@ class TesteAdquiridor(unittest.TestCase):
     def test_sha256_dos_blocos_correto(self):
         self._adquirir()
         with open(self.img_saida + ".map.jsonl", encoding="utf-8") as f:
-            linhas = [json.loads(l) for l in f if l.strip()][1:]
+            linhas = [json.loads(ln) for ln in f if ln.strip()][1:]
         for k, reg in enumerate(linhas):
             bloco = self.dados[k * self.BLOCO:(k + 1) * self.BLOCO]
             self.assertEqual(reg["sha256"], hashlib.sha256(bloco).hexdigest())
@@ -270,7 +277,7 @@ class TesteAdquiridor(unittest.TestCase):
         leitor.fechar()
         self.assertEqual(resumo["erro"], 1)
         with open(self.img_saida + ".map.jsonl", encoding="utf-8") as f:
-            regs = [json.loads(l) for l in f if l.strip()][1:]
+            regs = [json.loads(ln) for ln in f if ln.strip()][1:]
         self.assertEqual(regs[1]["estado"], "erro")
         # bloco de erro preenchido com 0xF8 (não confundir com zeros)
         with open(self.img_saida, "rb") as f:

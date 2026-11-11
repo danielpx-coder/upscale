@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 ntfs.py — Interpretador e recuperador de volumes NTFS.
 
@@ -25,8 +24,7 @@ from __future__ import annotations
 import struct
 from datetime import datetime, timedelta
 
-from candidatos import (CandidatoArquivo, Fragmento, METODO_MFT,
-                        METODO_MFT_ORFA, METODO_PASTA)
+from candidatos import METODO_MFT, METODO_MFT_ORFA, CandidatoArquivo, Fragmento
 from particoes import _info_ntfs
 
 # Tipos de atributo
@@ -88,7 +86,7 @@ class RunList:
         self.runs = runs
 
     @staticmethod
-    def parsear(dados: bytes, max_runs: int = MAX_RUNS) -> "RunList | None":
+    def parsear(dados: bytes, max_runs: int = MAX_RUNS) -> RunList | None:
         runs = []
         i = 0
         while i < len(dados) and len(runs) < max_runs:
@@ -909,7 +907,6 @@ class SistemaNTFS:
                            candidatos: list, recusas: list,
                            nomes_cache: dict) -> int:
         passo = self.rec_size
-        off = off_base
         i = 0
         while i + passo <= len(dados):
             if dados[i:i + 4] == b"FILE":

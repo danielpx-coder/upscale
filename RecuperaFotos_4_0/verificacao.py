@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 verificacao.py — Verificação de integridade e classificação dos arquivos
 recuperados.
@@ -24,7 +23,10 @@ import struct
 
 try:
     from PIL import Image
-    from PIL import ImageFile
+    # ImageFile.LOAD_TRUNCATED_IMAGES fica DESLIGADO de propósito: com ele o
+    # Pillow carregaria uma imagem cortada sem reclamar e o arquivo truncado
+    # seria classificado como "ok" — exatamente a mentira que este programa
+    # existe para não contar.
     PIL_DISPONIVEL = True
 except ImportError:      # pragma: no cover - Pillow é opcional
     Image = None
@@ -352,11 +354,10 @@ def classificar(dados: bytes, ext: str, tamanho_esperado: int | None = None,
 # ---------------------------------------------------------------------------
 
 
-def data_exif(dados: bytes) -> "tuple | None":
+def data_exif(dados: bytes) -> tuple | None:
     """Extrai DateTimeOriginal (0x9003) ou DateTime (0x0132) de JPEG/TIFF.
     Retorna (ano, mes, dia, h, m, s) ou None. Implementação própria, sem
     dependências."""
-    from datetime import datetime
     for inicio, endian in _localizar_tiff_em_jpeg(dados):
         dt = _data_em_tiff(dados, inicio, endian)
         if dt:

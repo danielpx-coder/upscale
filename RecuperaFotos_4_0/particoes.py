@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 particoes.py — Detecção de partições e volumes em discos e imagens.
 
