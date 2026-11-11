@@ -1,0 +1,28 @@
+# Recupera Fotos 4.0 — o que NÃO vai para o controle de versão
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# PyInstaller (Gerar_EXE.bat)
+build/
+dist/
+*.manifest
+
+# saída da CLI em .exe sem console
+recupera_fotos_log.txt
+
+# imagens de disco / cartões copiados: gigantes, nunca versionar
+*.img
+*.dd
+*.iso
+*.map.jsonl
+
+# a imagem do benchmark é construída em /tmp/rf4_bench (fora do repositório);
+# estas saídas, porém, SÃO versionadas de propósito, porque são evidência:
+#   resultado_testes.txt
+#   benchmark_saida/relatorio_benchmark.md
+#   benchmark_saida/medidas.json
+#   benchmark_saida/gabarito.json
+#   benchmark_saida/relatorio_cenario_*.csv

@@ -1,0 +1,15 @@
+# Recupera Fotos 4.0 — dependencias
+#
+# O programa funciona SEM nenhuma dependencia externa: todos os verificadores
+# de integridade (JPEG, PNG, TIFF, MP4/HEIC, GIF, BMP, WebP, PSD, RAF, MKV,
+# MPEG-TS) sao implementados diretamente sobre os bytes.
+#
+# O Pillow e OPCIONAL, mas recomendado: quando esta instalado ele acrescenta a
+# decodificacao real da imagem (o arquivo e aberto de verdade, nao apenas
+# medido), o que torna o estado "ok" mais forte. Sem Pillow, o programa avisa e
+# usa somente os verificadores proprios.
+Pillow>=9.0
+
+# Para gerar o .exe use o Gerar_EXE.bat (ele instala o PyInstaller sozinho).
+# Se preferir instalar a mao:
+#     python -m pip install --user pyinstaller
